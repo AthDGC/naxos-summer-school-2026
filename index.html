@@ -220,12 +220,43 @@
     </style>
 </head>
 
+.cta-section .cta-btn:hover {
+transform: scale(1.05);
+box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Footer */
+footer {
+background: var(--text-dark);
+color: white;
+padding: 3rem 2rem;
+text-align: center;
+}
+
+footer a {
+color: var(--accent);
+text-decoration: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+.hero h1 {
+font-size: 2rem;
+}
+
+.hero .subtitle {
+font-size: 1.2rem;
+}
+}
+</style>
+</head>
+
 <body>
     <!-- Navigation -->
     <nav class="navbar">
         <div class="container">
             <div class="nav-brand">
-                <a href="index.html">Naxos Summer School 2025</a>
+                <a href="index.html">Naxos Summer School 2026</a>
             </div>
             <ul class="nav-menu">
                 <li><a href="index.html" class="active">Home</a></li>
@@ -242,7 +273,7 @@
     <section class="hero">
         <h1>11th Naxos Summer School</h1>
         <div class="subtitle">Diachronic Linguistics: Comparing Diachronies</div>
-        <div class="dates">July 20-25, 2025 | Naxos, Greece</div>
+        <div class="dates">July 20-25, 2026 | Naxos, Greece</div>
         <a href="https://forms.gle/1GuNGaHsmVNAE4bx9" class="apply-btn" target="_blank">APPLY NOW</a>
     </section>
 
@@ -411,7 +442,7 @@
             </p>
             <button onclick="showApplicationInfo()" class="cta-btn"
                 style="cursor: pointer; border: none; font-family: inherit;">
-                APPLY NOW → Opens by end of December 2025
+                APPLY NOW → Opens by end of December 2026
             </button>
 
             <!-- Application Info Modal -->
@@ -424,7 +455,7 @@
                     <h3 style="color: var(--primary); margin-bottom: 1.5rem;">Application Opening Soon</h3>
                     <p style="font-size: 1.1rem; line-height: 1.6; color: var(--text-dark);">Applications for the 11th
                         Naxos Summer School on Diachronic Linguistics will open by the <strong>end of December
-                            2025</strong>.</p>
+                            2026</strong>.</p>
                     <p style="margin-top: 1.5rem; color: var(--text-light);">Please check back soon or contact us for
                         more information.</p>
                 </div>
@@ -468,3 +499,40 @@
 </body>
 
 </html>
+function showApplicationInfo() {
+document.getElementById('applicationModal').style.display = 'flex';
+}
+function closeApplicationInfo() {
+document.getElementById('applicationModal').style.display = 'none';
+}
+// Close modal when clicking outside
+document.getElementById('applicationModal')?.addEventListener('click', function (e) {
+if (e.target === this) closeApplicationInfo();
+});
+</script>
+</div>
+
+<!-- Contact -->
+<section class="section">
+    <h2 class="section-title">Contact Information</h2>
+    <div class="section-content">
+        <p><strong>Organizer:</strong> National and Kapodistrian University of Athens</p>
+        <p><strong>Contact:</strong> Prof. Nikolaos Lavidas</p>
+        <p><strong>Email:</strong> <a href="mailto:nlavidas@enl.uoa.gr"
+                style="color: var(--primary);">nlavidas@enl.uoa.gr</a></p>
+        <p style="margin-top: 1.5rem;">
+            <a href="https://athdgc.github.io/" style="color: var(--primary); font-weight: 600;" target="_blank">Visit
+                AthDGC Research Network →</a>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>Licensed under the <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank"
+                style="color: white; text-decoration: underline;">CC BY 4.0</a> License</p>
+        <p style="margin-top: 1rem;">
+            <a href="https://athdgc.github.io/" target="_blank">AthDGC Research Network</a>
+        </p>
+    </footer>
+    </body>
+
+    </html>
