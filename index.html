@@ -141,25 +141,36 @@
             margin: 3rem 0;
         }
 
-        .highlights ul {
-            list-style: none;
-            padding: 0;
+        .highlights-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
         }
 
-        .highlights li {
-            padding: 1rem 0;
-            padding-left: 2rem;
-            position: relative;
-            font-size: 1.1rem;
+        .highlight-item {
+            text-align: center;
+            padding: 2rem;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
         }
 
-        .highlights li:before {
-            content: "•";
-            position: absolute;
-            left: 0;
+        .highlight-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .highlight-item h3 {
             color: var(--primary);
-            font-weight: bold;
-            font-size: 1.3rem;
+            font-size: 1.4rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        .highlight-item p {
+            color: var(--text-dark);
+            line-height: 1.6;
+            font-size: 1rem;
         }
 
         /* CTA Section */
@@ -252,6 +263,16 @@
         </div>
     </section>
 
+    footer a {
+    color: var(--accent);
+    text-decoration: none;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+    .hero h1 {
+    font-size: 2rem;
+    }
     <!-- Main Content -->
     <div class="container">
         <!-- About Section -->
