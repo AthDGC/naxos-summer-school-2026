@@ -243,7 +243,13 @@
         <h1>11th Naxos Summer School</h1>
         <div class="subtitle">Diachronic Linguistics: Comparing Diachronies</div>
         <div class="dates">July 20-25, 2026 | Naxos, Greece</div>
-        <a href="#" class="apply-btn" onclick="showApplicationInfo()">Join Us in Naxos!</a>
+        <div class="apply-info" style="text-align: center; margin: 2rem 0;">
+            <h3>Join Us in Naxos!</h3>
+            <p><strong>Application opens by end of December 2026</strong></p>
+            <p style="margin-top: 1rem; font-style: italic;">
+                Please check back later for the application link
+            </p>
+        </div>
     </section>
 
     <!-- Main Content -->
@@ -274,7 +280,7 @@
                     within the 3rd Call for HFRI Research Projects to Support Faculty Members and Researchers.
                 </p>
                 <p style="margin-top: 1.5rem;">
-                    <strong>AthDGC Project Team:</strong> Nikolaos Lavidas (Principal Investigator), Kiki Nikiforidou,
+                    <strong>AthDGC Project Team:</strong> Nikolaos Lavidas, Kiki Nikiforidou,
                     Vassiliki Geka, Vassileios Symeonidis, Sofia Chionidi, Anastasia Tsiropina, Eleni Plakoutsi,
                     Theodoros Michalareas, Evangelos Argyropoulos
                 </p>
@@ -389,16 +395,30 @@
         <section class="section">
             <h2 class="section-title">The Naxos Experience</h2>
             <div class="image-grid"
-                style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); max-width: 800px; margin: 0 auto;">
+                style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); max-width: 1000px; margin: 0 auto;">
                 <div class="image-card">
                     <img src="https://images.pexels.com/photos/256417/pexels-photo-256417.jpeg?auto=compress&cs=tinysrgb&w=800"
                         alt="Academic Research" style="object-fit: cover; height: 300px;">
-                    <div class="image-caption">Linguistic Research Excellence</div>
+                    <div class="image-caption">Linguistic Research Excellence<br><small
+                            style="font-size: 0.8rem; opacity: 0.7;">Photo by Pexels on Pexels</small></div>
                 </div>
                 <div class="image-card">
                     <img src="https://images.pexels.com/photos/1285625/pexels-photo-1285625.jpeg?auto=compress&cs=tinysrgb&w=800"
                         alt="Greek Island Architecture" style="object-fit: cover; height: 300px;">
-                    <div class="image-caption">Beautiful Naxos Island Setting</div>
+                    <div class="image-caption">Beautiful Naxos Island Setting<br><small
+                            style="font-size: 0.8rem; opacity: 0.7;">Photo by Pexels on Pexels</small></div>
+                </div>
+                <div class="image-card">
+                    <img src="https://images.pexels.com/photos/5673501/pexels-photo-5673501.jpeg?auto=compress&cs=tinysrgb&w=800"
+                        alt="Group Learning and Discussion" style="object-fit: cover; height: 300px;">
+                    <div class="image-caption">Collaborative Learning Experience<br><small
+                            style="font-size: 0.8rem; opacity: 0.7;">Photo by Christina Morillo on Pexels</small></div>
+                </div>
+                <div class="image-card">
+                    <img src="https://images.pexels.com/photos/247478/pexels-photo-247478.jpeg?auto=compress&cs=tinysrgb&w=800"
+                        alt="Mediterranean Island Landscape" style="object-fit: cover; height: 300px;">
+                    <div class="image-caption">Mediterranean Academic Environment<br><small
+                            style="font-size: 0.8rem; opacity: 0.7;">Photo by Pixabay on Pexels</small></div>
                 </div>
             </div>
         </section>
@@ -409,99 +429,39 @@
             <p style="font-size: 1.2rem; margin-bottom: 2rem; opacity: 0.95;">
                 Applications for the 11th edition of our prestigious summer school
             </p>
-            <button onclick="showApplicationInfo()" class="cta-btn"
-                style="cursor: pointer; border: none; font-family: inherit;">
-                APPLY NOW → Opens by end of December 2026
-            </button>
-
-            <!-- Application Info Modal -->
-            <div id="applicationModal"
-                style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.7); z-index: 1000; align-items: center; justify-content: center;">
-                <div
-                    style="background: white; padding: 3rem; border-radius: 15px; max-width: 500px; text-align: center; position: relative;">
-                    <button onclick="closeApplicationInfo()"
-                        style="position: absolute; top: 1rem; right: 1rem; background: none; border: none; font-size: 2rem; cursor: pointer; color: #666;">&times;</button>
-                    <h3 style="color: var(--primary); margin-bottom: 1.5rem;">Application Opening Soon</h3>
-                    <p style="font-size: 1.1rem; line-height: 1.6; color: var(--text-dark);">Applications for the 11th
-                        Naxos Summer School on Diachronic Linguistics will open by the <strong>end of December
-                            2026</strong>.</p>
-                    <p style="margin-top: 1.5rem; color: var(--text-light);">Please check back soon or contact us for
-                        more information.</p>
-                </div>
-            </div>
-
-            <script>
-                function showApplicationInfo() {
-                    document.getElementById('applicationModal').style.display = 'flex';
-                }
-                function closeApplicationInfo() {
-                    document.getElementById('applicationModal').style.display = 'none';
-                }
-                // Close modal when clicking outside
-                document.getElementById('applicationModal')?.addEventListener('click', function (e) {
-                    if (e.target === this) closeApplicationInfo();
-                });
-            </script>
-        </div>
-
-        <!-- Contact -->
-        <section class="section">
-            <h2 class="section-title">Contact Information</h2>
-            <div class="section-content">
-                <p><strong>Organizer:</strong> National and Kapodistrian University of Athens</p>
-                <p><strong>Contact:</strong> Prof. Nikolaos Lavidas</p>
-                <p><strong>Email:</strong> <a href="mailto:nlavidas@enl.uoa.gr"
-                        style="color: var(--primary);">nlavidas@enl.uoa.gr</a></p>
-                <p style="margin-top: 1.5rem;">
-                    <a href="https://athdgc.github.io/" style="color: var(--primary); font-weight: 600;"
-                        target="_blank">Visit AthDGC Research Network →</a>
-            </div>
-
-            <!-- Footer -->
-            <footer>
-                <p>Licensed under the <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank"
-                        style="color: white; text-decoration: underline;">CC BY 4.0</a> License</p>
-                <p style="margin-top: 1rem;">
-                    <a href="https://athdgc.github.io/" target="_blank">AthDGC Research Network</a>
+            <div class="apply-info" style="text-align: center; margin: 2rem 0;">
+                <h3>Join Us in Naxos!</h3>
+                <p><strong>Application opens by end of December 2026</strong></p>
+                <p style="margin-top: 1rem; font-style: italic;">
+                    Please check back later for the application link
                 </p>
-            </footer>
+            </div>
+
+            <!-- Contact -->
+            <section class="section">
+                <h2 class="section-title">Contact Information</h2>
+                <div class="section-content">
+                    <p><strong>Organizer:</strong> National and Kapodistrian University of Athens</p>
+                    <p><strong>Contact:</strong> Prof. Nikolaos Lavidas</p>
+                    <p><strong>Email:</strong> <a href="mailto:nlavidas@enl.uoa.gr"
+                            style="color: var(--primary);">nlavidas@enl.uoa.gr</a></p>
+                    <p style="margin-top: 1.5rem;">
+                        <a href="https://athdgc.github.io/" style="color: var(--primary); font-weight: 600;"
+                            target="_blank">Visit AthDGC Research Network →</a>
+                </div>
+
+                <!-- Footer -->
+                <footer>
+                    <p>Licensed under the <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank"
+                            style="color: white; text-decoration: underline;">CC BY 4.0</a> License</p>
+                    <p style="margin-top: 1rem;">
+                        <a href="https://athdgc.github.io/" target="_blank">AthDGC Research Network</a>
+                    </p>
+                </footer>
+            </section>
+        </div>
+    </div>
+    </div>
 </body>
 
 </html>
-function showApplicationInfo() {
-document.getElementById('applicationModal').style.display = 'flex';
-}
-function closeApplicationInfo() {
-document.getElementById('applicationModal').style.display = 'none';
-}
-// Close modal when clicking outside
-document.getElementById('applicationModal')?.addEventListener('click', function (e) {
-if (e.target === this) closeApplicationInfo();
-});
-</script>
-</div>
-
-<!-- Contact -->
-<section class="section">
-    <h2 class="section-title">Contact Information</h2>
-    <div class="section-content">
-        <p><strong>Organizer:</strong> National and Kapodistrian University of Athens</p>
-        <p><strong>Contact:</strong> Prof. Nikolaos Lavidas</p>
-        <p><strong>Email:</strong> <a href="mailto:nlavidas@enl.uoa.gr"
-                style="color: var(--primary);">nlavidas@enl.uoa.gr</a></p>
-        <p style="margin-top: 1.5rem;">
-            <a href="https://athdgc.github.io/" style="color: var(--primary); font-weight: 600;" target="_blank">Visit
-                AthDGC Research Network →</a>
-    </div>
-
-    <!-- Footer -->
-    <footer>
-        <p>Licensed under the <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank"
-                style="color: white; text-decoration: underline;">CC BY 4.0</a> License</p>
-        <p style="margin-top: 1rem;">
-            <a href="https://athdgc.github.io/" target="_blank">AthDGC Research Network</a>
-        </p>
-    </footer>
-    </body>
-
-    </html>
