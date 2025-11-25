@@ -72,19 +72,22 @@
                 <div class="card">
                     <h3>Registration Fee</h3>
                     <p><strong>Registration fee: 200 euros</strong></p>
-                    <p>The registration fee is 200 euros. Participants cover their own travel and accommodation costs.</p>
+                    <p>The registration fee is 200 euros. Participants cover their own travel and accommodation costs.
+                    </p>
                 </div>
 
                 <div class="card">
                     <h3>Accommodation</h3>
                     <p><strong>Participant Responsibility</strong></p>
-                    <p>Estimated cost: €400-600 for the week. We provide accommodation recommendations and assistance with booking.</p>
+                    <p>Estimated cost: €400-600 for the week. We provide accommodation recommendations and assistance
+                        with booking.</p>
                 </div>
 
                 <div class="card">
                     <h3>Travel</h3>
                     <p><strong>Self-Funded</strong></p>
-                    <p>Participants arrange and fund their own travel to Naxos. Ferry from Athens (Piraeus) or direct flights available.</p>
+                    <p>Participants arrange and fund their own travel to Naxos. Ferry from Athens (Piraeus) or direct
+                        flights available.</p>
                 </div>
             </div>
 
@@ -119,8 +122,10 @@
             <h2 class="section-title">CIVIS Connection</h2>
             <div class="info-box">
                 <h3>Collaboration with CIVIS Blended Learning Course</h3>
-                <p>The 11th Naxos Summer School collaborates with the <strong>CIVIS Blended Learning Course: Diachronic Linguistics in the 21st century</strong>.</p>
-                <p>CIVIS students can combine online Spring School (April 2026) with our Summer School in Naxos (July 2026) for a comprehensive learning experience.</p>
+                <p>The 11th Naxos Summer School collaborates with the <strong>CIVIS Blended Learning Course: Diachronic
+                        Linguistics in the 21st century</strong>.</p>
+                <p>CIVIS students can combine online Spring School (April 2026) with our Summer School in Naxos (July
+                    2026) for a comprehensive learning experience.</p>
                 <p>
                     <a href="https://civis.eu/en/learn/civis-courses/diachronic-linguistics-in-the-21st-century"
                         target="_blank">Learn more about CIVIS Course</a>
@@ -131,15 +136,22 @@
 
     <!-- Footer -->
     <footer>
-        <div class="container">
-            <p>Licensed under the <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a>
-                License</p>
-            <p>
-                <a href="https://athdgc.github.io/">AthDGC Research Network</a> |
-                <a href="https://en.uoa.gr/">University of Athens</a>
-            </p>
-        </div>
+        <p>Licensed under the <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a>
+            License</p>
+        <p><a href="https://athdgc.github.io/">AthDGC Research Network</a></p>
     </footer>
+
+    <script>
+        function showApplicationInfo() {
+            document.getElementById('applicationModal').style.display = 'flex';
+        }
+        function closeApplicationInfo() {
+            document.getElementById('applicationModal').style.display = 'none';
+        }
+        document.getElementById('applicationModal')?.addEventListener('click', function (e) {
+            if (e.target === this) closeApplicationInfo();
+        });
+    </script>
 </body>
 
 </html>

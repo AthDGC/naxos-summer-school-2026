@@ -219,14 +219,6 @@ body {
     background: var(--primary-light);
 }
 
-.btn-primary {
-    background: var(--primary);
-}
-
-.btn-primary:hover {
-    background: var(--primary-light);
-}
-
 /* Footer */
 footer {
     background: var(--text-dark);
