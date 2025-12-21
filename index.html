@@ -8,15 +8,15 @@
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     
-    <!-- Fonts: Playfair Display (Serif) for headings, Inter (Sans) for body -->
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
     
-    <!-- FontAwesome for Icons -->
+    <!-- FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <!-- Custom Config & Styles -->
+    <!-- Config -->
     <script>
         tailwind.config = {
             theme: {
@@ -24,285 +24,492 @@
                     colors: {
                         naxos: {
                             blue: '#004C98',    // Deep Aegean Blue
-                            light: '#E6F0FA',   // Light Sky
-                            gold: '#D4AF37',    // Academic Gold
-                            sand: '#F5F5DC',    // Warm Sand
-                            text: '#1E293B',    // Slate 800
+                            dark: '#0B1E33',    // Night Blue
+                            gold: '#C5A059',    // Muted Gold
+                            sand: '#F7F5EB',    // Light Sand
                         }
                     },
                     fontFamily: {
                         sans: ['Inter', 'sans-serif'],
                         serif: ['Playfair Display', 'serif'],
-                    },
-                    backgroundImage: {
-                        'hero-pattern': "linear-gradient(rgba(0, 76, 152, 0.85), rgba(0, 76, 152, 0.7)), url('https://images.unsplash.com/photo-1533105079780-92b9be482077?q=80&w=2574&auto=format&fit=crop')",
                     }
                 }
             }
         }
     </script>
     <style>
-        /* Custom Utilities */
-        .glass-card {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-        }
-        .text-shadow {
-            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
-        }
+        .text-shadow-lg { text-shadow: 0 4px 6px rgba(0,0,0,0.4); }
+        .clip-image { clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%); }
+        /* Smooth fade for tabs if needed */
+        .tab-content { animation: fadeIn 0.5s; }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
     </style>
 </head>
-<body class="font-sans text-naxos-text bg-slate-50 antialiased selection:bg-naxos-blue selection:text-white">
+<body class="font-sans text-slate-800 bg-white antialiased">
 
     <!-- Navigation -->
-    <nav class="fixed w-full z-50 transition-all duration-300 bg-white/90 backdrop-blur-md shadow-sm" id="navbar">
-        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <!-- Logo Area -->
-            <a href="#" class="flex items-center gap-3 group">
-                <div class="w-10 h-10 bg-naxos-blue text-white rounded-full flex items-center justify-center text-xl font-serif font-bold group-hover:bg-naxos-gold transition-colors">
-                    N
-                </div>
+    <nav class="fixed w-full z-50 transition-all duration-300 bg-white/95 backdrop-blur-md shadow-md border-b border-slate-100" id="navbar">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="#" class="flex items-center gap-3">
+                <div class="w-10 h-10 bg-naxos-blue text-white rounded-full flex items-center justify-center text-xl font-serif font-bold border-2 border-naxos-gold">N</div>
                 <div class="leading-tight">
-                    <h1 class="font-serif font-bold text-naxos-blue text-lg tracking-wide">NAXOS SUMMER SCHOOL</h1>
-                    <p class="text-xs text-slate-500 font-medium tracking-widest uppercase">Diachronic Linguistics 2026</p>
+                    <h1 class="font-serif font-bold text-naxos-blue text-lg tracking-wide">NAXOS 2026</h1>
+                    <p class="text-[10px] text-slate-500 font-bold tracking-widest uppercase">Diachronic Linguistics</p>
                 </div>
             </a>
-
+            
             <!-- Desktop Menu -->
-            <div class="hidden md:flex items-center space-x-6 text-sm font-medium">
-                <a href="#about" class="hover:text-naxos-blue transition-colors">About</a>
-                <a href="#speakers" class="hover:text-naxos-blue transition-colors">Faculty</a>
-                <a href="#schedule" class="hover:text-naxos-blue transition-colors">Program</a>
+            <div class="hidden lg:flex items-center space-x-8 text-sm font-semibold text-slate-600">
+                <a href="#program" class="hover:text-naxos-blue transition-colors">Program</a>
+                <a href="#faculty" class="hover:text-naxos-blue transition-colors">Faculty</a>
                 <a href="#civis" class="hover:text-naxos-blue transition-colors">CIVIS</a>
+                <a href="#location" class="hover:text-naxos-blue transition-colors">Naxos Life</a>
                 <a href="#history" class="hover:text-naxos-blue transition-colors">History</a>
-                <a href="#contact" class="hover:text-naxos-blue transition-colors">Contact</a>
-                <a href="https://forms.gle/1GuNGaHsmVNAE4bx9" target="_blank" class="bg-naxos-blue text-white px-5 py-2.5 rounded-full hover:bg-blue-800 transition-all transform hover:-translate-y-0.5 shadow-md font-semibold">
+                <a href="https://forms.gle/1GuNGaHsmVNAE4bx9" target="_blank" class="bg-naxos-blue text-white px-6 py-2.5 rounded-full hover:bg-naxos-dark transition-all shadow-lg transform hover:-translate-y-0.5">
                     Apply Now
                 </a>
             </div>
 
-            <!-- Mobile Menu Button -->
-            <button class="md:hidden text-2xl text-naxos-blue focus:outline-none" onclick="toggleMenu()">
+            <!-- Mobile Menu Toggle -->
+            <button class="lg:hidden text-2xl text-naxos-blue" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
                 <i class="fa-solid fa-bars"></i>
             </button>
         </div>
 
-        <!-- Mobile Menu Dropdown -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100 absolute w-full shadow-xl">
-            <div class="flex flex-col p-6 space-y-4 font-medium text-center">
-                <a href="#about" class="py-2 hover:text-naxos-blue" onclick="toggleMenu()">About</a>
-                <a href="#speakers" class="py-2 hover:text-naxos-blue" onclick="toggleMenu()">Faculty</a>
-                <a href="#schedule" class="py-2 hover:text-naxos-blue" onclick="toggleMenu()">Program</a>
-                <a href="#civis" class="py-2 hover:text-naxos-blue" onclick="toggleMenu()">CIVIS</a>
-                <a href="#history" class="py-2 hover:text-naxos-blue" onclick="toggleMenu()">History</a>
-                <a href="#contact" class="py-2 hover:text-naxos-blue" onclick="toggleMenu()">Contact</a>
-                <a href="https://forms.gle/1GuNGaHsmVNAE4bx9" target="_blank" class="text-naxos-blue font-bold py-2">Apply Now →</a>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-slate-100 absolute w-full shadow-2xl">
+            <div class="flex flex-col p-6 space-y-4 font-bold text-center">
+                <a href="#program" class="py-2">Program</a>
+                <a href="#faculty" class="py-2">Faculty</a>
+                <a href="#civis" class="py-2">CIVIS</a>
+                <a href="#location" class="py-2">Naxos Life</a>
+                <a href="https://forms.gle/1GuNGaHsmVNAE4bx9" class="text-naxos-blue">Apply Now</a>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <header class="relative h-screen min-h-[600px] flex items-center justify-center bg-hero-pattern bg-cover bg-center bg-no-repeat bg-fixed">
-        <div class="absolute inset-0 bg-gradient-to-b from-transparent to-naxos-blue/90"></div>
-        
-        <div class="container mx-auto px-6 relative z-10 text-center text-white">
-            <div class="inline-block mb-6 px-4 py-1 border border-white/30 rounded-full bg-white/10 backdrop-blur-sm text-sm font-medium tracking-wider uppercase animate-fade-in-down">
-                July 19-24, 2026 &bull; Naxos, Greece
-            </div>
-            <h1 class="font-serif text-5xl md:text-7xl font-bold mb-6 leading-tight text-shadow">
-                11th Naxos Summer School
-            </h1>
-            <h2 class="text-2xl md:text-3xl font-light text-naxos-sand mb-8 italic font-serif">
-                "Diachronic Linguistics: Comparing Diachronies"
-            </h2>
-            <p class="max-w-2xl mx-auto text-lg md:text-xl text-slate-100 mb-10 leading-relaxed font-light">
-                Intensive classes, workshops, and master classes on ancient and medieval languages.
-            </p>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="https://forms.gle/1GuNGaHsmVNAE4bx9" target="_blank" class="px-8 py-4 bg-naxos-gold hover:bg-yellow-600 text-white rounded-full font-bold text-lg shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-1">
-                    Apply Now
-                </a>
-                <a href="#about" class="px-8 py-4 bg-transparent border-2 border-white hover:bg-white hover:text-naxos-blue text-white rounded-full font-bold text-lg transition-all">
-                    Learn More
-                </a>
-            </div>
-            <p class="mt-6 text-sm opacity-80 font-medium tracking-wide">Application opens by end of December 2025</p>
+    <header class="relative h-[85vh] min-h-[700px] flex items-center justify-center overflow-hidden clip-image">
+        <!-- Background Image -->
+        <div class="absolute inset-0">
+            <img src="https://images.unsplash.com/photo-1623164923724-c277764d88e0?q=80&w=2070&auto=format&fit=crop" 
+                 alt="Naxos Portara Gate" 
+                 class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-b from-naxos-blue/60 via-naxos-blue/40 to-naxos-dark/90 mix-blend-multiply"></div>
         </div>
 
-        <!-- Scroll Indicator -->
-        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce text-white/70">
-            <i class="fa-solid fa-chevron-down text-2xl"></i>
+        <div class="container mx-auto px-6 relative z-10 text-center text-white mt-10">
+            <div class="inline-flex items-center gap-2 px-4 py-1.5 border border-naxos-gold/50 rounded-full bg-naxos-dark/30 backdrop-blur-md text-xs font-bold tracking-widest uppercase mb-6 text-naxos-gold animate-fade-in-down">
+                <i class="fa-solid fa-calendar-check"></i> July 19-24, 2026
+            </div>
+            
+            <h1 class="font-serif text-5xl md:text-7xl lg:text-8xl font-bold mb-4 leading-none text-shadow-lg">
+                11th Naxos <br> Summer School
+            </h1>
+            
+            <h2 class="text-2xl md:text-3xl font-light text-naxos-sand mb-8 italic font-serif opacity-90">
+                "Diachronic Linguistics: Comparing Diachronies"
+            </h2>
+            
+            <p class="max-w-2xl mx-auto text-lg md:text-xl text-slate-100 mb-10 leading-relaxed font-light drop-shadow-md">
+                A week of intensive linguistic immersion, workshops, and master classes <br class="hidden md:block"> on the historic island of Naxos.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row gap-5 justify-center">
+                <a href="https://forms.gle/1GuNGaHsmVNAE4bx9" target="_blank" class="px-10 py-4 bg-naxos-gold hover:bg-yellow-600 text-white rounded-full font-bold text-lg shadow-xl transition-all transform hover:-translate-y-1 hover:scale-105 border border-white/20">
+                    Apply Now
+                </a>
+                <a href="#program" class="px-10 py-4 bg-white/10 backdrop-blur-sm border-2 border-white hover:bg-white hover:text-naxos-blue text-white rounded-full font-bold text-lg transition-all">
+                    View Program
+                </a>
+            </div>
         </div>
     </header>
 
-    <!-- Intro / About Section -->
-    <section id="about" class="py-20 bg-white">
+    <!-- About & Visual Grid -->
+    <section id="about" class="py-20 bg-naxos-sand/30">
         <div class="container mx-auto px-6">
-            <div class="grid md:grid-cols-2 gap-16 items-start">
-                <div>
-                    <h3 class="text-naxos-gold font-bold uppercase tracking-widest text-sm mb-2">The Program</h3>
-                    <h2 class="font-serif text-4xl font-bold text-naxos-blue mb-6">About the Summer School</h2>
-                    <div class="prose text-slate-600 leading-relaxed text-lg space-y-4">
+            <div class="flex flex-col lg:flex-row gap-16 items-center">
+                <!-- Text Content -->
+                <div class="lg:w-1/2">
+                    <h3 class="text-naxos-blue font-bold uppercase tracking-widest text-sm mb-3">Academic Excellence</h3>
+                    <h2 class="font-serif text-4xl md:text-5xl font-bold text-slate-800 mb-8 leading-tight">
+                        Bridging Past & Future <br> in Linguistics
+                    </h2>
+                    
+                    <div class="prose prose-lg text-slate-600 space-y-6">
                         <p>
-                            The <strong class="text-naxos-blue">National and Kapodistrian University of Athens</strong>, in collaboration with **Arizona State University**, **University of Osnabrück**, and **University of Cambridge**, coordinates a summer school program, workshop/poster session, and master classes on ancient and medieval languages and linguistics.
+                            Organized by the <strong>National and Kapodistrian University of Athens</strong> in collaboration with <strong>Arizona State University</strong>, <strong>University of Osnabrück</strong>, and <strong>University of Cambridge</strong>.
                         </p>
                         <p>
-                            The aim is to attract students and scholars to study ancient and medieval languages in a relaxed yet focused and stimulating atmosphere that promotes in-depth analysis and discussion.
+                            This year's focus, <em>"Comparing Diachronies,"</em> explores how ancient and medieval languages evolve through contrastive computational analysis and traditional philology.
                         </p>
                         
-                        <!-- Research Project Details -->
-                        <div class="p-6 bg-slate-50 border border-slate-100 rounded-lg mt-6 shadow-sm">
-                            <h4 class="font-bold text-naxos-blue mb-3 text-sm uppercase flex items-center gap-2">
-                                <i class="fa-solid fa-flask"></i> AthDGC Research Project
+                        <div class="bg-white p-6 rounded-xl border-l-4 border-naxos-gold shadow-sm mt-6">
+                            <h4 class="font-bold text-naxos-dark mb-2 flex items-center gap-2">
+                                <i class="fa-solid fa-microscope text-naxos-gold"></i>
+                                AthDGC Research Project
                             </h4>
-                            <p class="text-sm text-slate-600 leading-relaxed mb-3">
-                                This summer school is part of the <strong>Athens Digital Glossa Chronos (AthDGC)</strong> project: <em>'A Corpus-based Valency Lexicon for a Contrastive and Diachronic Study of Ancient & Medieval Languages'</em>.
-                            </p>
-                            <p class="text-sm text-slate-600 leading-relaxed mb-3">
-                                The project develops corpus-based valency lexicons using innovative computational methods (NLP) integrated with traditional philological expertise.
-                            </p>
-                            <div class="text-xs text-slate-500 border-t border-slate-200 pt-3 mt-3">
-                                Funded by the <strong>Hellenic Foundation for Research and Innovation (HFRI)</strong> (Grant No. 20577).
-                            </div>
-                        </div>
-
-                        <div class="my-6 p-4 bg-blue-50 border-l-4 border-naxos-blue rounded-r">
-                            <h4 class="font-bold text-naxos-blue">Workshop & Poster Session</h4>
-                            <p class="text-sm mt-1">
-                                The 11th Naxos Summer School will also be organizing a dedicated session on: <br>
-                                <span class="italic font-serif font-semibold text-slate-800">"Linguistic Diachronies: A Contrastive Approach"</span>
+                            <p class="text-sm">
+                                Part of the HFRI-funded project (Grant No. 20577) developing corpus-based valency lexicons. We combine NLP methods with deep linguistic analysis.
                             </p>
                         </div>
                     </div>
                 </div>
-                <div class="relative mt-8 md:mt-0">
-                    <!-- Decorative grid of images/icons -->
-                    <div class="grid grid-cols-2 gap-4">
-                        <div class="bg-naxos-light rounded-2xl h-64 flex flex-col items-center justify-center p-6 text-center transform translate-y-8 shadow-sm">
-                            <i class="fa-solid fa-landmark text-5xl text-naxos-blue mb-4"></i>
-                            <span class="font-serif font-bold text-xl text-naxos-blue">Historical Linguistics</span>
-                        </div>
-                        <div class="bg-naxos-blue rounded-2xl h-64 flex flex-col items-center justify-center p-6 text-center text-white shadow-lg">
-                            <i class="fa-solid fa-comments text-5xl text-naxos-gold mb-4"></i>
-                            <span class="font-serif font-bold text-xl">Intensive Workshops</span>
-                        </div>
-                        <div class="bg-slate-100 rounded-2xl h-64 flex flex-col items-center justify-center p-6 text-center text-slate-700 shadow-sm">
-                            <i class="fa-solid fa-graduation-cap text-5xl text-slate-400 mb-4"></i>
-                            <span class="font-serif font-bold text-xl">Master Classes</span>
-                        </div>
-                        <div class="bg-naxos-gold/20 rounded-2xl h-64 flex flex-col items-center justify-center p-6 text-center transform translate-y-8 shadow-sm">
-                            <i class="fa-solid fa-users text-5xl text-naxos-gold mb-4"></i>
-                            <span class="font-serif font-bold text-xl text-yellow-800">Networking</span>
-                        </div>
-                    </div>
+
+                <!-- Image Grid -->
+                <div class="lg:w-1/2 grid grid-cols-2 gap-4">
+                    <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=1470&auto=format&fit=crop" class="rounded-2xl shadow-lg object-cover h-64 w-full transform translate-y-8" alt="Students">
+                    <img src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?q=80&w=1374&auto=format&fit=crop" class="rounded-2xl shadow-lg object-cover h-64 w-full" alt="Ancient Text">
+                    <img src="https://images.unsplash.com/photo-1564399580075-5dfe19c205f9?q=80&w=1470&auto=format&fit=crop" class="rounded-2xl shadow-lg object-cover h-64 w-full transform translate-y-8" alt="Naxos Alley">
+                    <img src="https://images.unsplash.com/photo-1515542622106-78bda8ba30c8?q=80&w=1448&auto=format&fit=crop" class="rounded-2xl shadow-lg object-cover h-64 w-full" alt="Lecture">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Faculty Section -->
-    <section id="speakers" class="py-20 bg-slate-50">
+    <!-- INTENSIVE SCHEDULE -->
+    <section id="program" class="py-24 bg-white">
         <div class="container mx-auto px-6">
             <div class="text-center mb-16">
-                <h3 class="text-naxos-blue font-bold uppercase tracking-widest text-sm mb-2">World-Class Instruction</h3>
-                <h2 class="font-serif text-4xl font-bold text-slate-800">Faculty & Instructors</h2>
+                <h3 class="text-naxos-blue font-bold uppercase tracking-widest text-sm mb-2">Detailed Schedule</h3>
+                <h2 class="font-serif text-4xl md:text-5xl font-bold text-slate-900">Intensive Program</h2>
+                <p class="text-slate-500 mt-4 max-w-2xl mx-auto italic">
+                    Classes run daily from 09:00 to late evening. Social events follow every night.
+                </p>
+            </div>
+
+            <!-- Schedule Container -->
+            <div class="overflow-x-auto shadow-2xl rounded-2xl border border-slate-200">
+                <table class="w-full text-left border-collapse min-w-[1000px]">
+                    <!-- Table Header -->
+                    <thead>
+                        <tr class="bg-naxos-dark text-white text-sm uppercase tracking-wider">
+                            <th class="p-5 w-32 border-r border-slate-700 bg-slate-900">Time</th>
+                            <th class="p-5 w-1/5">Mon, July 20</th>
+                            <th class="p-5 w-1/5 bg-slate-800">Tue, July 21</th>
+                            <th class="p-5 w-1/5">Wed, July 22</th>
+                            <th class="p-5 w-1/5 bg-slate-800">Thu, July 23</th>
+                        </tr>
+                    </thead>
+                    
+                    <tbody class="text-sm text-slate-700 divide-y divide-slate-100">
+                        <!-- Morning Block 1 -->
+                        <tr class="hover:bg-blue-50/50 transition-colors">
+                            <td class="p-4 font-bold text-naxos-blue border-r border-slate-200 bg-slate-50">09:00 - 10:10</td>
+                            <td class="p-4 font-semibold">Morning Lecture I<br><span class="text-xs text-slate-500 font-normal">Historical Syntax</span></td>
+                            <td class="p-4 font-semibold bg-slate-50/50">Morning Lecture I<br><span class="text-xs text-slate-500 font-normal">Corpus Linguistics</span></td>
+                            <td class="p-4 font-semibold">Morning Lecture I<br><span class="text-xs text-slate-500 font-normal">Valency Patterns</span></td>
+                            <td class="p-4 font-semibold bg-slate-50/50">Morning Lecture I<br><span class="text-xs text-slate-500 font-normal">Language Contact</span></td>
+                        </tr>
+
+                        <!-- Coffee Break -->
+                        <tr class="bg-amber-50">
+                            <td class="p-2 text-center text-xs font-bold text-amber-600 border-r border-amber-100 uppercase tracking-widest" colspan="5">
+                                <i class="fa-solid fa-mug-hot mr-2"></i> Coffee Break (10 mins)
+                            </td>
+                        </tr>
+
+                        <!-- Morning Block 2 -->
+                        <tr class="hover:bg-blue-50/50 transition-colors">
+                            <td class="p-4 font-bold text-naxos-blue border-r border-slate-200 bg-slate-50">10:20 - 11:30</td>
+                            <td class="p-4 font-semibold text-naxos-dark">Keynote Class<br><span class="text-xs text-naxos-blue">Language Change & Theory</span></td>
+                            <td class="p-4 font-semibold text-naxos-dark bg-slate-50/50">Keynote Class<br><span class="text-xs text-naxos-blue">Grammaticalization</span></td>
+                            <td class="p-4 font-semibold text-naxos-dark">Keynote Class<br><span class="text-xs text-naxos-blue">Analogical Change</span></td>
+                            <td class="p-4 font-semibold text-naxos-dark bg-slate-50/50">Keynote Class<br><span class="text-xs text-naxos-blue">Syntactic Change</span></td>
+                        </tr>
+
+                        <!-- Short Break -->
+                        <tr class="bg-slate-50">
+                            <td class="p-2 text-center text-xs text-slate-400 border-r border-slate-200" colspan="5">Short Break (10 mins)</td>
+                        </tr>
+
+                        <!-- Morning Block 3 -->
+                        <tr class="hover:bg-blue-50/50 transition-colors">
+                            <td class="p-4 font-bold text-naxos-blue border-r border-slate-200 bg-slate-50">11:40 - 12:50</td>
+                            <td class="p-4">CIVIS Class<br><span class="text-xs text-slate-500">Guest Professor A</span></td>
+                            <td class="p-4 bg-slate-50/50">CIVIS Class<br><span class="text-xs text-slate-500">Guest Professor B</span></td>
+                            <td class="p-4">CIVIS Class<br><span class="text-xs text-slate-500">Guest Professor C</span></td>
+                            <td class="p-4 bg-slate-50/50">CIVIS Class<br><span class="text-xs text-slate-500">Guest Professor D</span></td>
+                        </tr>
+
+                        <!-- Lunch Break -->
+                        <tr class="bg-naxos-sand/50">
+                            <td class="p-6 font-bold text-slate-500 border-r border-slate-200 text-center uppercase tracking-widest text-xs">13:00 - 17:00</td>
+                            <td colspan="4" class="p-6 text-center text-slate-500 italic">
+                                <i class="fa-solid fa-sun text-naxos-gold mr-2 text-xl"></i> Lunch Break & Siesta / Free Time for Swimming & Study
+                            </td>
+                        </tr>
+
+                        <!-- Afternoon Session -->
+                        <tr class="hover:bg-blue-50/50 transition-colors border-t border-slate-200">
+                            <td class="p-4 font-bold text-naxos-blue border-r border-slate-200 bg-slate-50">17:00 - 18:30</td>
+                            <td class="p-4 bg-blue-50 border-l-4 border-naxos-blue">
+                                <span class="text-xs font-bold text-naxos-blue uppercase mb-1 block">Workshop I</span>
+                                Linguistic Diachronies
+                            </td>
+                            <td class="p-4 bg-slate-50/50">
+                                <span class="text-xs font-bold text-slate-500 uppercase mb-1 block">Master Class</span>
+                                Special Topics
+                            </td>
+                            <td class="p-4 bg-purple-50 border-l-4 border-purple-400">
+                                <span class="text-xs font-bold text-purple-600 uppercase mb-1 block">Poster Session</span>
+                                Student Presentations
+                            </td>
+                            <td class="p-4 bg-slate-50/50">
+                                <span class="text-xs font-bold text-slate-500 uppercase mb-1 block">Round Table</span>
+                                Closing Discussion
+                            </td>
+                        </tr>
+
+                        <!-- Evening Session -->
+                        <tr class="hover:bg-blue-50/50 transition-colors">
+                            <td class="p-4 font-bold text-naxos-blue border-r border-slate-200 bg-slate-50">19:00 - 20:30</td>
+                            <td class="p-4"><strong>Keynote Lecture</strong><br><span class="text-xs text-slate-500">Invited Speaker</span></td>
+                            <td class="p-4 bg-slate-50/50"><strong>Evening Workshop</strong><br><span class="text-xs text-slate-500">Contrastive Methods</span></td>
+                            <td class="p-4"><strong>Special Session</strong><br><span class="text-xs text-slate-500">Influence of Genres</span></td>
+                            <td class="p-4 bg-slate-50/50"><strong>Closing Keynote</strong><br><span class="text-xs text-slate-500">Future of Diachrony</span></td>
+                        </tr>
+
+                        <!-- Social Program -->
+                        <tr class="bg-naxos-dark text-slate-300">
+                            <td class="p-5 font-bold text-naxos-gold border-r border-slate-700">21:00 - Late</td>
+                            <td class="p-5">
+                                <div class="flex items-center gap-3">
+                                    <i class="fa-solid fa-wine-glass"></i>
+                                    <span><strong>Welcome Reception</strong><br><span class="text-xs opacity-70">Local Wine & Cheese</span></span>
+                                </div>
+                            </td>
+                            <td class="p-5 bg-slate-800">
+                                <div class="flex items-center gap-3">
+                                    <i class="fa-solid fa-music"></i>
+                                    <span><strong>Naxos Town Walk</strong><br><span class="text-xs opacity-70">Guided Tour</span></span>
+                                </div>
+                            </td>
+                            <td class="p-5">
+                                <div class="flex items-center gap-3">
+                                    <i class="fa-solid fa-utensils"></i>
+                                    <span class="text-naxos-gold"><strong>Conference Dinner</strong><br><span class="text-xs opacity-70">Traditional Taverna</span></span>
+                                </div>
+                            </td>
+                            <td class="p-5 bg-slate-800">
+                                <div class="flex items-center gap-3">
+                                    <i class="fa-solid fa-water"></i>
+                                    <span><strong>Farewell Drinks</strong><br><span class="text-xs opacity-70">By the Portara</span></span>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="mt-8 flex justify-between items-center text-sm text-slate-500">
+                <p>* Cultural Excursion on Friday, July 24 (Whole Day)</p>
+                <a href="#" class="text-naxos-blue hover:underline font-bold"><i class="fa-solid fa-file-pdf mr-1"></i> Download PDF Version</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FACULTY (Visual Upgrade) -->
+    <section id="faculty" class="py-20 bg-slate-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h3 class="text-naxos-blue font-bold uppercase tracking-widest text-sm mb-2">Mentors & Scholars</h3>
+                <h2 class="font-serif text-4xl font-bold text-slate-800">Distinguished Faculty</h2>
                 <div class="w-24 h-1 bg-naxos-gold mx-auto mt-6"></div>
             </div>
 
-            <!-- Main Faculty Grid -->
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <!-- Speaker Card 1 -->
-                <div class="bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 p-8 text-center border border-slate-100 group">
-                    <div class="w-24 h-24 mx-auto bg-slate-200 rounded-full mb-6 flex items-center justify-center text-3xl font-serif text-slate-400 group-hover:bg-naxos-blue group-hover:text-white transition-colors">
-                        NL
+            <div class="grid md:grid-cols-4 gap-8">
+                <!-- Faculty 1 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all group">
+                    <div class="h-32 bg-gradient-to-br from-naxos-blue to-naxos-dark relative">
+                        <div class="absolute -bottom-10 left-1/2 transform -translate-x-1/2 w-20 h-20 bg-white p-1 rounded-full">
+                            <div class="w-full h-full bg-slate-200 rounded-full flex items-center justify-center text-xl font-serif font-bold text-naxos-blue">NL</div>
+                        </div>
                     </div>
-                    <h4 class="font-bold text-xl text-slate-800 mb-1">Prof. Nikolaos Lavidas</h4>
-                    <p class="text-sm text-naxos-blue font-medium mb-4">NKUA</p>
-                    <p class="text-xs text-slate-500 leading-relaxed">National and Kapodistrian University of Athens</p>
+                    <div class="pt-12 pb-6 px-6 text-center">
+                        <h4 class="font-bold text-lg text-slate-800">Prof. Nikolaos Lavidas</h4>
+                        <p class="text-xs text-naxos-blue font-bold uppercase mb-2">NKUA</p>
+                        <p class="text-xs text-slate-500">Chair of Organizing Committee. Diachronic Linguistics & Syntax.</p>
+                    </div>
                 </div>
 
-                <!-- Speaker Card 2 -->
-                <div class="bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 p-8 text-center border border-slate-100 group">
-                    <div class="w-24 h-24 mx-auto bg-slate-200 rounded-full mb-6 flex items-center justify-center text-3xl font-serif text-slate-400 group-hover:bg-naxos-blue group-hover:text-white transition-colors">
-                        EvG
+                <!-- Faculty 2 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all group">
+                    <div class="h-32 bg-gradient-to-br from-slate-600 to-slate-800 relative">
+                        <div class="absolute -bottom-10 left-1/2 transform -translate-x-1/2 w-20 h-20 bg-white p-1 rounded-full">
+                            <div class="w-full h-full bg-slate-200 rounded-full flex items-center justify-center text-xl font-serif font-bold text-slate-600">EvG</div>
+                        </div>
                     </div>
-                    <h4 class="font-bold text-xl text-slate-800 mb-1">Prof. Elly van Gelderen</h4>
-                    <p class="text-sm text-naxos-blue font-medium mb-4">Arizona State University</p>
-                    <p class="text-xs text-slate-500 leading-relaxed">Historical Linguistics</p>
+                    <div class="pt-12 pb-6 px-6 text-center">
+                        <h4 class="font-bold text-lg text-slate-800">Prof. Elly van Gelderen</h4>
+                        <p class="text-xs text-naxos-blue font-bold uppercase mb-2">Arizona State</p>
+                        <p class="text-xs text-slate-500">Linguistic Cycles, Historical Linguistics.</p>
+                    </div>
                 </div>
 
-                <!-- Speaker Card 3 -->
-                <div class="bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 p-8 text-center border border-slate-100 group">
-                    <div class="w-24 h-24 mx-auto bg-slate-200 rounded-full mb-6 flex items-center justify-center text-3xl font-serif text-slate-400 group-hover:bg-naxos-blue group-hover:text-white transition-colors">
-                        AB
+                <!-- Faculty 3 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all group">
+                    <div class="h-32 bg-gradient-to-br from-naxos-gold to-yellow-700 relative">
+                        <div class="absolute -bottom-10 left-1/2 transform -translate-x-1/2 w-20 h-20 bg-white p-1 rounded-full">
+                            <div class="w-full h-full bg-slate-200 rounded-full flex items-center justify-center text-xl font-serif font-bold text-yellow-700">AB</div>
+                        </div>
                     </div>
-                    <h4 class="font-bold text-xl text-slate-800 mb-1">Prof. Alexander Bergs</h4>
-                    <p class="text-sm text-naxos-blue font-medium mb-4">University of Osnabrück</p>
-                    <p class="text-xs text-slate-500 leading-relaxed">English Historical Linguistics</p>
+                    <div class="pt-12 pb-6 px-6 text-center">
+                        <h4 class="font-bold text-lg text-slate-800">Prof. Alexander Bergs</h4>
+                        <p class="text-xs text-naxos-blue font-bold uppercase mb-2">Osnabrück</p>
+                        <p class="text-xs text-slate-500">Construction Grammar, Context in Language Change.</p>
+                    </div>
                 </div>
 
-                <!-- Speaker Card 4 -->
-                <div class="bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 p-8 text-center border border-slate-100 group">
-                    <div class="w-24 h-24 mx-auto bg-slate-200 rounded-full mb-6 flex items-center justify-center text-3xl font-serif text-slate-400 group-hover:bg-naxos-blue group-hover:text-white transition-colors">
-                        IS
+                <!-- Faculty 4 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all group">
+                    <div class="h-32 bg-gradient-to-br from-purple-700 to-indigo-900 relative">
+                        <div class="absolute -bottom-10 left-1/2 transform -translate-x-1/2 w-20 h-20 bg-white p-1 rounded-full">
+                            <div class="w-full h-full bg-slate-200 rounded-full flex items-center justify-center text-xl font-serif font-bold text-purple-800">IS</div>
+                        </div>
                     </div>
-                    <h4 class="font-bold text-xl text-slate-800 mb-1">Prof. Ioanna Sitaridou</h4>
-                    <p class="text-sm text-naxos-blue font-medium mb-4">University of Cambridge</p>
-                    <p class="text-xs text-slate-500 leading-relaxed">Romance Linguistics</p>
+                    <div class="pt-12 pb-6 px-6 text-center">
+                        <h4 class="font-bold text-lg text-slate-800">Prof. Ioanna Sitaridou</h4>
+                        <p class="text-xs text-naxos-blue font-bold uppercase mb-2">Cambridge</p>
+                        <p class="text-xs text-slate-500">Romance Linguistics, Pontic Greek, Syntax.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- PROVISIONAL SCHEDULE SECTION (Detailed) -->
-    <section id="schedule" class="py-20 bg-white">
+    <!-- LIFE IN NAXOS (New Image Gallery) -->
+    <section id="location" class="py-20 bg-white">
         <div class="container mx-auto px-6">
-            <div class="text-center mb-12">
-                <h3 class="text-naxos-blue font-bold uppercase tracking-widest text-sm mb-2">Agenda</h3>
-                <h2 class="font-serif text-4xl font-bold text-slate-800">Provisional Program</h2>
-                <p class="text-slate-500 mt-4 max-w-2xl mx-auto">This schedule is provisional. A detailed program with specific speakers and room assignments will be sent to registered participants.</p>
+            <div class="flex flex-col md:flex-row items-end justify-between mb-12">
+                <div>
+                    <h3 class="text-naxos-blue font-bold uppercase tracking-widest text-sm mb-2">The Experience</h3>
+                    <h2 class="font-serif text-4xl font-bold text-slate-800">Life in Naxos</h2>
+                </div>
+                <p class="text-slate-500 md:w-1/3 text-right">Beyond the classroom, experience the rich history and vibrant culture of the Cyclades.</p>
             </div>
 
-            <div class="overflow-x-auto shadow-sm rounded-xl">
-                <table class="w-full text-left border-collapse bg-slate-50">
-                    <thead>
-                        <tr class="bg-naxos-blue text-white">
-                            <th class="p-4 font-serif text-lg border-b border-blue-800 w-32">Time</th>
-                            <th class="p-4 font-serif text-lg border-b border-blue-800">Monday (July 20)</th>
-                            <th class="p-4 font-serif text-lg border-b border-blue-800">Tuesday (July 21)</th>
-                            <th class="p-4 font-serif text-lg border-b border-blue-800">Wednesday (July 22)</th>
-                            <th class="p-4 font-serif text-lg border-b border-blue-800">Thursday (July 23)</th>
-                        </tr>
-                    </thead>
-                    <tbody class="divide-y divide-slate-200 text-sm">
-                        <!-- Morning Slot 1 -->
-                        <tr class="hover:bg-blue-50/50">
-                            <td class="p-4 font-bold text-naxos-blue whitespace-nowrap bg-white">09:00 - 10:10</td>
-                            <td class="p-4">Morning Lecture I</td>
-                            <td class="p-4">Morning Lecture I</td>
-                            <td class="p-4">Morning Lecture I</td>
-                            <td class="p-4">Morning Lecture I</td>
-                        </tr>
-                        <!-- Break -->
-                        <tr class="bg-slate-100 text-slate-400 text-xs uppercase tracking-widest">
-                            <td class="p-2 text-center" colspan="5">Coffee Break</td>
-                        </tr>
-                        <!-- Morning Slot 2 -->
-                        <tr class="hover:bg-blue-50/50">
-                            <td class="p-4 font-bold text-naxos-blue whitespace-nowrap bg-white">10:20 - 11:30</td>
-                            <td class="p-4"><strong>Keynote Class</strong><br><span class="text-xs text-slate-500">Language Change & Theory</span></td>
-                            <td class="p-4"><strong>Keynote Class</strong><br><span class="text-xs text-slate-500">Grammaticalization</span></td>
-                            <td class="p-4"><strong>Keynote Class</strong><br><span class="text-xs text-slate-500">Analogical Change</span></td>
-                            <td class="p-4"><strong>Keynote Class</strong><br><span class="text-xs text-slate-500">Syntactic Change</span></td>
-                        </tr>
-                        <!-- Break -->
-                        <tr class="bg-slate-100 text-slate-400 text-xs uppercase tracking-widest">
-                            <td class="p-2 text-center" colspan="5">Short Break</td>
-                        </tr>
-                        <!-- Morning Slot 3 -->
-                        <tr class="hover:bg-blue-50/50">
-                            <td class="p-4 font-bold text-naxos-blue whitespace-nowrap bg-white">11:40 - 12:50</td>
-                            <td class="p-4"><strong>Civis Class</strong><br><span class="text-xs text-slate-500">Historical Syntax</span></td>
-                            <td class="p-4"><strong>Civis Class</strong><br><span class="text-xs text-slate-500">Historical Syntax</span></td>
-                            <td class="p-4"><strong>Civis Class</strong><br><span class="text
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 h-96">
+                <div class="col-span-2 row-span-2 relative group overflow-hidden rounded-2xl">
+                    <img src="https://images.unsplash.com/photo-1605206963283-20519c58550c?q=80&w=2070&auto=format&fit=crop" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Naxos Town">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-8">
+                        <div class="text-white">
+                            <h4 class="font-bold text-xl">Cultural Immersion</h4>
+                            <p class="text-sm opacity-90">Guided tours of the Kastro and Portara.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative group overflow-hidden rounded-2xl">
+                    <img src="https://images.unsplash.com/photo-1596707328604-94474775d788?q=80&w=1540&auto=format&fit=crop" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Food">
+                    <div class="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition-colors"></div>
+                    <div class="absolute bottom-4 left-4 text-white">
+                        <p class="font-bold text-sm">Gastronomy</p>
+                    </div>
+                </div>
+                <div class="relative group overflow-hidden rounded-2xl">
+                    <img src="https://images.unsplash.com/photo-1505566378415-8c70757a7d42?q=80&w=1470&auto=format&fit=crop" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Study">
+                     <div class="absolute bottom-4 left-4 text-white">
+                        <p class="font-bold text-sm">Focused Study</p>
+                    </div>
+                </div>
+                <div class="col-span-2 relative group overflow-hidden rounded-2xl">
+                    <img src="https://images.unsplash.com/photo-1615569472343-a6125a2b0202?q=80&w=2070&auto=format&fit=crop" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Beach">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-6">
+                        <div class="text-white">
+                            <h4 class="font-bold text-lg">Agios Prokopios</h4>
+                            <p class="text-xs opacity-90">Afternoon breaks by the sea.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SPONSORS (Refined) -->
+    <section class="py-16 bg-slate-50 border-t border-slate-200">
+        <div class="container mx-auto px-6 text-center">
+            <h3 class="text-naxos-blue font-bold uppercase tracking-widest text-sm mb-10">With the Generous Support of</h3>
+            
+            <div class="grid md:grid-cols-3 gap-12 items-center justify-items-center max-w-4xl mx-auto">
+                <!-- CIVIS -->
+                <div class="group flex flex-col items-center">
+                    <div class="w-20 h-20 bg-white rounded-full shadow-sm flex items-center justify-center text-3xl text-naxos-blue mb-4 border border-slate-100 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-university"></i>
+                    </div>
+                    <h4 class="font-bold text-slate-800">CIVIS</h4>
+                    <p class="text-xs text-slate-500">European Civic University</p>
+                </div>
+
+                <!-- Municipality -->
+                <div class="group flex flex-col items-center">
+                    <div class="w-20 h-20 bg-white rounded-full shadow-sm flex items-center justify-center text-3xl text-naxos-blue mb-4 border border-slate-100 group-hover:scale-110 transition-transform">
+                         <i class="fa-solid fa-landmark"></i>
+                    </div>
+                    <h4 class="font-bold text-slate-800">Municipality of Naxos</h4>
+                    <p class="text-xs text-slate-500">& Small Cyclades</p>
+                </div>
+
+                <!-- Van Riemsdijk -->
+                <div class="group flex flex-col items-center">
+                    <div class="w-20 h-20 bg-white rounded-full shadow-sm flex items-center justify-center text-3xl text-naxos-blue mb-4 border border-slate-100 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-feather"></i>
+                    </div>
+                    <h4 class="font-bold text-slate-800">The Van Riemsdijk Foundation</h4>
+                    <p class="text-xs text-slate-500">Supporting Linguistics</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-naxos-dark text-slate-400 py-16">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-3 gap-12 border-b border-slate-800 pb-12 mb-12">
+                <div>
+                    <h3 class="text-white font-serif text-2xl font-bold mb-4">Naxos 2026</h3>
+                    <p class="text-sm leading-relaxed mb-6">
+                        An intensive summer program dedicated to the study of diachronic linguistics, bringing together global experts and students in the heart of the Aegean.
+                    </p>
+                    <a href="https://athdgc.github.io/" target="_blank" class="text-naxos-gold hover:text-white transition-colors text-sm font-bold">
+                        Visit AthDGC Research Network &rarr;
+                    </a>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold uppercase text-sm tracking-wider mb-6">Contact</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-envelope mt-1 text-naxos-gold"></i>
+                            <div>
+                                <strong class="block text-slate-300">Prof. Nikolaos Lavidas</strong>
+                                <a href="mailto:nlavidas@enl.uoa.gr" class="hover:text-white transition-colors">nlavidas@enl.uoa.gr</a>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-location-dot mt-1 text-naxos-gold"></i>
+                            <span>National and Kapodistrian University of Athens</span>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold uppercase text-sm tracking-wider mb-6">Previous Years</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="hover:text-naxos-gold transition-colors">10th Summer School (2025)</a></li>
+                        <li><a href="#" class="hover:text-naxos-gold transition-colors">9th Summer School (2024)</a></li>
+                        <li><a href="#" class="hover:text-naxos-gold transition-colors">8th Summer School (2023)</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="flex flex-col md:flex-row justify-between items-center text-xs">
+                <p>&copy; 2026 AthDGC / NKUA. All rights reserved.</p>
+                <div class="flex gap-4 mt-4 md:mt-0">
+                    <a href="#" class="hover:text-white"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#" class="hover:text-white"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#" class="hover:text-white"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
