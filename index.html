@@ -1,560 +1,398 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>11th Naxos Summer School on Diachronic Linguistics 2026</title>
-    <meta name="description"
-        content="Intensive summer school on Historical & Diachronic Linguistics, July 19-24, 2026, Naxos, Greece. Organized by National and Kapodistrian University of Athens.">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700;900&family=Merriweather:wght@300;400;700;900&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <title>11th Naxos Summer School 2026 | Diachronic Linguistics</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Fonts: Playfair Display (Serif) for headings, Inter (Sans) for body -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom Config & Styles -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        naxos: {
+                            blue: '#004C98',    // Deep Aegean Blue
+                            light: '#E6F0FA',   // Light Sky
+                            gold: '#D4AF37',    // Academic Gold
+                            sand: '#F5F5DC',    // Warm Sand
+                            text: '#1E293B',    // Slate 800
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    backgroundImage: {
+                        'hero-pattern': "linear-gradient(rgba(0, 76, 152, 0.85), rgba(0, 76, 152, 0.7)), url('https://images.unsplash.com/photo-1533105079780-92b9be482077?q=80&w=2574&auto=format&fit=crop')",
+                    }
+                }
+            }
+        }
+    </script>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        :root {
-            /* University of Athens Colors */
-            --uoa-blue: #003d82;
-            --uoa-blue-dark: #002147;
-            --uoa-blue-light: #1565C0;
-            --uoa-gold: #d4a017;
-            --accent: #2196F3;
-            --text-dark: #212121;
-            --text-medium: #424242;
-            --text-light: #616161;
-            --bg-light: #f5f5f5;
-            --white: #ffffff;
-        }
-
-        body {
-            font-family: 'Roboto', sans-serif;
-            color: var(--text-dark);
-            line-height: 1.8;
-            font-size: 18px;
-        }
-
-        h1,
-        h2,
-        h3,
-        h4 {
-            font-family: 'Merriweather', serif;
-        }
-
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(135deg, var(--uoa-blue-dark) 0%, var(--uoa-blue) 100%);
-            color: white;
-            padding: 10rem 2rem 8rem;
-            text-align: center;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
-        }
-
-        .hero h1 {
-            font-size: 4rem;
-            font-weight: 900;
-            margin-bottom: 1.5rem;
-            letter-spacing: -1px;
-            line-height: 1.2;
-        }
-
-        .hero .subtitle {
-            font-size: 2rem;
-            margin-bottom: 2.5rem;
-            opacity: 0.95;
-            font-weight: 300;
-        }
-
-        .hero .dates {
-            font-size: 1.8rem;
-            font-weight: 600;
-            margin-bottom: 3rem;
-            color: var(--uoa-gold);
-        }
-
-        .hero .apply-info {
-            background: rgba(255, 255, 255, 0.1);
+        /* Custom Utilities */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(10px);
-            padding: 2.5rem;
-            border-radius: 16px;
-            margin: 3rem auto;
-            max-width: 700px;
-            border: 2px solid rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.2);
         }
-
-        .hero .apply-info h3 {
-            font-size: 2rem;
-            margin-bottom: 1rem;
-        }
-
-        .hero .apply-info p {
-            font-size: 1.4rem;
-            margin: 1rem 0;
-        }
-
-        .hero .apply-info a {
-            color: var(--uoa-gold);
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 1.6rem;
-            border-bottom: 2px solid var(--uoa-gold);
-            transition: all 0.3s;
-        }
-
-        .hero .apply-info a:hover {
-            color: white;
-            border-color: white;
-        }
-
-        /* Container */
-        .container {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 5rem 3rem;
-        }
-
-        /* Sections */
-        .section {
-            margin-bottom: 5rem;
-        }
-
-        .section-title {
-            font-size: 3rem;
-            font-weight: 900;
-            color: var(--uoa-blue);
-            margin-bottom: 2.5rem;
-            border-bottom: 4px solid var(--uoa-gold);
-            padding-bottom: 1rem;
-        }
-
-        .section-content {
-            font-size: 1.3rem;
-            line-height: 1.9;
-            color: var(--text-medium);
-        }
-
-        .section-content p {
-            margin-bottom: 1.5rem;
-        }
-
-        .section-content strong {
-            color: var(--uoa-blue);
-            font-weight: 600;
-        }
-
-        /* Faculty Cards */
-        .faculty-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 2rem;
-            margin: 2rem 0;
-        }
-
-        .faculty-card {
-            padding: 2rem;
-            background: var(--white);
-            border-left: 6px solid var(--uoa-blue);
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-            transition: all 0.3s;
-        }
-
-        .faculty-card:hover {
-            transform: translateX(8px);
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
-            border-left-color: var(--uoa-gold);
-        }
-
-        .faculty-card h4 {
-            color: var(--uoa-blue);
-            margin-bottom: 0.8rem;
-            font-size: 1.4rem;
-            font-weight: 700;
-        }
-
-        .faculty-card p {
-            font-size: 1.1rem;
-            color: var(--text-light);
-            line-height: 1.6;
-        }
-
-        /* CIVIS Section */
-        .civis-section {
-            background: var(--bg-light);
-            padding: 4rem;
-            border-radius: 12px;
-            margin: 3rem 0;
-        }
-
-        .civis-section h3 {
-            font-size: 2.2rem;
-            color: var(--uoa-blue);
-            margin-bottom: 2rem;
-            font-weight: 700;
-        }
-
-        .civis-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 1.5rem;
-        }
-
-        .civis-card {
-            padding: 1.5rem;
-            background: var(--white);
-            border: 2px solid #e0e0e0;
-            border-radius: 8px;
-            transition: all 0.3s;
-        }
-
-        .civis-card:hover {
-            border-color: var(--uoa-blue);
-            box-shadow: 0 4px 12px rgba(0, 61, 130, 0.1);
-        }
-
-        .civis-card p:first-child {
-            font-weight: 600;
-            color: var(--text-dark);
-            font-size: 1.2rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .civis-card p:last-child {
-            font-size: 1rem;
-            color: var(--text-light);
-        }
-
-        /* Info Cards */
-        .info-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2.5rem;
-            margin: 4rem 0;
-        }
-
-        .info-card {
-            background: var(--white);
-            border-radius: 12px;
-            padding: 3rem;
-            border: 2px solid var(--uoa-blue);
-            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
-        }
-
-        .info-card h3 {
-            color: var(--uoa-blue);
-            font-size: 1.8rem;
-            margin-bottom: 1.5rem;
-            font-weight: 700;
-        }
-
-        .info-card p {
-            color: var(--text-medium);
-            line-height: 1.8;
-            font-size: 1.2rem;
-        }
-
-        .info-card strong {
-            font-size: 1.3rem;
-        }
-
-        .info-card a {
-            color: var(--uoa-blue);
-            font-weight: 600;
-            text-decoration: none;
-            border-bottom: 2px solid var(--uoa-gold);
-        }
-
-        .info-card a:hover {
-            color: var(--uoa-gold);
-        }
-
-        /* Contact Section */
-        .contact-box {
-            background: linear-gradient(135deg, var(--uoa-blue) 0%, var(--uoa-blue-dark) 100%);
-            color: white;
-            padding: 4rem;
-            border-radius: 12px;
-            margin: 4rem 0;
-            box-shadow: 0 8px 24px rgba(0, 61, 130, 0.3);
-        }
-
-        .contact-box h2 {
-            font-size: 2.8rem;
-            margin-bottom: 2rem;
-        }
-
-        .contact-box p {
-            font-size: 1.4rem;
-            margin: 1rem 0;
-            line-height: 1.8;
-        }
-
-        .contact-box strong {
-            color: var(--uoa-gold);
-        }
-
-        .contact-box a {
-            color: var(--uoa-gold);
-            text-decoration: none;
-            font-weight: 600;
-            border-bottom: 2px solid var(--uoa-gold);
-        }
-
-        .contact-box a:hover {
-            color: white;
-            border-color: white;
-        }
-
-        /* Footer */
-        footer {
-            background: var(--uoa-blue-dark);
-            color: white;
-            padding: 3.5rem 2rem;
-            text-align: center;
-            font-size: 1.1rem;
-        }
-
-        footer p {
-            margin: 1rem 0;
-        }
-
-        footer a {
-            color: var(--uoa-gold);
-            text-decoration: none;
-            font-weight: 600;
-        }
-
-        footer a:hover {
-            text-decoration: underline;
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-
-            .hero .subtitle {
-                font-size: 1.5rem;
-            }
-
-            .hero .dates {
-                font-size: 1.3rem;
-            }
-
-            .section-title {
-                font-size: 2rem;
-            }
-
-            .section-content {
-                font-size: 1.1rem;
-            }
-
-            .container {
-                padding: 3rem 1.5rem;
-            }
+        .text-shadow {
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
         }
     </style>
 </head>
+<body class="font-sans text-naxos-text bg-slate-50 antialiased selection:bg-naxos-blue selection:text-white">
 
-<body>
     <!-- Navigation -->
-    <nav class="navbar">
-        <div class="container">
-            <div class="nav-brand">
-                <a href="index.html">Naxos Summer School 2026</a>
+    <nav class="fixed w-full z-50 transition-all duration-300 bg-white/90 backdrop-blur-md shadow-sm" id="navbar">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <!-- Logo Area -->
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="w-10 h-10 bg-naxos-blue text-white rounded-full flex items-center justify-center text-xl font-serif font-bold group-hover:bg-naxos-gold transition-colors">
+                    N
+                </div>
+                <div class="leading-tight">
+                    <h1 class="font-serif font-bold text-naxos-blue text-lg tracking-wide">NAXOS SUMMER SCHOOL</h1>
+                    <p class="text-xs text-slate-500 font-medium tracking-widest uppercase">Diachronic Linguistics 2026</p>
+                </div>
+            </a>
+
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex items-center space-x-8 text-sm font-medium">
+                <a href="#about" class="hover:text-naxos-blue transition-colors">About</a>
+                <a href="#speakers" class="hover:text-naxos-blue transition-colors">Faculty</a>
+                <a href="#civis" class="hover:text-naxos-blue transition-colors">CIVIS</a>
+                <a href="#info" class="hover:text-naxos-blue transition-colors">Info & Credits</a>
+                <a href="#contact" class="hover:text-naxos-blue transition-colors">Contact</a>
+                <a href="https://forms.gle/1GuNGaHsmVNAE4bx9" target="_blank" class="bg-naxos-blue text-white px-5 py-2.5 rounded-full hover:bg-blue-800 transition-all transform hover:-translate-y-0.5 shadow-md font-semibold">
+                    Apply Now
+                </a>
             </div>
-            <ul class="nav-menu">
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="program.html">Program</a></li>
-                <li><a href="speakers.html">Speakers</a></li>
-                <li><a href="registration.html">Registration</a></li>
-                <li><a href="venue.html">Venue</a></li>
-                <li><a href="previous-years.html">Previous Years</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
+
+            <!-- Mobile Menu Button -->
+            <button class="md:hidden text-2xl text-naxos-blue focus:outline-none" onclick="toggleMenu()">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100 absolute w-full shadow-xl">
+            <div class="flex flex-col p-6 space-y-4 font-medium text-center">
+                <a href="#about" class="py-2 hover:text-naxos-blue" onclick="toggleMenu()">About</a>
+                <a href="#speakers" class="py-2 hover:text-naxos-blue" onclick="toggleMenu()">Faculty</a>
+                <a href="#civis" class="py-2 hover:text-naxos-blue" onclick="toggleMenu()">CIVIS</a>
+                <a href="#info" class="py-2 hover:text-naxos-blue" onclick="toggleMenu()">Info</a>
+                <a href="#contact" class="py-2 hover:text-naxos-blue" onclick="toggleMenu()">Contact</a>
+                <a href="https://forms.gle/1GuNGaHsmVNAE4bx9" target="_blank" class="text-naxos-blue font-bold py-2">Apply Now →</a>
+            </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero">
-        <h1>11th Naxos Summer School</h1>
-        <div class="subtitle">Diachronic Linguistics: Comparing Diachronies</div>
-        <div class="dates">July 19-24, 2026 | Naxos, Greece</div>
-        <p style="font-size: 1.2rem; opacity: 0.9; margin-top: 1rem;">July 19: Welcome Reception | July 20-24: Classes &
-            Workshops</p>
-        <div class="apply-info">
-            <h3>Join Us in Naxos!</h3>
-            <p><strong>Application opens by end of December 2025</strong></p>
-            <p style="margin-top: 1.5rem;">
-                <a href="https://forms.gle/1GuNGaHsmVNAE4bx9" target="_blank">APPLY NOW →</a>
+    <header class="relative h-screen min-h-[600px] flex items-center justify-center bg-hero-pattern bg-cover bg-center bg-no-repeat bg-fixed">
+        <div class="absolute inset-0 bg-gradient-to-b from-transparent to-naxos-blue/90"></div>
+        
+        <div class="container mx-auto px-6 relative z-10 text-center text-white">
+            <div class="inline-block mb-6 px-4 py-1 border border-white/30 rounded-full bg-white/10 backdrop-blur-sm text-sm font-medium tracking-wider uppercase animate-fade-in-down">
+                July 19-24, 2026 &bull; Naxos, Greece
+            </div>
+            <h1 class="font-serif text-5xl md:text-7xl font-bold mb-6 leading-tight text-shadow">
+                11th Naxos Summer School
+            </h1>
+            <h2 class="text-2xl md:text-3xl font-light text-naxos-sand mb-8 italic font-serif">
+                "Diachronic Linguistics: Comparing Diachronies"
+            </h2>
+            <p class="max-w-2xl mx-auto text-lg md:text-xl text-slate-100 mb-10 leading-relaxed font-light">
+                Join leading scholars on the beautiful Aegean island of Naxos for intensive workshops, master classes, and deep linguistic analysis.
             </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="https://forms.gle/1GuNGaHsmVNAE4bx9" target="_blank" class="px-8 py-4 bg-naxos-gold hover:bg-yellow-600 text-white rounded-full font-bold text-lg shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-1">
+                    Apply Now
+                </a>
+                <a href="#about" class="px-8 py-4 bg-transparent border-2 border-white hover:bg-white hover:text-naxos-blue text-white rounded-full font-bold text-lg transition-all">
+                    Learn More
+                </a>
+            </div>
+            <p class="mt-6 text-sm opacity-80">Application opens by end of December 2025</p>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce text-white/70">
+            <i class="fa-solid fa-chevron-down text-2xl"></i>
+        </div>
+    </header>
+
+    <!-- Intro / About Section -->
+    <section id="about" class="py-20 md:py-28 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h3 class="text-naxos-gold font-bold uppercase tracking-widest text-sm mb-2">The Program</h3>
+                    <h2 class="font-serif text-4xl font-bold text-naxos-blue mb-6">Comparing Diachronies</h2>
+                    <div class="prose text-slate-600 leading-relaxed text-lg space-y-4">
+                        <p>
+                            The <strong class="text-naxos-blue">National and Kapodistrian University of Athens</strong>, in collaboration with Arizona State University, University of Osnabrück, and University of Cambridge, invites you to a unique academic experience.
+                        </p>
+                        <p>
+                            Our summer school offers intensive language and linguistic classes focused on Historical & Diachronic Linguistics. We aim to foster a relaxed yet intellectually stimulating atmosphere where students and scholars can discuss the evolution of ancient and medieval languages.
+                        </p>
+                        <div class="p-6 bg-slate-50 border-l-4 border-naxos-blue rounded-r-lg mt-6">
+                            <h4 class="font-bold text-naxos-blue mb-2 text-sm uppercase">Research Context</h4>
+                            <p class="text-sm italic text-slate-500">
+                                Part of the HFRI-funded project: "A Corpus-based Valency Lexicon for a Contrastive and Diachronic Study of Ancient & Medieval Languages" (Grant No. 20577).
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative">
+                    <!-- Decorative grid of images/icons -->
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-naxos-light rounded-2xl h-64 flex flex-col items-center justify-center p-6 text-center transform translate-y-8">
+                            <i class="fa-solid fa-landmark text-5xl text-naxos-blue mb-4"></i>
+                            <span class="font-serif font-bold text-xl text-naxos-blue">Historical Linguistics</span>
+                        </div>
+                        <div class="bg-naxos-blue rounded-2xl h-64 flex flex-col items-center justify-center p-6 text-center text-white">
+                            <i class="fa-solid fa-comments text-5xl text-naxos-gold mb-4"></i>
+                            <span class="font-serif font-bold text-xl">Intensive Workshops</span>
+                        </div>
+                        <div class="bg-slate-100 rounded-2xl h-64 flex flex-col items-center justify-center p-6 text-center text-slate-700">
+                            <i class="fa-solid fa-graduation-cap text-5xl text-slate-400 mb-4"></i>
+                            <span class="font-serif font-bold text-xl">Master Classes</span>
+                        </div>
+                        <div class="bg-naxos-gold/20 rounded-2xl h-64 flex flex-col items-center justify-center p-6 text-center transform translate-y-8">
+                            <i class="fa-solid fa-users text-5xl text-naxos-gold mb-4"></i>
+                            <span class="font-serif font-bold text-xl text-yellow-800">Networking</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- Main Content -->
-    <div class="container">
-        <!-- About Section -->
-        <section class="section">
-            <h2 class="section-title">About the Summer School</h2>
-            <div class="section-content">
-                <p>
-                    The <strong>National and Kapodistrian University of Athens</strong>, in collaboration with
-                    <strong>Arizona State University</strong>, <strong>University of Osnabrück</strong>, and
-                    <strong>University of Cambridge</strong>, coordinates a summer school program, workshop/poster
-                    session,
-                    and master classes on ancient and medieval languages and linguistics.
-                </p>
-                <p>
-                    The summer school will offer intensive language classes and linguistic classes on Historical &
-                    Diachronic Linguistics. The aim is to attract students and scholars to study ancient and medieval
-                    languages in a relaxed yet focused and stimulating atmosphere that promotes in-depth analysis and
-                    discussion. The 11th Naxos Summer School will also be organizing a workshop/poster session on
-                    "Linguistic Diachronies: A Contrastive Approach".
-                </p>
-                <p>
-                    <strong>Research Project:</strong> This summer school is part of the research project
-                    <em>'A Corpus-based Valency Lexicon for a Contrastive and Diachronic Study of Ancient & Medieval
-                        Languages'</em>,
-                    funded by the <strong>Hellenic Foundation for Research and Innovation (HFRI)</strong> (Grant No.
-                    20577)
-                    within the 3rd Call for HFRI Research Projects to Support Faculty Members and Researchers.
-                </p>
-                <p>
-                    <strong>AthDGC Project Team:</strong> Nikolaos Lavidas, Kiki Nikiforidou,
-                    Vassiliki Geka, Vassileios Symeonidis, Sofia Chionidi, Anastasia Tsiropina, Eleni Plakoutsi,
-                    Theodoros Michalareas, Evangelos Argyropoulos
-                </p>
+    <!-- Faculty Section -->
+    <section id="speakers" class="py-20 bg-slate-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h3 class="text-naxos-blue font-bold uppercase tracking-widest text-sm mb-2">World-Class Instruction</h3>
+                <h2 class="font-serif text-4xl font-bold text-slate-800">Key Faculty & Instructors</h2>
+                <div class="w-24 h-1 bg-naxos-gold mx-auto mt-6"></div>
             </div>
-        </section>
 
-        <!-- Faculty & Instructors -->
-        <section class="section">
-            <h2 class="section-title">Faculty & Instructors</h2>
-            <div class="section-content">
-                <p style="margin-bottom: 2rem; font-size: 1.4rem;">
-                    Our summer school brings together leading scholars in diachronic linguistics from top universities
-                    worldwide:
-                </p>
-                <div class="faculty-grid">
-                    <div class="faculty-card">
-                        <h4>Prof. Nikolaos Lavidas</h4>
-                        <p>National and Kapodistrian University of Athens</p>
+            <!-- Main Faculty Grid -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Speaker Card 1 -->
+                <div class="bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 p-8 text-center border border-slate-100 group">
+                    <div class="w-24 h-24 mx-auto bg-slate-200 rounded-full mb-6 flex items-center justify-center text-3xl font-serif text-slate-400 group-hover:bg-naxos-blue group-hover:text-white transition-colors">
+                        NL
                     </div>
-                    <div class="faculty-card">
-                        <h4>Prof. Elly van Gelderen</h4>
-                        <p>Arizona State University<br>Historical Linguistics</p>
-                    </div>
-                    <div class="faculty-card">
-                        <h4>Prof. Alexander Bergs</h4>
-                        <p>University of Osnabrück<br>English Historical Linguistics</p>
-                    </div>
-                    <div class="faculty-card">
-                        <h4>Prof. Ioanna Sitaridou</h4>
-                        <p>University of Cambridge<br>Romance Linguistics</p>
-                    </div>
+                    <h4 class="font-bold text-xl text-slate-800 mb-1">Prof. Nikolaos Lavidas</h4>
+                    <p class="text-sm text-naxos-blue font-medium mb-4">NKUA</p>
+                    <p class="text-xs text-slate-500 leading-relaxed">Expert in Diachronic Linguistics and organizing committee chair.</p>
                 </div>
 
-                <div class="civis-section">
-                    <h3>CIVIS Classes</h3>
-                    <p style="margin-bottom: 2rem; font-size: 1.2rem; color: var(--text-medium);">
-                        The 11th Naxos Summer School collaborates with the <strong>CIVIS Blended Learning Course / CIVIS
-                            short-mobility Course</strong>
-                        "Diachronic Linguistics in the 21st Century", featuring additional distinguished professors:
+                <!-- Speaker Card 2 -->
+                <div class="bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 p-8 text-center border border-slate-100 group">
+                    <div class="w-24 h-24 mx-auto bg-slate-200 rounded-full mb-6 flex items-center justify-center text-3xl font-serif text-slate-400 group-hover:bg-naxos-blue group-hover:text-white transition-colors">
+                        EvG
+                    </div>
+                    <h4 class="font-bold text-xl text-slate-800 mb-1">Prof. Elly van Gelderen</h4>
+                    <p class="text-sm text-naxos-blue font-medium mb-4">Arizona State University</p>
+                    <p class="text-xs text-slate-500 leading-relaxed">Specializing in Historical Linguistics and Cycles.</p>
+                </div>
+
+                <!-- Speaker Card 3 -->
+                <div class="bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 p-8 text-center border border-slate-100 group">
+                    <div class="w-24 h-24 mx-auto bg-slate-200 rounded-full mb-6 flex items-center justify-center text-3xl font-serif text-slate-400 group-hover:bg-naxos-blue group-hover:text-white transition-colors">
+                        AB
+                    </div>
+                    <h4 class="font-bold text-xl text-slate-800 mb-1">Prof. Alexander Bergs</h4>
+                    <p class="text-sm text-naxos-blue font-medium mb-4">University of Osnabrück</p>
+                    <p class="text-xs text-slate-500 leading-relaxed">English Historical Linguistics and Construction Grammar.</p>
+                </div>
+
+                <!-- Speaker Card 4 -->
+                <div class="bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 p-8 text-center border border-slate-100 group">
+                    <div class="w-24 h-24 mx-auto bg-slate-200 rounded-full mb-6 flex items-center justify-center text-3xl font-serif text-slate-400 group-hover:bg-naxos-blue group-hover:text-white transition-colors">
+                        IS
+                    </div>
+                    <h4 class="font-bold text-xl text-slate-800 mb-1">Prof. Ioanna Sitaridou</h4>
+                    <p class="text-sm text-naxos-blue font-medium mb-4">University of Cambridge</p>
+                    <p class="text-xs text-slate-500 leading-relaxed">Romance Linguistics and Pontic Greek.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CIVIS Section -->
+    <section id="civis" class="py-20 bg-naxos-blue text-white relative overflow-hidden">
+        <!-- Background Pattern -->
+        <div class="absolute inset-0 opacity-10 pointer-events-none">
+            <i class="fa-solid fa-globe absolute top-10 right-10 text-9xl"></i>
+            <i class="fa-solid fa-book-open absolute bottom-10 left-10 text-9xl"></i>
+        </div>
+
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="flex flex-col md:flex-row items-center justify-between mb-12">
+                <div class="md:w-1/2 mb-8 md:mb-0">
+                    <div class="inline-block bg-white/20 px-3 py-1 rounded-full text-xs font-bold tracking-wider mb-4">BLENDED LEARNING</div>
+                    <h2 class="font-serif text-3xl md:text-4xl font-bold mb-4">CIVIS Collaboration</h2>
+                    <p class="text-white/80 text-lg">
+                        The 11th Naxos Summer School collaborates with the CIVIS course <span class="text-naxos-gold font-semibold">"Diachronic Linguistics in the 21st Century"</span>, bringing together a diverse network of European scholars.
                     </p>
-                    <div class="civis-grid">
-                        <div class="civis-card">
-                            <p>Antonio R. Revuelta Puigdollers</p>
-                            <p>Universidad Autónoma de Madrid</p>
-                        </div>
-                        <div class="civis-card">
-                            <p>Katrin Axel-Tober</p>
-                            <p>University of Tübingen</p>
-                        </div>
-                        <div class="civis-card">
-                            <p>Artemis Keidan</p>
-                            <p>Sapienza Università di Roma</p>
-                        </div>
-                        <div class="civis-card">
-                            <p>Joanna Kopaczyk</p>
-                            <p>University of Glasgow</p>
-                        </div>
-                        <div class="civis-card">
-                            <p>Adina Dragomirescu</p>
-                            <p>University of Bucharest</p>
-                        </div>
-                        <div class="civis-card">
-                            <p>Alexandru Nicolae</p>
-                            <p>University of Bucharest</p>
-                        </div>
-                        <div class="civis-card">
-                            <p>Ljuba Veselinova</p>
-                            <p>Stockholm University</p>
-                        </div>
-                        <div class="civis-card">
-                            <p>Matthias Heinz</p>
-                            <p>Paris Lodron University of Salzburg</p>
-                        </div>
-                        <div class="civis-card">
-                            <p>Linda Pillière</p>
-                            <p>Aix-Marseille Université</p>
-                        </div>
+                    <a href="https://civis.eu/en" target="_blank" class="inline-flex items-center gap-2 mt-6 text-naxos-gold font-bold hover:text-white transition-colors">
+                        Visit CIVIS Website <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+                
+                <!-- CIVIS List -->
+                <div class="md:w-1/2 bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
+                    <h4 class="font-serif text-xl font-bold mb-6 border-b border-white/20 pb-2">Guest Professors</h4>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-3 text-sm">
+                        <div class="flex items-center gap-2"><i class="fa-solid fa-check text-naxos-gold"></i> Antonio R. Revuelta Puigdollers</div>
+                        <div class="flex items-center gap-2"><i class="fa-solid fa-check text-naxos-gold"></i> Katrin Axel-Tober</div>
+                        <div class="flex items-center gap-2"><i class="fa-solid fa-check text-naxos-gold"></i> Artemis Keidan</div>
+                        <div class="flex items-center gap-2"><i class="fa-solid fa-check text-naxos-gold"></i> Joanna Kopaczyk</div>
+                        <div class="flex items-center gap-2"><i class="fa-solid fa-check text-naxos-gold"></i> Adina Dragomirescu</div>
+                        <div class="flex items-center gap-2"><i class="fa-solid fa-check text-naxos-gold"></i> Alexandru Nicolae</div>
+                        <div class="flex items-center gap-2"><i class="fa-solid fa-check text-naxos-gold"></i> Ljuba Veselinova</div>
+                        <div class="flex items-center gap-2"><i class="fa-solid fa-check text-naxos-gold"></i> Matthias Heinz</div>
+                        <div class="flex items-center gap-2"><i class="fa-solid fa-check text-naxos-gold"></i> Linda Pillière</div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Key Information -->
-        <div class="info-grid">
-            <div class="info-card">
-                <h3>📚 Credits</h3>
-                <p>Students will be able to earn <strong>6 ECTS</strong> from the summer school.</p>
-                <p style="margin-top: 1rem; font-size: 1rem; color: var(--text-light);">ECTS approval: 8-2-2021 (law:
-                    a90.4692/2020)</p>
-            </div>
+    <!-- Info & Logistics -->
+    <section id="info" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Card 1: Credits -->
+                <div class="p-8 bg-slate-50 rounded-2xl border border-slate-100 hover:shadow-lg transition-all text-center">
+                    <div class="w-16 h-16 bg-green-100 text-green-600 rounded-full flex items-center justify-center text-2xl mx-auto mb-6">
+                        <i class="fa-solid fa-certificate"></i>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold text-slate-800 mb-2">ECTS Credits</h3>
+                    <p class="text-slate-600">Students will be able to earn <strong>6 ECTS</strong> from the summer school upon successful completion.</p>
+                </div>
 
-            <div class="info-card">
-                <h3>📍 Location</h3>
-                <p><strong>Naxos Island</strong>, Cyclades, Greece</p>
-                <p style="margin-top: 1rem;">A beautiful Aegean island offering the perfect setting for focused
-                    academic work and cultural immersion.</p>
-            </div>
+                <!-- Card 2: Location -->
+                <div class="p-8 bg-slate-50 rounded-2xl border border-slate-100 hover:shadow-lg transition-all text-center">
+                    <div class="w-16 h-16 bg-blue-100 text-naxos-blue rounded-full flex items-center justify-center text-2xl mx-auto mb-6">
+                        <i class="fa-solid fa-map-location-dot"></i>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold text-slate-800 mb-2">Location</h3>
+                    <p class="text-slate-600">Naxos Island, Cyclades, Greece.<br>A stunning setting for academic work and cultural immersion.</p>
+                </div>
 
-            <div class="info-card">
-                <h3>🤝 Collaboration</h3>
-                <p>Coordinated with the <strong>CIVIS Course</strong> "Diachronic Linguistics in the 21st century"</p>
-                <p style="margin-top: 1rem;"><a
-                        href="https://civis.eu/en/learn/civis-courses/diachronic-linguistics-in-the-21st-century"
-                        target="_blank">Learn more →</a></p>
+                <!-- Card 3: Dates -->
+                <div class="p-8 bg-slate-50 rounded-2xl border border-slate-100 hover:shadow-lg transition-all text-center">
+                    <div class="w-16 h-16 bg-yellow-100 text-yellow-600 rounded-full flex items-center justify-center text-2xl mx-auto mb-6">
+                        <i class="fa-solid fa-calendar-days"></i>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold text-slate-800 mb-2">Schedule</h3>
+                    <p class="text-slate-600">
+                        <strong>July 19:</strong> Welcome Reception<br>
+                        <strong>July 20-24:</strong> Classes & Workshops
+                    </p>
+                </div>
             </div>
         </div>
+    </section>
 
-        <!-- Contact -->
-        <div class="contact-box">
-            <h2>Contact Information</h2>
-            <p><strong>Organizer:</strong> National and Kapodistrian University of Athens</p>
-            <p><strong>Contact:</strong> Prof. Nikolaos Lavidas</p>
-            <p><strong>Email:</strong> <a href="mailto:nlavidas@enl.uoa.gr">nlavidas@enl.uoa.gr</a></p>
-            <p style="margin-top: 2rem;">
-                <a href="https://athdgc.github.io/" target="_blank">Visit AthDGC Research Network →</a>
-            </p>
+    <!-- Contact & Footer -->
+    <footer id="contact" class="bg-slate-900 text-slate-300 pt-20 pb-10">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                <!-- Column 1 -->
+                <div>
+                    <h3 class="font-serif text-2xl text-white font-bold mb-6">Naxos Summer School</h3>
+                    <p class="text-sm leading-relaxed mb-6">
+                        Comparing Diachronies across languages and time. An initiative by the National and Kapodistrian University of Athens.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-8 h-8 rounded-full bg-slate-700 flex items-center justify-center hover:bg-naxos-blue transition-colors"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="w-8 h-8 rounded-full bg-slate-700 flex items-center justify-center hover:bg-naxos-blue transition-colors"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#" class="w-8 h-8 rounded-full bg-slate-700 flex items-center justify-center hover:bg-naxos-blue transition-colors"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+
+                <!-- Column 2 -->
+                <div>
+                    <h4 class="text-white font-bold uppercase tracking-wider mb-6">Contact</h4>
+                    <ul class="space-y-4 text-sm">
+                        <li>
+                            <strong class="block text-slate-500">Organizer</strong>
+                            Prof. Nikolaos Lavidas
+                        </li>
+                        <li>
+                            <strong class="block text-slate-500">Email</strong>
+                            <a href="mailto:nlavidas@enl.uoa.gr" class="hover:text-white transition-colors">nlavidas@enl.uoa.gr</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Column 3 -->
+                <div>
+                    <h4 class="text-white font-bold uppercase tracking-wider mb-6">AthDGC Team</h4>
+                    <p class="text-xs text-slate-500 leading-relaxed">
+                        Nikolaos Lavidas, Kiki Nikiforidou, Vassiliki Geka, Vassileios Symeonidis, Sofia Chionidi, Anastasia Tsiropina, Eleni Plakoutsi, Theodoros Michalareas, Evangelos Argyropoulos.
+                    </p>
+                </div>
+
+                <!-- Column 4 -->
+                <div>
+                    <h4 class="text-white font-bold uppercase tracking-wider mb-6">Apply</h4>
+                    <p class="text-sm mb-4">Ready to join us in Naxos? Applications are open.</p>
+                    <a href="https://forms.gle/1GuNGaHsmVNAE4bx9" target="_blank" class="block w-full text-center py-3 bg-naxos-blue hover:bg-blue-600 text-white font-bold rounded transition-colors">
+                        Register Now
+                    </a>
+                </div>
+            </div>
+
+            <div class="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-slate-600">
+                <p>&copy; 2026 National and Kapodistrian University of Athens. All rights reserved.</p>
+                <div class="mt-4 md:mt-0">
+                    <a href="https://athdgc.github.io/" target="_blank" class="hover:text-slate-400 transition-colors">AthDGC Research Network</a>
+                    <span class="mx-2">|</span>
+                    <span>CC BY 4.0 License</span>
+                </div>
+            </div>
         </div>
-    </div>
-
-    <!-- Footer -->
-    <footer>
-        <p><strong>National and Kapodistrian University of Athens</strong></p>
-        <p>Licensed under the <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a>
-            License</p>
-        <p style="margin-top: 1.5rem;">
-            <a href="https://athdgc.github.io/" target="_blank">AthDGC Research Network</a>
-        </p>
     </footer>
-</body>
 
+    <!-- Mobile Menu Script -->
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+
+        // Navbar Scroll Effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('shadow-md');
+                navbar.classList.remove('py-4');
+                navbar.classList.add('py-2');
+            } else {
+                navbar.classList.remove('shadow-md');
+                navbar.classList.remove('py-2');
+                navbar.classList.add('py-4');
+            }
+        });
+    </script>
+</body>
 </html>
