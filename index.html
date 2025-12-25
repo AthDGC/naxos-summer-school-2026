@@ -78,24 +78,29 @@
         }
 
         nav .logo {
-            font-size: 1.2rem;
-            font-weight: 600;
+            font-family: 'Helvetica Neue', sans-serif;
+            font-weight: 700;
+            font-size: 1.5rem;
             color: var(--primary);
             text-decoration: none;
+            letter-spacing: -0.5px;
         }
 
         nav ul {
             display: flex;
             list-style: none;
-            gap: 1.8rem;
+            gap: 2rem;
         }
 
         nav a {
-            color: var(--text);
             text-decoration: none;
+            color: var(--text);
+            font-family: 'Helvetica Neue', sans-serif;
             font-size: 0.95rem;
-            font-family: 'Helvetica Neue', Arial, sans-serif;
+            font-weight: 500;
             transition: color 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
 
         nav a:hover {
@@ -104,57 +109,51 @@
 
         .hero {
             height: 100vh;
-            background: linear-gradient(135deg, rgba(26, 77, 143, 0.92) 0%, rgba(46, 92, 138, 0.88) 100%),
-                url('https://images.unsplash.com/photo-1533105079780-92b9be482077?w=1600') center/cover;
+            background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+                url('https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
             color: var(--white);
-            position: relative;
-            margin-top: 80px;
+            padding: 0 2rem;
+            margin-top: 60px;
         }
 
         .hero-content {
             max-width: 900px;
-            padding: 2rem;
             animation: fadeInUp 1s ease-out;
-        }
-
-        .hero h1 {
-            margin-bottom: 1.5rem;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
         }
 
         .hero-subtitle {
             font-size: 1.5rem;
-            margin-bottom: 1rem;
-            opacity: 0.95;
+            margin: 1rem 0 2rem;
             font-weight: 300;
+            opacity: 0.9;
         }
 
         .hero-details {
             font-size: 1.2rem;
-            margin-bottom: 2.5rem;
-            opacity: 0.9;
-        }
-
-        .cta-buttons {
-            display: flex;
-            gap: 1.5rem;
-            justify-content: center;
-            flex-wrap: wrap;
+            font-family: 'Helvetica Neue', sans-serif;
+            margin-bottom: 3rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
         }
 
         .btn {
+            display: inline-block;
             padding: 1rem 2.5rem;
             border-radius: 50px;
             text-decoration: none;
-            font-size: 1rem;
-            font-family: 'Helvetica Neue', Arial, sans-serif;
-            font-weight: 500;
+            font-family: 'Helvetica Neue', sans-serif;
+            font-weight: 600;
             transition: all 0.3s;
-            display: inline-block;
+            margin: 0 0.5rem;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
         }
 
         .btn-primary {
@@ -163,50 +162,60 @@
         }
 
         .btn-primary:hover {
-            background: #f0c94c;
+            background: var(--white);
             transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(212, 175, 55, 0.3);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
         }
 
         .btn-secondary {
             background: transparent;
-            color: var(--white);
             border: 2px solid var(--white);
+            color: var(--white);
         }
 
         .btn-secondary:hover {
             background: var(--white);
             color: var(--primary);
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
+            transform: translateY(-2px);
         }
 
         section {
             padding: 6rem 0;
         }
 
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
         .section-title {
             text-align: center;
-            margin-bottom: 4rem;
             color: var(--primary);
+            margin-bottom: 4rem;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background: var(--accent);
+            margin: 1rem auto 0;
         }
 
         .about-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 3rem;
-            margin-top: 3rem;
         }
 
         .about-card {
+            padding: 2rem;
             background: var(--white);
-            padding: 2.5rem;
-            border-radius: 10px;
-            box-shadow: 0 5px 30px rgba(0, 0, 0, 0.08);
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
             transition: transform 0.3s;
         }
 
@@ -214,69 +223,59 @@
             transform: translateY(-5px);
         }
 
-        .about-card h3 {
-            color: var(--primary);
-            margin-bottom: 1rem;
-            font-size: 1.4rem;
+        .topics {
+            background: var(--primary);
+            color: var(--white);
         }
 
-        .topics {
-            background: var(--bg-light);
+        .topics .section-title {
+            color: var(--white);
         }
 
         .topics-list {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 2rem;
-            margin-top: 2rem;
         }
 
         .topic-item {
-            background: var(--white);
+            background: rgba(255, 255, 255, 0.1);
             padding: 2rem;
             border-radius: 8px;
-            border-left: 4px solid var(--accent);
+            backdrop-filter: blur(5px);
         }
 
         .topic-item h4 {
-            color: var(--primary);
-            margin-bottom: 0.8rem;
+            color: var(--accent);
+            margin-bottom: 1rem;
             font-size: 1.2rem;
         }
 
         .speakers-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 2.5rem;
-            margin-top: 3rem;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 2rem;
         }
 
         .speaker-card {
-            background: var(--white);
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
-            transition: transform 0.3s, box-shadow 0.3s;
-            border-left: 4px solid var(--primary);
+            text-align: center;
         }
 
-        .speaker-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
-        }
-
-        .speaker-info {
-            padding: 2rem;
+        .speaker-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 1rem;
+            border: 3px solid var(--accent);
         }
 
         .speaker-info h4 {
             color: var(--primary);
             margin-bottom: 0.5rem;
-            font-size: 1.2rem;
         }
 
-        .speaker-info .affiliation {
-            color: var(--text-light);
+        .affiliation {
             font-size: 0.95rem;
             font-style: italic;
             line-height: 1.5;
@@ -487,13 +486,14 @@
 <body>
     <nav>
         <div class="container">
-            <a href="index.html" class="logo">Naxos 2026</a>
+            <a href="#" class="logo">Naxos 2026</a>
             <ul>
-                <li><a href="index.html#about">About</a></li>
-                <li><a href="program.html">Program</a></li>
-                <li><a href="index.html#topics">Topics</a></li>
-                <li><a href="speakers.html">Faculty</a></li>
-                <li><a href="registration.html">Register</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#program">Program</a></li>
+                <li><a href="#topics">Topics</a></li>
+                <li><a href="#speakers">Faculty</a></li>
+                <li><a href="#registration">Register</a></li>
+                <li><a href="#supported-by" style="color: var(--accent);">Supported By</a></li>
                 <li><a href="venue.html">Venue</a></li>
                 <li><a href="index.html#accommodation">Stay</a></li>
                 <li><a href="index.html#explore">Explore</a></li>
@@ -705,350 +705,88 @@
                         <p class="affiliation">Stockholm University, Sweden</p>
                     </div>
                 </div>
-
-                <div class="speaker-card">
-                    <div class="speaker-info">
-                        <h4>Adina Dragomirescu</h4>
-                        <p class="affiliation">University of Bucharest, Romania</p>
-                    </div>
-                </div>
-
-                <div class="speaker-card">
-                    <div class="speaker-info">
-                        <h4>Alexandru Nicolae</h4>
-                        <p class="affiliation">University of Bucharest, Romania</p>
-                    </div>
-                </div>
-
-                <div class="speaker-card">
-                    <div class="speaker-info">
-                        <h4>Antonio R. Revuelta Puigdollers</h4>
-                        <p class="affiliation">Universidad Autónoma de Madrid, Spain</p>
-                    </div>
-                </div>
-
-                <div class="speaker-card">
-                    <div class="speaker-info">
-                        <h4>Artemij Keidan</h4>
-                        <p class="affiliation">Sapienza Università di Roma, Italy</p>
-                    </div>
-                </div>
-
-                <div class="speaker-card">
-                    <div class="speaker-info">
-                        <h4>Flavia Pompeo</h4>
-                        <p class="affiliation">Sapienza Università di Roma, Italy</p>
-                    </div>
-                </div>
-
-                <div class="speaker-card">
-                    <div class="speaker-info">
-                        <h4>Linda Pillière</h4>
-                        <p class="affiliation">Aix-Marseille Université, France</p>
-                    </div>
-                </div>
-
-                <div class="speaker-card">
-                    <div class="speaker-info">
-                        <h4>Matthias Heinz</h4>
-                        <p class="affiliation">Paris Lodron University of Salzburg, Austria</p>
-                    </div>
-                </div>
-
-                <div class="speaker-card">
-                    <div class="speaker-info">
-                        <h4>ARCAS Team</h4>
-                        <p class="affiliation">Center for Hellenic Studies, Harvard University, USA<br>
-                            <span style="font-size: 0.85rem; display: block; margin-top: 0.5rem;">Esteban Belmehdi,
-                                Ioanna Papadopoulou, Julien Razanajao, Mark Schiefsky</span>
-                        </p>
-                    </div>
-                </div>
-
-                <div class="speaker-card" style="opacity: 0.7; border-left-color: var(--text-light);">
-                    <div class="speaker-info">
-                        <h4>Additional Speakers</h4>
-                        <p class="affiliation">To be announced</p>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
 
     <section id="registration" class="registration">
         <div class="container">
-            <h2 class="section-title">Registration & Fees</h2>
-            <p style="text-align: center; max-width: 800px; margin: 0 auto 3rem; font-size: 1.1rem;">
-                Limited spots available. Early registration strongly encouraged.
+            <h2 class="section-title">Registration</h2>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto 3rem; font-size: 1.1rem; opacity: 0.9;">
+                Secure your place at the 11th Naxos Summer School. Early registration is recommended as spaces are
+                limited.
             </p>
 
             <div class="pricing-grid">
-                <div class="pricing-card featured">
+                <div class="pricing-card">
                     <h3>Early Bird</h3>
-                    <div class="price">€175</div>
-                    <p class="deadline">Deadline: Mid-April 2026</p>
-                    <p>Full access to all sessions, materials, workshops, and poster session. Light lunches included.
-                        Best value for early planners.</p>
-                    <a href="mailto:nlavidas@enl.uoa.gr" class="btn btn-primary" style="margin-top: 1.5rem;">Apply
+                    <p class="price">€150</p>
+                    <p class="deadline">Register by March 31, 2026</p>
+                    <ul style="list-style: none; margin-bottom: 2rem; text-align: left; padding: 0 1rem;">
+                        <li style="margin-bottom: 0.5rem;">✓ Full access to all workshops</li>
+                        <li style="margin-bottom: 0.5rem;">✓ Course materials</li>
+                        <li style="margin-bottom: 0.5rem;">✓ Welcome & Farewell receptions</li>
+                        <li>✓ Coffee breaks</li>
+                    </ul>
+                    <a href="mailto:nlavidas@enl.uoa.gr" class="btn btn-primary"
+                        style="width: 100%; box-sizing: border-box;">Register Now</a>
+                </div>
+
+                <div class="pricing-card featured">
+                    <h3>Standard</h3>
+                    <p class="price">€200</p>
+                    <p class="deadline">From April 1, 2026</p>
+                    <ul style="list-style: none; margin-bottom: 2rem; text-align: left; padding: 0 1rem;">
+                        <li style="margin-bottom: 0.5rem;">✓ Full access to all workshops</li>
+                        <li style="margin-bottom: 0.5rem;">✓ Course materials</li>
+                        <li style="margin-bottom: 0.5rem;">✓ Welcome & Farewell receptions</li>
+                        <li>✓ Coffee breaks</li>
+                    </ul>
+                    <a href="mailto:nlavidas@enl.uoa.gr" class="btn btn-primary"
+                        style="width: 100%; box-sizing: border-box; background: var(--primary); color: white;">Register
                         Now</a>
                 </div>
 
                 <div class="pricing-card">
-                    <h3>Regular Registration</h3>
-                    <div class="price">€210</div>
-                    <p class="deadline">Deadline: Mid-May 2026</p>
-                    <p>Full access to all sessions, materials, workshops, and poster session. Light lunches included.
-                    </p>
-                    <a href="mailto:nlavidas@enl.uoa.gr" class="btn btn-primary" style="margin-top: 1.5rem;">Apply
-                        Now</a>
+                    <h3>Student/CIVIS</h3>
+                    <p class="price">€100</p>
+                    <p class="deadline">Valid student ID required</p>
+                    <ul style="list-style: none; margin-bottom: 2rem; text-align: left; padding: 0 1rem;">
+                        <li style="margin-bottom: 0.5rem;">✓ Reduced rate for BA/MA/PhD</li>
+                        <li style="margin-bottom: 0.5rem;">✓ CIVIS students eligible</li>
+                        <li style="margin-bottom: 0.5rem;">✓ Full access to all workshops</li>
+                        <li>✓ Course materials</li>
+                    </ul>
+                    <a href="mailto:nlavidas@enl.uoa.gr" class="btn btn-primary"
+                        style="width: 100%; box-sizing: border-box;">Apply for Discount</a>
                 </div>
-
-                <div class="pricing-card">
-                    <h3>Late Registration</h3>
-                    <div class="price">€230</div>
-                    <p class="deadline">Deadline: Mid-June 2026</p>
-                    <p>Full access to all sessions, materials, workshops, and poster session. Light lunches included.
-                        Subject to availability.</p>
-                    <a href="mailto:nlavidas@enl.uoa.gr" class="btn btn-primary" style="margin-top: 1.5rem;">Apply
-                        Now</a>
-                </div>
-            </div>
-
-            <div style="text-align: center; margin-top: 4rem; font-size: 1rem;">
-                <h3 style="margin-bottom: 1.5rem;">Financial Aid</h3>
-                <p style="margin-bottom: 1rem;">3 scholarships available that cover the registration fees for university
-                    (BA, MA, PhD) students.</p>
-                <p>To apply for a scholarship, please email your motivation and CV to <a
-                        href="mailto:nlavidas@enl.uoa.gr" style="color: var(--accent);">nlavidas@enl.uoa.gr</a></p>
             </div>
         </div>
     </section>
 
-    <section id="venue" class="venue">
+    <section id="explore" class="venue">
         <div class="container">
-            <h2 class="section-title">The Island of Naxos</h2>
+            <h2 class="section-title">Discover Naxos</h2>
 
             <div class="venue-content">
                 <div>
-                    <h3 style="margin-bottom: 1.5rem;">Where Ancient Heritage Meets Modern Scholarship</h3>
+                    <h3 style="margin-bottom: 1.5rem; color: var(--primary);">The Island of Ariadne</h3>
                     <p style="margin-bottom: 1.5rem;">
-                        Naxos is the largest and most fertile island in the Cyclades, steeped in mythology and history.
-                        As the legendary birthplace of Zeus and center of archaic Cycladic culture, the island provides
-                        an inspiring backdrop for exploring language evolution through the millennia.
-                    </p>
-                    <p style="margin-bottom: 1.5rem;">
-                        The island is famous for its history, beautiful beaches, and distinct cuisine. Beyond its
-                        academic significance, Naxos offers participants pristine Aegean waters, traditional mountain
-                        villages, archaeological sites dating from the 3rd millennium BCE, and exceptional Greek cuisine
-                        featuring local cheeses, wines, and fresh Mediterranean ingredients.
-                    </p>
-                </div>
-                <div>
-                    <img src="https://images.unsplash.com/photo-1613395877344-13d4a8e0d49e?w=800"
-                        alt="Naxos Portara temple gateway" class="venue-image">
-                </div>
-            </div>
-
-            <div class="venue-content" style="margin-top: 3rem;">
-                <div>
-                    <img src="https://images.unsplash.com/photo-1601823984263-b55b7d2d9594?w=800"
-                        alt="Naxos Aegean Sea coastline" class="venue-image">
-                </div>
-                <div>
-                    <h3 style="margin-bottom: 1.5rem;">The Cycladic Experience</h3>
-                    <p style="margin-bottom: 1.5rem;">
-                        The summer school venue combines academic excellence with the natural beauty of the Aegean.
-                        Naxos offers pristine beaches, crystal-clear waters, and a landscape that has inspired scholars
-                        and artists for millennia.
+                        Naxos is the largest and greenest island in the Cyclades, famous for its long sandy beaches,
+                        fertile valleys, and rich history. According to mythology, it was here that Theseus abandoned
+                        Ariadne after killing the Minotaur on Crete.
                     </p>
                     <p>
-                        Between intensive academic sessions, participants can explore the island's rich cultural
-                        heritage, from ancient marble quarries to Byzantine monasteries, experiencing the living
-                        connection between past and present that makes Naxos the perfect setting for studying language
-                        evolution.
+                        The summer school takes place in Naxos Town (Chora), a vibrant harbor town presided over by a
+                        Venetian castle and the iconic Portara, the massive marble gateway of an unfinished ancient
+                        temple dedicated to Apollo.
                     </p>
                 </div>
+                <img src="https://images.unsplash.com/photo-1596317786202-6c4784384b72?auto=format&fit=crop&w=800&q=80"
+                    alt="Naxos Town narrow streets" class="venue-image">
             </div>
 
-            <div style="margin-top: 4rem;">
-                <h3 style="margin-bottom: 2rem; color: var(--primary); text-align: center;">Venue: Ursulines School of
-                    Naxos</h3>
-                <p
-                    style="max-width: 800px; margin: 0 auto 3rem; text-align: center; font-size: 1.05rem; line-height: 1.8;">
-                    The summer school will be held at the historic Ursulines School (Greek-French Ursuline School of
-                    Naxos), a prestigious educational institution with a rich history dating back to 1672. Located in
-                    the heart of Naxos Town (Chora), the school provides modern facilities in a beautifully preserved
-                    historic setting, offering an inspiring environment for academic exchange and learning.
-                </p>
-
-                <h3 style="margin-bottom: 1.5rem; margin-top: 4rem;">Getting to Naxos</h3>
-                <div class="about-grid">
-                    <div class="about-card">
-                        <h3>By Ferry from Athens</h3>
-                        <p>Regular ferry services from Piraeus (Athens) to Naxos. Journey time: 3.5-5 hours for
-                            conventional ferries, 3-3.5 hours for high-speed catamarans. Multiple departures daily
-                            during summer. The trip by boat is all part of the island experience and is considered
-                            pleasant by most during summer months. University students may use the 30% discount for Blue
-                            Star Ferries.</p>
-                    </div>
-                    <div class="about-card">
-                        <h3>By Air</h3>
-                        <p>Naxos Apollon National Airport is located 3 km from Chora. Regular flights from Athens
-                            International Airport (45 minutes). Two to three flights daily with the national carrier.
-                            The airport is connected by taxi and regional buses (KTEL). In peak season there are
-                            additional flights as well as charter flights from many European airports.</p>
-                    </div>
-                    <div class="about-card">
-                        <h3>From the Airport/Port to Venue</h3>
-                        <p>The Ursulines School is located in Naxos Town (Chora), within walking distance from the port.
-                            From the airport, taxi or bus service (KTEL) is available. Detailed directions will be
-                            provided to registered participants.</p>
-                    </div>
-                </div>
-
-                <h3 style="margin-bottom: 1.5rem; margin-top: 4rem;">Accommodation Options</h3>
-                <div class="about-grid">
-                    <div class="about-card" style="border-left: 4px solid var(--accent);">
-                        <h3>Free Dormitory Accommodation</h3>
-                        <p><strong>Limited spaces available in a mountain village!</strong> Free dormitory accommodation
-                            is offered at a traditional village location outside Naxos Town. This option provides an
-                            authentic experience of island life in the mountainous interior. Transportation to/from the
-                            venue will be arranged. First-come, first-served basis - apply early!</p>
-                    </div>
-                    <div class="about-card">
-                        <h3>Hotels & Guesthouses in Naxos Town</h3>
-                        <p>A comprehensive list of recommended hotels and guesthouses near the Ursulines School venue
-                            will be provided to registered participants. Options range from budget-friendly rooms to
-                            boutique hotels. Book early for best availability and rates during the peak summer season.
-                        </p>
-                    </div>
-                    <div class="about-card">
-                        <h3>Other Accommodation</h3>
-                        <p>Many participants choose to stay in nearby beach areas (Agios Prokopios, Agia Anna) which are
-                            connected to Naxos Town by frequent bus service. Apartments and studios are also available
-                            for longer stays. Detailed recommendations will be shared upon registration.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="accommodation" class="venue">
-        <div class="container">
-            <h2 class="section-title">Accommodation</h2>
-
-            <div class="about-grid" style="margin-bottom: 4rem;">
-                <div class="about-card" style="border-left: 4px solid var(--accent); background: #fffbf0;">
-                    <h3>Free Municipality Dormitory</h3>
-                    <p><strong>Location:</strong> Vivlos (Tripodes village), 8 km from Naxos Town (15 minutes by bus)
-                    </p>
-                    <p style="margin-top: 1rem;"><strong>Available to:</strong> University (BA, MA, PhD) students who
-                        are participants of the Naxos Summer School and are not receiving a CIVIS mobility grant</p>
-                    <p style="margin-top: 1rem;"><strong>Capacity:</strong> 40 beds - first-come, first-served</p>
-
-                    <h4 style="margin-top: 1.5rem; color: var(--primary); font-size: 1.1rem;">What to Bring</h4>
-                    <ul style="margin-top: 0.5rem; margin-left: 1.5rem; line-height: 1.8;">
-                        <li>Your own bedsheets</li>
-                        <li>Towels</li>
-                        <li>Personal toiletries</li>
-                    </ul>
-
-                    <h4 style="margin-top: 1.5rem; color: var(--primary); font-size: 1.1rem;">Important Notes</h4>
-                    <ul style="margin-top: 0.5rem; margin-left: 1.5rem; line-height: 1.8;">
-                        <li>No air conditioning available</li>
-                        <li>No stable WiFi connection</li>
-                        <li>Participants are responsible for keeping the premises clean</li>
-                        <li>The organizing committee is not responsible for transportation or daily expenses of hostel
-                            participants</li>
-                        <li>Bus service connects Vivlos to Naxos Town regularly</li>
-                    </ul>
-
-                    <p style="margin-top: 1.5rem; font-weight: 500;">The Municipality of Naxos and Small Cyclades
-                        generously provides this hostel. Apply early as spaces are limited!</p>
-                </div>
-
-                <div class="about-card">
-                    <h3>Recommended Hotels Near Venue</h3>
-                    <p style="margin-bottom: 1rem;">The following hotels are within walking distance of the Ursulines
-                        School:</p>
-
-                    <ul style="line-height: 2; margin-left: 0; list-style: none;">
-                        <li><strong>Hotel Anixis</strong> (350 meters from venue)<br>
-                            <a href="mailto:info@hotel-anixis.gr"
-                                style="color: var(--primary); font-size: 0.9rem;">info@hotel-anixis.gr</a>
-                        </li>
-
-                        <li style="margin-top: 1rem;"><strong>Korali Boutique Hotel</strong><br>
-                            <a href="mailto:info@koralihotel.com"
-                                style="color: var(--primary); font-size: 0.9rem;">info@koralihotel.com</a>
-                        </li>
-
-                        <li style="margin-top: 1rem;"><strong>Korali Palace Hotel</strong><br>
-                            <a href="mailto:info@koralipalace.com"
-                                style="color: var(--primary); font-size: 0.9rem;">info@koralipalace.com</a>
-                        </li>
-
-                        <li style="margin-top: 1rem;"><strong>Korali Garden Hotel</strong><br>
-                            <a href="mailto:koraligarden@gmail.com"
-                                style="color: var(--primary); font-size: 0.9rem;">koraligarden@gmail.com</a>
-                        </li>
-
-                        <li style="margin-top: 1rem;"><strong>Naxos Ark Rooms</strong><br>
-                            <a href="mailto:naxosark@gmail.com"
-                                style="color: var(--primary); font-size: 0.9rem;">naxosark@gmail.com</a>
-                        </li>
-
-                        <li style="margin-top: 1rem;"><strong>Hotel Koronis</strong><br>
-                            <a href="mailto:info@hotelcoronis.gr"
-                                style="color: var(--primary); font-size: 0.9rem;">info@hotelcoronis.gr</a>
-                        </li>
-
-                        <li style="margin-top: 1rem;"><strong>Yacht Marine Maison</strong><br>
-                            <a href="mailto:yachtmarinemaison1@gmail.com"
-                                style="color: var(--primary); font-size: 0.9rem;">yachtmarinemaison1@gmail.com</a>
-                        </li>
-                    </ul>
-
-                    <p style="margin-top: 1.5rem; font-style: italic;">Please contact hotels directly to make
-                        reservations. Mention the Naxos Summer School for potential discounts.</p>
-                </div>
-
-                <div class="about-card">
-                    <h3>Other Accommodation Options</h3>
-                    <p>Traditional guesthouses, rooms and apartments for rent, and youth hostels are available near the
-                        venue in Naxos Town (Chora).</p>
-
-                    <p style="margin-top: 1rem;">Many participants choose to stay in nearby beach areas such as:</p>
-                    <ul style="margin-top: 0.5rem; margin-left: 1.5rem; line-height: 1.8;">
-                        <li>Agios Prokopios</li>
-                        <li>Agia Anna</li>
-                        <li>Agios Georgios</li>
-                    </ul>
-
-                    <p style="margin-top: 1rem;">These areas are connected to Naxos Town by frequent bus service (KTEL)
-                        and offer beautiful beaches alongside accommodation options.</p>
-
-                    <p style="margin-top: 1.5rem;"><strong>Booking Tip:</strong> Book early for best availability and
-                        rates during the peak summer season (July). Apartments and studios are available for longer
-                        stays at competitive prices.</p>
-
-                    <p style="margin-top: 1rem;">Detailed recommendations and additional options will be provided to
-                        registered participants.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="explore" class="previous-editions">
-        <div class="container">
-            <h2 class="section-title">Explore Naxos</h2>
-            <p
-                style="text-align: center; max-width: 900px; margin: 0 auto 3rem; font-size: 1.1rem; color: var(--text-light);">
-                Beyond the academic programme, Naxos offers an unforgettable Mediterranean experience combining pristine
-                beaches, traditional mountain villages, ancient archaeological treasures, and vibrant island culture.
-            </p>
-
-            <h3 style="margin-bottom: 2rem; color: var(--primary);">Beaches & Natural Beauty</h3>
+            <h3 style="margin-bottom: 2rem; color: var(--primary);">Famous Beaches</h3>
             <div class="about-grid" style="margin-bottom: 4rem;">
                 <div class="about-card">
                     <h3>Agios Prokopios & Agia Anna</h3>
@@ -1262,22 +1000,32 @@
         </div>
     </section>
 
-    <section class="logos">
+    <section id="supported-by" class="logos">
         <div class="container">
             <h3 style="text-align: center; margin-bottom: 3rem; color: var(--primary); font-size: 2rem;">Supported By
             </h3>
 
             <div
                 style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 3rem; align-items: center; margin-bottom: 4rem; padding: 2rem; background: white; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
-                <div
-                    style="text-align: center; padding: 1.5rem; background: linear-gradient(135deg, #0f766e 0%, #14b8a6 100%); border-radius: 8px;">
-                    <p style="font-weight: 700; color: white; font-size: 1.3rem; margin: 0; line-height: 1.4;">Van
-                        Riemdijk Foundation</p>
+                <div style="text-align: center;">
+                    <a href="https://vanriemsdijkfoundation.org/" target="_blank" style="text-decoration: none;">
+                        <div
+                            style="padding: 1.5rem; background: linear-gradient(135deg, #0f766e 0%, #14b8a6 100%); border-radius: 8px;">
+                            <p style="font-weight: 700; color: white; font-size: 1.3rem; margin: 0; line-height: 1.4;">
+                                Van Riemdijk Foundation</p>
+                        </div>
+                    </a>
                 </div>
                 <div style="text-align: center;">
                     <a href="https://civis.eu" target="_blank">
                         <img src="https://civis.eu/images/civis.svg" alt="CIVIS European University Alliance"
                             style="max-height: 100px; width: auto;">
+                    </a>
+                </div>
+                <div style="text-align: center;">
+                    <a href="https://www.naxos.gr" target="_blank">
+                        <img src="https://www.naxos.gr/wp-content/uploads/2016/06/naxos-logo-en.png"
+                            alt="Municipality of Naxos and Small Cyclades" style="max-height: 100px; width: auto;">
                     </a>
                 </div>
             </div>
@@ -1318,13 +1066,14 @@
                             University of<br>Cambridge</p>
                     </div>
                 </a>
-                <a href="https://www.naxos.gr" target="_blank" style="text-decoration: none;">
-                    <div
-                        style="padding: 1.5rem; background: #2563eb; border-radius: 8px; height: 100%; display: flex; align-items: center; justify-content: center;">
-                        <p
-                            style="font-weight: 700; color: white; font-size: 1rem; margin: 0; text-align: center; line-height: 1.4;">
-                            Municipality of Naxos<br>and Small Cyclades</p>
-                    </div>
+            </div>
+
+            <h4 style="text-align: center; margin: 4rem 0 3rem; color: var(--primary); font-size: 1.8rem;">Sponsors</h4>
+            <div
+                style="display: flex; justify-content: center; padding: 2rem; background: white; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
+                <a href="https://www.bluestarferries.com" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/8/87/Blue_star_ferries_logo.svg/320px-Blue_star_ferries_logo.svg.png"
+                        alt="Blue Star Ferries" style="max-height: 80px; width: auto;">
                 </a>
             </div>
         </div>
