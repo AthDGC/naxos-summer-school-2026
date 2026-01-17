@@ -23,6 +23,7 @@ body {
     color: var(--text);
     overflow-x: hidden;
     background-color: var(--bg-page);
+    font-size: 18px;
 }
 
 h1,
@@ -35,12 +36,12 @@ h4 {
 }
 
 h1 {
-    font-size: 2.5rem;
+    font-size: 2.8rem;
     margin-bottom: 1rem;
 }
 
 h2 {
-    font-size: 2rem;
+    font-size: 2.2rem;
     margin-bottom: 2rem;
     text-align: left;
     border-bottom: 1px solid var(--border);
@@ -48,8 +49,8 @@ h2 {
 }
 
 h3 {
-    font-size: 1.4rem;
-    margin-bottom: 0.5rem;
+    font-size: 1.8rem;
+    margin-bottom: 0.75rem;
     color: var(--text);
     font-weight: 600;
 }
@@ -137,7 +138,7 @@ nav a.active {
 }
 
 .hero-text-big {
-    font-size: 14rem;
+    font-size: 15rem;
     font-weight: 500;
     color: var(--primary);
     line-height: 1;
@@ -150,14 +151,14 @@ nav a.active {
 }
 
 .hero h1 {
-    font-size: 2.5rem;
+    font-size: 2.8rem;
     font-weight: 600;
     margin-bottom: 1rem;
     color: var(--primary);
 }
 
 .hero-subtitle {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     font-weight: 300;
     margin-bottom: 1rem;
     opacity: 0.9;
@@ -165,7 +166,7 @@ nav a.active {
 }
 
 .hero-details {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     font-weight: 400;
     margin-bottom: 2rem;
     opacity: 0.8;
@@ -426,7 +427,7 @@ footer a {
 }
 
 .topic-item h3 {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     font-weight: 600;
     color: var(--primary);
     margin: 0;
@@ -443,7 +444,7 @@ footer a {
 }
 
 .topic-item-single h3 {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     font-weight: 600;
     color: var(--primary);
     margin: 0;
