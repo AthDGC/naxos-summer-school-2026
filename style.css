@@ -11,9 +11,10 @@
     /* Black text as primary */
     --text: #333333;
     --text-light: #555555;
-    --bg-light: #fdfbf7;
-    --white: #faf8f5;
-    --border: #e0e0e0;
+    --bg-page: #fbf7ef;
+    --bg-surface: #ffffff;
+    --bg-soft: #f6f2e8;
+    --border: #ebe3d6;
 }
 
 body {
@@ -21,7 +22,7 @@ body {
     line-height: 1.6;
     color: var(--text);
     overflow-x: hidden;
-    background-color: var(--white);
+    background-color: var(--bg-page);
 }
 
 h1,
@@ -57,7 +58,7 @@ nav {
     position: fixed;
     top: 0;
     width: 100%;
-    background: var(--white);
+    background: var(--bg-surface);
     border-bottom: 1px solid var(--border);
     z-index: 1000;
     padding: 1rem 0;
@@ -100,7 +101,7 @@ nav a.active {
 }
 
 .hero {
-    background-color: var(--white);
+    background-color: var(--bg-soft);
     color: var(--primary);
     padding: 6rem 2rem;
     text-align: left;
@@ -252,7 +253,7 @@ section {
 }
 
 .topics {
-    background: var(--bg-light);
+    background: var(--bg-surface);
     border-top: 1px solid var(--border);
     border-bottom: 1px solid var(--border);
 }
@@ -304,7 +305,7 @@ section {
 }
 
 .registration {
-    background: var(--white);
+    background: var(--bg-surface);
     border-top: 1px solid var(--border);
 }
 
@@ -345,7 +346,7 @@ section {
 }
 
 .venue {
-    background: var(--bg-light);
+    background: var(--bg-surface);
     border-top: 1px solid var(--border);
 }
 
@@ -363,7 +364,7 @@ section {
 }
 
 .previous-editions {
-    background: var(--white);
+    background: var(--bg-surface);
 }
 
 .editions-grid {
@@ -374,7 +375,7 @@ section {
 }
 
 .edition-link {
-    background: var(--bg-light);
+    background: var(--bg-soft);
     padding: 1rem;
     border: 1px solid var(--border);
     text-decoration: none;
@@ -383,18 +384,18 @@ section {
 }
 
 .edition-link:hover {
-    background: var(--white);
+    background: var(--bg-surface);
     border-color: var(--primary);
     color: var(--primary);
 }
 
 .logos {
-    background: var(--white);
+    background: var(--bg-surface);
     padding: 4rem 0;
 }
 
 footer {
-    background: var(--bg-light);
+    background: var(--bg-page);
     color: var(--text-light);
     padding: 2rem 0;
     text-align: center;
