@@ -104,12 +104,13 @@ nav a.active {
 .hero {
     background-color: var(--bg-soft);
     color: var(--primary);
-    padding: 6rem 2rem;
-    text-align: left;
+    padding: 0 2rem;
+    text-align: center;
     position: relative;
     display: flex;
     align-items: center;
-    min-height: 80vh;
+    justify-content: center;
+    min-height: 70vh;
     margin-top: 60px;
 }
 
@@ -155,6 +156,15 @@ nav a.active {
     font-weight: 600;
     margin-bottom: 1rem;
     color: var(--primary);
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.hero h2 {
+    font-size: 1.8rem;
+    font-weight: 300;
+    margin-bottom: 1rem;
+    color: var(--primary);
+    text-shadow: 0 2px 4px rgba(0,0,0,0.2);
 }
 
 .hero-subtitle {
@@ -171,6 +181,10 @@ nav a.active {
     margin-bottom: 2rem;
     opacity: 0.8;
     text-shadow: none;
+    background: rgba(0,0,0,0.5);
+    display: inline-block;
+    padding: 0.5rem 1.5rem;
+    border-radius: 50px;
 }
 
 .image-credit {
