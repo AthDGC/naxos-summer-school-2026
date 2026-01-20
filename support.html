@@ -16,11 +16,11 @@
 
         .support-header {
             text-align: center;
-            margin-bottom: 3rem;
+            margin-bottom: 3.5rem;
             padding-bottom: 2rem;
             border-bottom: 2px solid #1a4d8f;
-            background-color: #f0f4f8;
-            padding-top: 1rem;
+            background: #eaf0fa;
+            padding-top: 1.5rem;
         }
 
         .support-section {
@@ -54,11 +54,19 @@
 
         .logo-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-            gap: 3rem;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 2.5rem;
             align-items: center;
             justify-items: center;
-            margin: 2rem 0;
+            margin: 2rem 0 3rem 0;
+            padding-bottom: 2rem;
+        }
+
+        @media (max-width: 900px) {
+            .logo-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
         }
 
         .logo-item {
@@ -76,7 +84,8 @@
         }
 
         .logo-item img {
-            max-height: 150px;
+            max-height: 120px;
+            max-width: 240px;
             width: auto;
             margin-bottom: 0.5rem;
         }
@@ -147,7 +156,7 @@
             <div class="logo-grid">
                 <div class="logo-item">
                     <a href="https://vanriemsdijkfoundation.org/" target="_blank">
-                        <img src="assets/logos/van Riemsdijl Foundation.png" alt="Van Riemsdijk Foundation">
+                        <img src="assets/logos/van_riemsdijk_foundation.png" alt="Van Riemsdijk Foundation">
                         <p>Van Riemsdijk Foundation</p>
                     </a>
                 </div>
@@ -168,7 +177,7 @@
                     </div>
                     <div class="logo-item">
                         <a href="https://greece20.gov.gr/" target="_blank">
-                            <img src="assets/logos/Greece 2.0.png" alt="Greece 2.0">
+                            <img src="assets/logos/greece_2_0.png" alt="Greece 2.0">
                             <p>Greece 2.0 - National Recovery and Resilience Plan</p>
                         </a>
                     </div>
@@ -181,10 +190,12 @@
             style="background: #fff; text-align:center; padding: 2.5rem 1rem 2rem 1rem; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); margin-bottom: 2.5rem;">
             <img src="assets/logos/civis.png" alt="CIVIS European University Alliance"
                 style="height: 150px; max-width: 95vw; margin-bottom: 2rem;">
-            <div style="display: flex; align-items: center; justify-content: center; gap: 1.5rem; flex-wrap: wrap;">
-                <img src="assets/logos/eu.png" alt="European Union" style="height: 55px; width: auto;">
-                <span style="font-size: 2rem; color: #1a4d8f; font-weight: 700; vertical-align: middle;">Funded by the
-                    European Union</span>
+            <div
+                style="display: flex; align-items: center; justify-content: center; gap: 1.2rem; flex-wrap: wrap; margin-top: 1rem;">
+                <img src="assets/logos/eu.png" alt="European Union" style="height: 48px; width: auto;">
+                <span
+                    style="font-size: 1.7rem; color: #1a4d8f; font-weight: 700; margin-left: 0.3em; white-space: nowrap;">Funded
+                    by the European Union</span>
             </div>
         </div>
 
@@ -193,7 +204,7 @@
             <div class="logo-grid">
                 <div class="logo-item">
                     <a href="https://en.uoa.gr" target="_blank">
-                        <img src="assets/logos/university of athens.jpg"
+                        <img src="assets/logos/university_of_athens.jpg"
                             alt="National and Kapodistrian University of Athens">
                         <p>National and Kapodistrian University of Athens</p>
                     </a>
@@ -224,7 +235,7 @@
             <div class="logo-grid">
                 <div class="logo-item">
                     <a href="https://www.naxos.gr" target="_blank">
-                        <img src="assets/logos/naxos municipality.png" alt="Municipality of Naxos and Small Cyclades">
+                        <img src="assets/logos/naxos_municipality.png" alt="Municipality of Naxos and Small Cyclades">
                         <p>Municipality of Naxos and Small Cyclades</p>
                     </a>
                 </div>
