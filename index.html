@@ -1,494 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>11th Naxos Summer School on Diachronic Linguistics 2026</title>
-    <meta name="description"
-        content="Intensive summer school on Historical & Diachronic Linguistics, July 19-24, 2026, Naxos, Greece. Organized by National and Kapodistrian University of Athens.">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
-        rel="stylesheet">
+    <title>Naxos Summer School 2026</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="images.css">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        :root {
-            --primary: #1565C0;
-            --primary-light: #1976D2;
-            --accent: #2196F3;
-            --text-dark: #1f2937;
-            --text-light: #6b7280;
-            --bg-light: #E3F2FD;
-        }
-
-        body {
-            font-family: 'Inter', sans-serif;
-            color: var(--text-dark);
-            line-height: 1.6;
-        }
-
-        /* Hero Section */
-        .hero {
-            background: #0d47a1;
-            color: white;
-            padding: 8rem 2rem 6rem;
-            text-align: center;
-        }
-
-        .hero h1 {
-            font-size: 3rem;
-            font-weight: 900;
-            margin-bottom: 1rem;
-            letter-spacing: -1px;
-        }
-
-        .hero .subtitle {
-            font-size: 1.5rem;
-            margin-bottom: 2rem;
-            opacity: 0.95;
-        }
-
-        .hero .dates {
-            font-size: 1.3rem;
-            font-weight: 600;
-            margin-bottom: 2rem;
-        }
-
-        .hero .apply-btn {
-            display: inline-block;
-            background: white;
-            color: var(--primary);
-            padding: 1.2rem 3rem;
-            border-radius: 50px;
-            font-weight: 700;
-            font-size: 1.1rem;
-            text-decoration: none;
-            transition: transform 0.3s, box-shadow 0.3s;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-        }
-
-        .hero .apply-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
-        }
-
-        /* Container */
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 4rem 2rem;
-        }
-
-        /* Sections */
-        .section {
-            margin-bottom: 4rem;
-        }
-
-        .section-title {
-            font-size: 2rem;
-            font-weight: 800;
-            color: var(--primary);
-            margin-bottom: 1.5rem;
-        }
-
-        .section-content {
-            font-size: 1.1rem;
-            line-height: 1.8;
-            color: var(--text-dark);
-        }
-
-        /* Info Cards */
-        .info-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin: 3rem 0;
-        }
-
-        .info-card {
-            background: white;
-            border-radius: 16px;
-            padding: 2rem;
-            border: 1px solid #e0e0e0;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        .info-card h3 {
-            color: var(--primary);
-            font-size: 1.3rem;
-            margin-bottom: 1rem;
-            font-weight: 700;
-        }
-
-        .info-card p {
-            color: var(--text-dark);
-            line-height: 1.7;
-        }
-
-        /* Highlights */
-        .highlights {
-            background: #f0f9ff;
-            border: 2px solid #bae6fd;
-            border-radius: 20px;
-            padding: 3rem;
-            margin: 3rem 0;
-        }
-
-        .highlights-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-        }
-
-        .highlight-item {
-            text-align: center;
-            padding: 2rem;
-            background: white;
-            border-radius: 16px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
-        }
-
-        .highlight-item:hover {
-            transform: translateY(-5px);
-        }
-
-        .highlight-item h3 {
-            color: var(--primary);
-            font-size: 1.4rem;
-            margin-bottom: 0.5rem;
-            font-weight: 700;
-        }
-
-        .highlight-item p {
-            color: var(--text-dark);
-            line-height: 1.6;
-            font-size: 1rem;
-        }
-
-        /* CTA Section */
-        .cta-section {
-            background: var(--primary);
-            color: white;
-            padding: 4rem 2rem;
-            text-align: center;
-            border-radius: 20px;
-            margin: 4rem 0;
-        }
-
-        .cta-section h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .cta-section .cta-btn {
-            display: inline-block;
-            background: var(--accent);
-            color: white;
-            padding: 1.2rem 3rem;
-            border-radius: 50px;
-            font-weight: 700;
-            font-size: 1.2rem;
-            text-decoration: none;
-            transition: all 0.3s;
-        }
-
-        .cta-section .cta-btn:hover {
-            transform: scale(1.05);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-        }
-
-        /* Footer */
-        footer {
-            background: var(--text-dark);
-            color: white;
-            padding: 3rem 2rem;
-            text-align: center;
-        }
-
-        footer a {
-            color: var(--accent);
-            text-decoration: none;
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2rem;
-            }
-
-            .hero .subtitle {
-                font-size: 1.2rem;
-            }
-        }
-    </style>
+    <link rel="icon" href="images/athdgc.png" type="image/png">
 </head>
-
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="container">
-            <div class="nav-brand">
-                <a href="index.html">Naxos Summer School 2026</a>
-            </div>
-            <ul class="nav-menu">
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="program.html">Program</a></li>
-                <li><a href="speakers.html">Speakers</a></li>
-                <li><a href="registration.html">Registration</a></li>
-                <li><a href="venue.html">Venue</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <h1>11th Naxos Summer School</h1>
-        <div class="subtitle">Diachronic Linguistics: Comparing Diachronies</div>
-        <div class="dates">July 19-24, 2026 | Naxos, Greece</div>
-        <div class="apply-info" style="text-align: center; margin: 2rem 0;">
-            <h3>Join Us in Naxos!</h3>
-            <p><strong>Application opens by end of December 2026</strong></p>
-            <p style="margin-top: 1rem; font-style: italic;">
-                Please check back later for the application link
-            </p>
-        </div>
+<header>
+    <div class="logos-container">
+        <img src="images/uoa.png" alt="UoA" class="logo-uoa">
+        <img src="images/civis.png" alt="CIVIS" class="logo-civis">
+        <img src="images/athdgc.png" alt="Athdgc" class="logo-athdgc">
+    </div>
+
+    <h1>9th Naxos Summer School on Diachronic Linguistics</h1>
+    <h2>Linguistic Diachronies: A Contrastive Approach</h2>
+    <h3>July 19–24, 2026</h3>
+    <p>Naxos, Greece</p>
+</header>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="faculty.html">Faculty</a>
+    <a href="registration.html">Registration</a>
+    <a href="venue.html">Venue</a>
+    <a href="accommodation.html">Accommodation</a>
+    <a href="social.html">Social Program</a>
+    <a href="previous.html">Previous Schools</a>
+    <a href="support.html">Support</a>
+</nav>
+
+<main style="padding: 40px; max-width: 1000px; margin: 0 auto;">
+
+    <div style="background-color: #fff8ee; padding: 20px; border: 1px solid #e0d5c0; border-radius: 8px;">
+        <h3 style="text-align:center;">Topics</h3>
+        <ul style="font-size: 1.1em; line-height: 1.8;">
+            <li>The diachrony of English</li>
+            <li>New perspectives in Studying Ancient and Medieval IE Languages</li>
+            <li>The diachrony of Romance</li>
+            <li>Comparative and Contrastive Diachronic Linguistics</li>
+            <li>Language Contact</li>
+            <li>Workshop / Poster session (of summer school participants)</li>
+        </ul>
+    </div>
+
+    <section style="margin-top: 40px; text-align: center;">
+        <h3>Organizers</h3>
+        <p style="font-size: 1.1em;">
+            Professor Nikolaos Lavidas (National and Kapodistrian University of Athens) &nbsp; | &nbsp;
+            Professor Elly van Gelderen (Arizona State University) &nbsp; | &nbsp;
+            Professor Ioanna Sitaridou (University of Cambridge) &nbsp; | &nbsp;
+            Professor Alexander Bergs (University of Osnabrück)
+        </p>
     </section>
 
-    footer a {
-    color: var(--accent);
-    text-decoration: none;
-    }
+    <section style="margin-top: 30px; text-align: center;">
+        <h3>Teaching Assistants</h3>
+        <p><strong>PhD Candidates of the Univ. of Athens:</strong> Sofia Chionidi, Eleni Plakoutsi</p>
+    </section>
 
-    /* Responsive */
-    @media (max-width: 768px) {
-    .hero h1 {
-    font-size: 2rem;
-    }
-    <!-- Main Content -->
-    <div class="container">
-        <!-- About Section -->
-        <section class="section">
-            <h2 class="section-title">About the Summer School</h2>\n<div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(350px,1fr)); gap:2rem; margin:3rem 0;"><div style="border-radius:12px; overflow:hidden; box-shadow:0 4px 12px rgba(0,0,0,0.1);"><img src="https://images.unsplash.com/photo-1613395877344-13d4a8e0d49e?auto=format&fit=crop&w=800&q=80" alt="Naxos Portara" style="width:100%; height:300px; object-fit:cover;"><div style="padding:1rem; background:#f8f9fa; text-align:center; font-size:0.9rem; color:#666;">Naxos Island Portara<br><small>Jimmy Teoh / Unsplash</small></div></div><div style="border-radius:12px; overflow:hidden; box-shadow:0 4px 12px rgba(0,0,0,0.1);"><img src="https://images.unsplash.com/photo-1601581987809-a874a81309c9?auto=format&fit=crop&w=800&q=80" alt="Naxos Chora" style="width:100%; height:300px; object-fit:cover;"><div style="padding:1rem; background:#f8f9fa; text-align:center; font-size:0.9rem; color:#666;">Naxos Chora<br><small>Arthur Yeti / Unsplash</small></div></div><div style="border-radius:12px; overflow:hidden; box-shadow:0 4px 12px rgba(0,0,0,0.1);"><img src="https://images.unsplash.com/photo-1580837119756-563d608dd119?auto=format&fit=crop&w=800&q=80" alt="Aegean Sea" style="width:100%; height:300px; object-fit:cover;"><div style="padding:1rem; background:#f8f9fa; text-align:center; font-size:0.9rem; color:#666;">Aegean Sea View<br><small>Jonathan Gallegos / Unsplash</small></div></div></div>
-            <div class="section-content">
-                <p>
-                    The <strong>National and Kapodistrian University of Athens</strong>, in collaboration with
-                    <strong>Arizona State University</strong>, <strong>University of Osnabrück</strong>, and
-                    <strong>University of Cambridge</strong>, coordinates a summer school program, workshop/poster
-                    session,
-                    and master classes on ancient and medieval languages and linguistics.
-                </p>
-                <p style="margin-top: 1.5rem;">
-                    The summer school will offer intensive language classes and linguistic classes on Historical &
-                    Diachronic Linguistics. The aim is to attract students and scholars to study ancient and medieval
-                    languages in a relaxed yet focused and stimulating atmosphere that promotes in-depth analysis and
-                    discussion. The 11th Naxos Summer School will also be organizing a workshop/poster session on
-                    "Linguistic Diachronies: A Contrastive Approach".
-                </p>
-                <p style="margin-top: 1.5rem;">
-                    <strong>Research Project:</strong> This summer school is part of the research project
-                    <em>'A Corpus-based Valency Lexicon for a Contrastive and Diachronic Study of Ancient & Medieval
-                        Languages'</em>,
-                    funded by the <strong>Hellenic Foundation for Research and Innovation (HFRI)</strong> (Grant No.
-                    20577)
-                    within the 3rd Call for HFRI Research Projects to Support Faculty Members and Researchers.
-                </p>
-                <p style="margin-top: 1.5rem;">
-                    <strong>AthDGC Project Team:</strong> Nikolaos Lavidas, Kiki Nikiforidou,
-                    Vassiliki Geka, Vassileios Symeonidis, Sofia Chionidi, Anastasia Tsiropina, Eleni Plakoutsi,
-                    Theodoros Michalareas, Evangelos Argyropoulos
-                </p>
-            </div>
-        </section>
+</main>
 
-        <!-- Faculty & Instructors -->
-        <section class="section">
-            <h2 class="section-title">Faculty & Instructors</h2>
-            <div class="section-content">
-                <p style="margin-bottom: 1.5rem;">
-                    Our summer school brings together leading scholars in diachronic linguistics from top universities
-                    worldwide:
-                </p>
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem;">
-                    <div
-                        style="padding: 1rem; background: #f8f9fa; border-left: 4px solid var(--primary); border-radius: 8px;">
-                        <h4 style="color: var(--primary); margin-bottom: 0.5rem;">Prof. Nikolaos Lavidas</h4>
-                        <p style="font-size: 0.9rem; color: #666;">National and Kapodistrian University of Athens</p>
-                    </div>
-                    <div
-                        style="padding: 1rem; background: #f8f9fa; border-left: 4px solid var(--primary); border-radius: 8px;">
-                        <h4 style="color: var(--primary); margin-bottom: 0.5rem;">Prof. Elly van Gelderen</h4>
-                        <p style="font-size: 0.9rem; color: #666;">Arizona State University<br>Historical Linguistics
-                        </p>
-                    </div>
-                    <div
-                        style="padding: 1rem; background: #f8f9fa; border-left: 4px solid var(--primary); border-radius: 8px;">
-                        <h4 style="color: var(--primary); margin-bottom: 0.5rem;">Prof. Alexander Bergs</h4>
-                        <p style="font-size: 0.9rem; color: #666;">University of Osnabrück<br>English Historical
-                            Linguistics</p>
-                    </div>
-                    <div
-                        style="padding: 1rem; background: #f8f9fa; border-left: 4px solid var(--primary); border-radius: 8px;">
-                        <h4 style="color: var(--primary); margin-bottom: 0.5rem;">Prof. Ioanna Sitaridou</h4>
-                        <p style="font-size: 0.9rem; color: #666;">University of Cambridge<br>Romance Linguistics</p>
-                    </div>
-                </div>
-
-                <h3 style="margin-top: 3rem; margin-bottom: 1.5rem; color: var(--primary);">CIVIS Classes
-                </h3>
-                <p style="margin-bottom: 1.5rem;">
-                    The 11th Naxos Summer School collaborates with the <strong>CIVIS Blended Learning Course / CIVIS
-                        short-mobility Course</strong>
-                    "Diachronic Linguistics in the 21st Century", featuring additional distinguished professors:
-                </p>
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem;">
-                    <div style="padding: 0.8rem; background: #ffffff; border: 1px solid #e0e0e0; border-radius: 8px;">
-                        <p style="font-weight: 600; color: var(--text-dark);">Antonio R. Revuelta Puigdollers</p>
-                        <p style="font-size: 0.85rem; color: #666;">Universidad Autónoma de Madrid</p>
-                    </div>
-                    <div style="padding: 0.8rem; background: #ffffff; border: 1px solid #e0e0e0; border-radius: 8px;">
-                        <p style="font-weight: 600; color: var(--text-dark);">Katrin Axel-Tober</p>
-                        <p style="font-size: 0.85rem; color: #666;">University of Tübingen</p>
-                    </div>
-                    <div style="padding: 0.8rem; background: #ffffff; border: 1px solid #e0e0e0; border-radius: 8px;">
-                        <p style="font-weight: 600; color: var(--text-dark);">Artemis Pompeo</p>
-                        <p style="font-size: 0.85rem; color: #666;">Sapienza Università di Roma</p>
-                    </div>
-                    <div style="padding: 0.8rem; background: #ffffff; border: 1px solid #e0e0e0; border-radius: 8px;">
-                        <p style="font-weight: 600; color: var(--text-dark);">Joanna Kopaczyk</p>
-                        <p style="font-size: 0.85rem; color: #666;">University of Glasgow</p>
-                    </div>
-                    <div style="padding: 0.8rem; background: #ffffff; border: 1px solid #e0e0e0; border-radius: 8px;">
-                        <p style="font-weight: 600; color: var(--text-dark);">Adina Dragomirescu</p>
-                        <p style="font-size: 0.85rem; color: #666;">University of Bucharest</p>
-                    </div>
-                    <div style="padding: 0.8rem; background: #ffffff; border: 1px solid #e0e0e0; border-radius: 8px;">
-                        <p style="font-weight: 600; color: var(--text-dark);">Alexandru Nicolae</p>
-                        <p style="font-size: 0.85rem; color: #666;">University of Bucharest</p>
-                    </div>
-                    <div style="padding: 0.8rem; background: #ffffff; border: 1px solid #e0e0e0; border-radius: 8px;">
-                        <p style="font-weight: 600; color: var(--text-dark);">Ljuba Veselinova</p>
-                        <p style="font-size: 0.85rem; color: #666;">Stockholm University</p>
-                    </div>
-                    <div style="padding: 0.8rem; background: #ffffff; border: 1px solid #e0e0e0; border-radius: 8px;">
-                        <p style="font-weight: 600; color: var(--text-dark);">Matthias Heinz</p>
-                        <p style="font-size: 0.85rem; color: #666;">Paris Lodron University of Salzburg</p>
-                    </div>
-                    <div style="padding: 0.8rem; background: #ffffff; border: 1px solid #e0e0e0; border-radius: 8px;">
-                        <p style="font-weight: 600; color: var(--text-dark);">Linda Pillière</p>
-                        <p style="font-size: 0.85rem; color: #666;">Aix-Marseille Université</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Key Information -->
-        <div class="info-grid">
-            <div class="info-card">
-                <h3>Credits</h3>
-                <p>Students will be able to earn up to <strong>6 ECTS</strong> from the summer school.</p>
-                <p style="margin-top: 0.5rem; font-size: 0.9rem;">ECTS approval: 8-2-2021 (law: a90.4692/2020)</p>
-            </div>
-
-            <div class="info-card">
-                <h3>Location</h3>
-                <p><strong>Naxos Island</strong>, Cyclades, Greece</p>
-                <p style="margin-top: 0.5rem;">A beautiful Aegean island offering the perfect setting for focused
-                    academic work and cultural immersion.</p>
-            </div>
-
-            <div class="info-card">
-                <h3>Collaboration</h3>
-                <p>Coordinated with the <strong>CIVIS Course</strong> "Diachronic Linguistics in the 21st century"</p>
-                <p style="margin-top: 0.5rem;"><a
-                        href="https://civis.eu/en/learn/civis-courses/diachronic-linguistics-in-the-21st-century"
-                        target="_blank" style="color: var(--primary);">Learn more →</a></p>
-            </div>
-        </div>
-
-        <!-- Visual Identity -->
-        <section class="section">
-            <h2 class="section-title">The Naxos Experience</h2>
-            <div class="image-grid"
-                style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); max-width: 1000px; margin: 0 auto;">
-                <div class="image-card">
-                    <img src="https://images.unsplash.com/photo-1613395877344-13d4a8e0d49e?auto=format&fit=crop&w=800&q=80"
-                        alt="Portara - Temple of Apollo, Naxos" style="object-fit: cover; height: 300px;">
-                    <div class="image-caption">Portara - Temple of Apollo, Naxos<br><small
-                            style="font-size: 0.8rem; opacity: 0.7;">Photo by Jimmy Teoh on Unsplash</small>
-                    </div>
-                </div>
-                <div class="image-card">
-                    <img src="https://images.unsplash.com/photo-1601581987809-a874a81309c9?auto=format&fit=crop&w=800&q=80"
-                        alt="Naxos Chora - Cycladic Architecture" style="object-fit: cover; height: 300px;">
-                    <div class="image-caption">Naxos Chora - White-Washed Streets<br><small
-                            style="font-size: 0.8rem; opacity: 0.7;">Photo
-                            by Arthur Yeti on Unsplash</small></div>
-                </div>
-                <div class="image-card">
-                    <img src="https://images.unsplash.com/photo-1580837119756-563d608dd119?auto=format&fit=crop&w=800&q=80"
-                        alt="Aegean Sea View from Naxos" style="object-fit: cover; height: 300px;">
-                    <div class="image-caption">Aegean Sea View<br><small style="font-size: 0.8rem; opacity: 0.7;">Photo
-                            by
-                            Jonathan Gallegos on Unsplash</small></div>
-                </div>
-                <div class="image-card">
-                    <img src="https://images.unsplash.com/photo-1532012197267-da84d127e765?auto=format&fit=crop&w=800&q=80"
-                        alt="Ancient Greek Columns" style="object-fit: cover; height: 300px;">
-                    <div class="image-caption">Ancient Greek Heritage<br><small
-                            style="font-size: 0.8rem; opacity: 0.7;">Photo
-                            by Arthur Yeti on Unsplash</small></div>
-                </div>
-            </div>
-        </section>
-
-        <!-- CTA -->
-        <div class="cta-section">
-            <h2>Join Us in Naxos!</h2>
-            <p style="font-size: 1.2rem; margin-bottom: 2rem; opacity: 0.95;">
-                Applications for the 11th edition of our prestigious summer school
-            </p>
-            <div class="apply-info" style="text-align: center; margin: 2rem 0;">
-                <h3>Join Us in Naxos!</h3>
-                <p><strong>Application opens by end of December 2026</strong></p>
-                <p style="margin-top: 1rem; font-style: italic;">
-                    <a href="https://forms.gle/1GuNGaHsmVNAE4bx9" target="_blank"
-                        style="color: var(--primary); font-weight: bold;">APPLY NOW →</a>
-                </p>
-            </div>
-
-            <!-- Contact -->
-            <section class="section">
-                <h2 class="section-title">Contact Information</h2>
-                <div class="section-content">
-                    <p><strong>Organizer:</strong> National and Kapodistrian University of Athens</p>
-                    <p><strong>Contact:</strong> Prof. Nikolaos Lavidas</p>
-                    <p><strong>Email:</strong> <a href="mailto:nlavidas@enl.uoa.gr"
-                            style="color: var(--primary);">nlavidas@enl.uoa.gr</a></p>
-                    <p style="margin-top: 1.5rem;">
-                        <a href="https://athdgc.github.io/" style="color: var(--primary); font-weight: 600;"
-                            target="_blank">Visit AthDGC Research Network →</a>
-                </div>
-
-                <!-- Footer -->
-                <footer>
-                    <p>Licensed under the <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank"
-                            style="color: white; text-decoration: underline;">CC BY 4.0</a> License</p>
-                    <p style="margin-top: 1rem;">
-                        <a href="https://athdgc.github.io/" target="_blank">AthDGC Research Network</a>
-                    </p>
-                </footer>\n<div style="margin-top:2rem; padding:1rem; background:#f8f9fa; border-left:4px solid #1a4d8f; font-size:0.85rem; color:#666;"><strong>Image Attributions:</strong> All images from Unsplash (free license). Photographers: Birmingham Museums Trust, Freddy Kearney, Giammarco Boscaro, Jimmy Teoh, Arthur Yeti, Jonathan Gallegos, Spencer Davis, Headway. Full details: <a href="https://github.com/athdgc/athdgc.github.io/blob/main/IMAGE_SOURCES.md" style="color:#1a4d8f;">IMAGE_SOURCES.md</a></div>\n
-            </section>
-        </div>
+<footer>
+    <div class="footer-logos">
+        <img src="images/summer-school-logo.png" alt="Naxos School">
+        <img src="images/riemsdijk.png" alt="Riemsdijk">
+        <img src="images/civis.png" alt="CIVIS">
+        <img src="images/erasmus.png" alt="Erasmus">
+        <img src="images/naxos.png" alt="Municipality">
     </div>
-    </div>
+    <p style="margin-top:15px;">&copy; 2026 Naxos Summer School</p>
+</footer>
+
 </body>
-
 </html>
