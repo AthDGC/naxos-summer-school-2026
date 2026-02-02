@@ -464,6 +464,72 @@ footer a {
     margin: 0;
 }
 
+.summer-school-info {
+    background: var(--bg-surface);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    padding: 4rem 2rem;
+}
+
+.info-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.info-content h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.subtitle {
+    font-size: 1.3rem;
+    color: var(--text-light);
+    text-align: center;
+    margin-bottom: 2rem;
+    font-style: italic;
+}
+
+.description p {
+    margin-bottom: 1.5rem;
+    line-height: 1.7;
+}
+
+.registration-info {
+    background: var(--bg-soft);
+    padding: 2rem;
+    border-radius: 8px;
+    margin: 2rem 0;
+    border-left: 4px solid var(--primary);
+}
+
+.registration-info h3 {
+    margin-bottom: 1rem;
+    color: var(--primary);
+}
+
+.registration-info ul {
+    margin-bottom: 1rem;
+    padding-left: 1.5rem;
+}
+
+.registration-info li {
+    margin-bottom: 0.5rem;
+}
+
+.apply-section {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.apply-section .btn {
+    font-size: 1.1rem;
+    padding: 1rem 2.5rem;
+}
+
 @media (max-width: 768px) {
     h1 {
         font-size: 2rem;
