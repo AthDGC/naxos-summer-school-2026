@@ -1,0 +1,47 @@
+﻿/* FOOTER WITH REAL LOGOS - ADD TO style.css */
+.footer-with-logos {
+    background: #1e293b;
+    color: #e2e8f0;
+    padding: 2.5rem 0;
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+    border-top: 1px solid #334155;
+}
+
+.footer-content {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.footer-title {
+    font-family: 'Crimson Text', serif;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #f1f5f9;
+    margin-bottom: 0.5rem;
+}
+
+.logos-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+    margin: 1.5rem 0;
+}
+
+.logo-item img {
+    height: 60px;
+    width: auto;
+    transition: transform 0.3s ease;
+}
+
+.logo-item a:hover img {
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .logos-container { flex-direction: column; gap: 2rem; }
+    .logo-item img { height: 50px; }
+}
