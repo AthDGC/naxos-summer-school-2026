@@ -1,321 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
- 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Program | Naxos Summer School 2026</title>
-    <link rel="icon" type="image/png" href="assets/logos/favicon.png">
-    <link rel="stylesheet" href="style.css">
+    <title>Program Schedule - Naxos 2026</title>
     <style>
-        /* Academic-style fonts for the program page */
-        #program {
-            font-family: Georgia, 'Times New Roman', serif;
-        }
-        
-        #program h2, #program h3, #program h4 {
-            font-family: Georgia, 'Times New Roman', serif;
-            font-weight: 600;
-        }
-        
-        #program table {
-            font-family: Georgia, 'Times New Roman', serif;
-        }
-        
-        #program p {
-            font-family: Georgia, 'Times New Roman', serif;
-            line-height: 1.6;
-        }
+        body { font-family: 'Georgia', serif; color: #222; line-height: 1.4; padding: 30px; }
+        .header { text-align: center; border-bottom: 2px solid #2c5aa0; margin-bottom: 20px; padding-bottom: 10px; }
+        h1 { margin: 0; font-size: 22pt; color: #2c5aa0; }
+        .info-box { background: #f4f7fa; padding: 12px; border-left: 6px solid #2c5aa0; margin-bottom: 20px; font-size: 10pt; }
+        table { width: 100%; border-collapse: collapse; table-layout: fixed; }
+        th { background-color: #2c5aa0; color: white; border: 1px solid #ccc; padding: 10px; font-size: 11pt; }
+        td { border: 1px solid #ccc; padding: 8px; vertical-align: top; font-size: 9.5pt; height: 55px; }
+        .time-col { width: 90px; font-weight: bold; background: #fcfcfc; text-align: center; color: #555; }
+        .intensive { background-color: #fafafa; font-style: italic; color: #444; }
+        .prox-highlight { background-color: #f0f7ff; font-weight: bold; } /* For Chiara/Daniel */
+        .spread-highlight { background-color: #fff9f0; } /* For Lavidas */
+        .lunch { background-color: #f0f0f0; text-align: center; font-weight: bold; font-size: 10pt; height: 35px; }
+        .footer { margin-top: 25px; font-size: 9pt; border-top: 1px solid #ccc; padding-top: 10px; }
+        .invited { color: #2c5aa0; font-weight: bold; }
+        @media print { body { padding: 0; } .no-print { display: none; } }
     </style>
 </head>
- 
 <body>
-    <nav>
-        <div class="container">
-            <a href="index.html" class="logo">Naxos 2026</a>
-            <ul>
-                <li><a href="about.html">About</a></li>
-                <li><a href="program.html" class="active">Program</a></li>
-                <li><a href="topics.html">Topics</a></li>
-                <li><a href="faculty.html">Faculty</a></li>
-                <li><a href="registration.html">Register</a></li>
-                <li><a href="venue.html">Venue</a></li>
-                <li><a href="accommodation.html">Stay</a></li>
-                <li><a href="social.html">Social</a></li>
-                <li><a href="previous.html">Previous</a></li>
-                <li><a href="support.html">Support</a></li>
-            </ul>
-        </div>
-    </nav>
- 
-    <section id="program">
-        <div class="container">
-            <h2 class="section-title">Program Schedule</h2>
-            
-            <p><strong>Dates:</strong> July 19–24, 2026</p>
- 
-            <h3>Daily Schedule</h3>
-            
-            <p><strong>Morning (9:00 AM):</strong> Light refreshments (cookies, coffee, tea) available at venue</p>
-            
-            <p><strong>Lunch (2:20–3:00 PM):</strong> Light lunch served at venue, including Poster Session and Presentations</p>
-            
-            <p><strong>Classes:</strong> Sessions run until evening</p>
- 
-            <hr>
 
-                     <div style="background-color: #f0f4f8; border-left: 4px solid #2c5aa0; padding: 1rem 1.5rem; margin: 2rem 0;">
-                <p style="margin: 0 0 0.5rem 0;"><strong>Important Notes:</strong></p>
-                <p style="margin: 0 0 0.5rem 0;">• Participants can freely select which lectures and seminars to attend, or attend all sessions.</p>
-                <p style="margin: 0;">• <strong>For ECTS credits:</strong> Minimum 50% attendance is required.</p>
-            </div>
- 
-            <h3>Weekly Schedule</h3>
- 
-            <div style="overflow-x: auto;">
-                <table style="width: 100%; border-collapse: collapse; margin: 2rem 0; font-family: Georgia, 'Times New Roman', serif;">
-                    <thead>
-                        <tr style="background-color: #2c5aa0; color: white;">
-                            <th style="padding: 12px; border: 1px solid #ddd; text-align: left; font-family: Georgia, 'Times New Roman', serif;">Time</th>
-                            <th style="padding: 12px; border: 1px solid #ddd; text-align: left; font-family: Georgia, 'Times New Roman', serif;">Sunday</th>
-                            <th style="padding: 12px; border: 1px solid #ddd; text-align: left; font-family: Georgia, 'Times New Roman', serif;">Monday</th>
-                            <th style="padding: 12px; border: 1px solid #ddd; text-align: left; font-family: Georgia, 'Times New Roman', serif;">Tuesday</th>
-                            <th style="padding: 12px; border: 1px solid #ddd; text-align: left; font-family: Georgia, 'Times New Roman', serif;">Wednesday</th>
-                            <th style="padding: 12px; border: 1px solid #ddd; text-align: left; font-family: Georgia, 'Times New Roman', serif;">Thursday</th>
-                            <th style="padding: 12px; border: 1px solid #ddd; text-align: left; font-family: Georgia, 'Times New Roman', serif;">Friday</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">9:00 AM</td>
-                            <td style="padding: 10px; border: 1px solid #ddd;"></td>
-                            <td style="padding: 10px; border: 1px solid #ddd; background-color: #f0f4f8;"><strong>Light refreshments (cookies, coffee, tea) at venue</strong></td>
-                            <td style="padding: 10px; border: 1px solid #ddd; background-color: #f0f4f8;"><strong>Light refreshments</strong></td>
-                            <td style="padding: 10px; border: 1px solid #ddd; background-color: #f0f4f8;"><strong>Light refreshments</strong></td>
-                            <td style="padding: 10px; border: 1px solid #ddd; background-color: #f0f4f8;"><strong>Light refreshments</strong></td>
-                            <td style="padding: 10px; border: 1px solid #ddd; background-color: #f0f4f8;"><strong>Light refreshments</strong></td>
-                        </tr>
-                        <tr>
-                            <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">9:00-10:00 AM</td>
-                            <td style="padding: 10px; border: 1px solid #ddd;"></td>
-                            <td style="padding: 10px; border: 1px solid #ddd;"><strong>On the diachrony of indefinites, at least</strong><br><em>Johan van der Auwera</em><br>Universiteit Antwerpen</td>
-                            <td style="padding: 10px; border: 1px solid #ddd;"><strong>On the diachrony of indefinites, a map with more semantics</strong><br><em>Johan van der Auwera</em><br>Universiteit Antwerpen</td>
-                            <td style="padding: 10px; border: 1px solid #ddd;"><strong>Borrowing phenomena - Italo-Romance contact (Part 1)</strong><br><em>Matthias Heinz</em><br>Universität Salzburg</td>
-                            <td style="padding: 10px; border: 1px solid #ddd;"><strong>The diachrony of negation (Part 2)</strong><br><em>Chiara Gianollo</em><br>Università di Bologna</td>
-                            <td style="padding: 10px; border: 1px solid #ddd;"><strong>Borrowing phenomena - Italo-Romance contact (Part 2)</strong><br><em>Matthias Heinz</em><br>Universität Salzburg</td>
-                        </tr>
-                        <tr style="background-color: #f9f9f9;">
-                            <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">10:00-10:05</td>
-                            <td style="padding: 10px; border: 1px solid #ddd;"></td>
-                            <td style="padding: 10px; border: 1px solid #ddd;">Short Break</td>
-                            <td style="padding: 10px; border: 1px solid #ddd;">Short Break</td>
-                            <td style="padding: 10px; border: 1px solid #ddd;">Short Break</td>
-                            <td style="padding: 10px; border: 1px solid #ddd;">Short Break</td>
-                            <td style="padding: 10px; border: 1px solid #ddd;">Short Break</td>
-                        </tr>
-                        <tr>
-                            <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">10:05-11:05 AM</td>
-                            <td style="padding: 10px; border: 1px solid #ddd;"></td>
-                            <td style="padding: 10px; border: 1px solid #ddd;"><strong>Evolutionary formal tools (Day 1)</strong><br><em>Igor Yanovich</em><br>University of Vienna</td>
-                            <td style="padding: 10px; border: 1px solid #ddd;"><strong>Evolutionary formal tools (Day 2)</strong><br><em>Igor Yanovich</em><br>University of Vienna</td>
-                            <td style="padding: 10px; border: 1px solid #ddd;"><strong>Evolutionary formal tools (Day 3)</strong><br><em>Igor Yanovich</em><br>University of Vienna</td>
-                            <td style="padding: 10px; border: 1px solid #ddd;"><strong>Evolutionary formal tools (Day 4)</strong><br><em>Igor Yanovich</em><br>University of Vienna</td>
-                            <td style="padding: 10px; border: 1px solid #ddd;"><strong>Evolutionary formal tools (Day 5)</strong><br><em>Igor Yanovich</em><br>University of Vienna</td>
-                        </tr>
-                        <tr style="background-color: #f9f9f9;">
-                            <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">11:05-11:10</td>
-                            <td style="padding: 10px; border: 1px solid #ddd;"></td>
-                            <td style="padding: 10px; border: 1px solid #ddd;">Short Break</td>
-                            <td style="padding: 10px; border: 1px solid #ddd;">Short Break</td>
-                            <td style="padding: 10px; border: 1px solid #ddd;">Short Break</td>
-                            <td style="padding: 10px; border: 1px solid #ddd;">Short Break</td>
-                            <td style="padding: 10px; border: 1px solid #ddd;">Short Break</td>
-                        </tr>
-                        <tr>
-                            <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">11:10 AM-12:10 PM</td>
-                            <td style="padding: 10px; border: 1px solid #ddd;"></td>
-                            <td style="padding: 10px; border: 1px solid #ddd;"><strong>The syntactic evolution of the Romance Languages (Day 1)</strong><br><em>Ioanna Sitaridou</em><br>University of Cambridge</td>
-                            <td style="padding: 10px; border: 1px solid #ddd;"><strong>The syntactic evolution of the Romance Languages (Day 2)</strong><br><em>Ioanna Sitaridou</em><br>University of Cambridge</td>
-                            <td style="padding: 10px; border: 1px solid #ddd;"><strong>The syntactic evolution of the Romance Languages (Day 3)</strong><br><em>Ioanna Sitaridou</em><br>University of Cambridge</td>
-                            <td style="padding: 10px; border: 1px solid #ddd;"><strong>The syntactic evolution of the Romance Languages (Day 4)</strong><br><em>Ioanna Sitaridou</em><br>University of Cambridge</td>
-                            <td style="padding: 10px; border: 1px solid #ddd;"><strong>The syntactic evolution of the Romance Languages (Day 5)</strong><br><em>Ioanna Sitaridou</em><br>University of Cambridge</td>
-                        </tr>
-                        <tr style="background-color: #f9f9f9;">
-                            <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">12:10-12:15 PM</td>
-                            <td style="padding: 10px; border: 1px solid #ddd;"></td>
-                            <td style="padding: 10px; border: 1px solid #ddd;">Short Break</td>
-                            <td style="padding: 10px; border: 1px solid #ddd;">Short Break</td>
-                            <td style="padding: 10px; border: 1px solid #ddd;">Short Break</td>
-                            <td style="padding: 10px; border: 1px solid #ddd;">Short Break</td>
-                            <td style="padding: 10px; border: 1px solid #ddd;">Short Break</td>
-                        </tr>
-                        <tr>
-                            <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">12:15-1:15 PM</td>
-                            <td style="padding: 10px; border: 1px solid #ddd;"></td>
-                            <td style="padding: 10px; border: 1px solid #ddd;"><strong>Phylogenetic methods in historical linguistics (Day 1)</strong><br><em>Gerhard Jäger</em><br>University of Tübingen</td>
-                            <td style="padding: 10px; border: 1px solid #ddd;"><strong>Phylogenetic methods in historical linguistics (Day 2)</strong><br><em>Gerhard Jäger</em><br>University of Tübingen</td>
-                            <td style="padding: 10px; border: 1px solid #ddd;"><strong>Phylogenetic methods in historical linguistics (Day 3)</strong><br><em>Gerhard Jäger</em><br>University of Tübingen</td>
-                            <td style="padding: 10px; border: 1px solid #ddd;"><strong>Phylogenetic methods in historical linguistics (Day 4)</strong><br><em>Gerhard Jäger</em><br>University of Tübingen</td>
-                            <td style="padding: 10px; border: 1px solid #ddd;"><strong>Phylogenetic methods in historical linguistics (Day 5)</strong><br><em>Gerhard Jäger</em><br>University of Tübingen</td>
-                        </tr>
-                        <tr style="background-color: #f9f9f9;">
-                            <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">1:15-1:20 PM</td>
-                            <td style="padding: 10px; border: 1px solid #ddd;"></td>
-                            <td style="padding: 10px; border: 1px solid #ddd;">Short Break</td>
-                            <td style="padding: 10px; border: 1px solid #ddd;">Short Break</td>
-                            <td style="padding: 10px; border: 1px solid #ddd;">Short Break</td>
-                            <td style="padding: 10px; border: 1px solid #ddd;">Short Break</td>
-                            <td style="padding: 10px; border: 1px solid #ddd;">Short Break</td>
-                        </tr>
-                        <tr>
-                            <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">1:20-2:20 PM</td>
-                            <td style="padding: 10px; border: 1px solid #ddd;"></td>
-                            <td style="padding: 10px; border: 1px solid #ddd;"><strong>The Rise of Pragmatic Markers (Day 1)</strong><br><em>Katrin Axel-Tober & Kalle Müller</em><br>University of Tübingen</td>
-                            <td style="padding: 10px; border: 1px solid #ddd;"><strong>The Rise of Pragmatic Markers (Day 2)</strong><br><em>Katrin Axel-Tober & Kalle Müller</em><br>University of Tübingen</td>
-                            <td style="padding: 10px; border: 1px solid #ddd;"><strong>The Rise of Pragmatic Markers (Day 3)</strong><br><em>Katrin Axel-Tober & Kalle Müller</em><br>University of Tübingen</td>
-                            <td style="padding: 10px; border: 1px solid #ddd;"><strong>The Rise of Pragmatic Markers (Day 4)</strong><br><em>Katrin Axel-Tober & Kalle Müller</em><br>University of Tübingen</td>
-                            <td style="padding: 10px; border: 1px solid #ddd;"><strong>The Rise of Pragmatic Markers (Day 5)</strong><br><em>Katrin Axel-Tober & Kalle Müller</em><br>University of Tübingen</td>
-                        </tr>
-                        <tr style="background-color: #f0f4f8;">
-                            <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">2:20-3:00 PM</td>
-                            <td style="padding: 10px; border: 1px solid #ddd;"></td>
-                            <td style="padding: 10px; border: 1px solid #ddd;"><strong>Light Lunch at Venue + Poster Session + Presentations</strong></td>
-                            <td style="padding: 10px; border: 1px solid #ddd;"><strong>Light Lunch + Posters + Presentations</strong></td>
-                            <td style="padding: 10px; border: 1px solid #ddd;"><strong>Light Lunch + Posters + Presentations</strong></td>
-                            <td style="padding: 10px; border: 1px solid #ddd;"><strong>Light Lunch + Posters + Presentations</strong></td>
-                            <td style="padding: 10px; border: 1px solid #ddd;"><strong>Light Lunch + Posters + Presentations</strong></td>
-                        </tr>
-                        <tr>
-                            <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">3:00-4:00 PM</td>
-                            <td style="padding: 10px; border: 1px solid #ddd;"></td>
-                            <td style="padding: 10px; border: 1px solid #ddd;"><strong>Computational modeling of semantic change (Day 1)</strong><br><em>Nina Tahmasebi & Pierluigi Cassotti</em><br>University of Gothenburg</td>
-                            <td style="padding: 10px; border: 1px solid #ddd;"><strong>Computational modeling of semantic change (Day 2)</strong><br><em>Nina Tahmasebi & Pierluigi Cassotti</em><br>University of Gothenburg</td>
-                            <td style="padding: 10px; border: 1px solid #ddd;"><strong>Computational modeling of semantic change (Day 3)</strong><br><em>Nina Tahmasebi & Pierluigi Cassotti</em><br>University of Gothenburg</td>
-                            <td style="padding: 10px; border: 1px solid #ddd;"><strong>Computational modeling of semantic change (Day 4)</strong><br><em>Nina Tahmasebi & Pierluigi Cassotti</em><br>University of Gothenburg</td>
-                            <td style="padding: 10px; border: 1px solid #ddd;"><strong>Computational modeling of semantic change (Day 5)</strong><br><em>Nina Tahmasebi & Pierluigi Cassotti</em><br>University of Gothenburg</td>
-                        </tr>
-                        <tr style="background-color: #f9f9f9;">
-                            <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">4:00-4:05 PM</td>
-                            <td style="padding: 10px; border: 1px solid #ddd;"></td>
-                            <td style="padding: 10px; border: 1px solid #ddd;">Short Break</td>
-                            <td style="padding: 10px; border: 1px solid #ddd;">Short Break</td>
-                            <td style="padding: 10px; border: 1px solid #ddd;">Short Break</td>
-                            <td style="padding: 10px; border: 1px solid #ddd;">Short Break</td>
-                            <td style="padding: 10px; border: 1px solid #ddd;">Short Break</td>
-                        </tr>
-                        <tr>
-                            <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">4:05-5:05 PM</td>
-                            <td style="padding: 10px; border: 1px solid #ddd;"></td>
-                            <td style="padding: 10px; border: 1px solid #ddd;"><strong>The diachrony of negation (Part 1)</strong><br><em>Chiara Gianollo</em><br>Università di Bologna</td>
-                            <td style="padding: 10px; border: 1px solid #ddd;"><strong>English in a comparative Germanic approach (Part 1)</strong><br><em>Thórhallur Eythórsson</em><br>University of Iceland</td>
-                            <td style="padding: 10px; border: 1px solid #ddd;"><strong>English in a comparative Germanic approach (Part 2)</strong><br><em>Thórhallur Eythórsson</em><br>University of Iceland</td>
-                            <td style="padding: 10px; border: 1px solid #ddd;"><strong>Case syncretism in Ancient Greek (Part 1)</strong><br><em>Flavia Pompeo</em><br>Sapienza Università di Roma</td>
-                            <td style="padding: 10px; border: 1px solid #ddd;"><strong>Case syncretism in Ancient Greek (Part 2)</strong><br><em>Flavia Pompeo</em><br>Sapienza Università di Roma</td>
-                        </tr>
-                        <tr style="background-color: #f9f9f9;">
-                            <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">5:05-5:10 PM</td>
-                            <td style="padding: 10px; border: 1px solid #ddd;"></td>
-                            <td style="padding: 10px; border: 1px solid #ddd;">Short Break</td>
-                            <td style="padding: 10px; border: 1px solid #ddd;">Short Break</td>
-                            <td style="padding: 10px; border: 1px solid #ddd;">Short Break</td>
-                            <td style="padding: 10px; border: 1px solid #ddd;">Short Break</td>
-                            <td style="padding: 10px; border: 1px solid #ddd;">Short Break</td>
-                        </tr>
-                        <tr>
-                            <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">5:10-6:10 PM</td>
-                            <td style="padding: 10px; border: 1px solid #ddd;"></td>
-                            <td style="padding: 10px; border: 1px solid #ddd;"><strong>Cyclical processes in language change (Part 1)</strong><br><em>Ljuba Veselinova</em><br>Stockholm University</td>
-                            <td style="padding: 10px; border: 1px solid #ddd;"><strong>Forecasting the propagation of language change (Part 1)</strong><br><em>Sigríður Sæunn Sigurðardóttir</em><br>University of Iceland</td>
-                            <td style="padding: 10px; border: 1px solid #ddd;"><strong>Forecasting the propagation of language change (Part 2)</strong><br><em>Sigríður Sæunn Sigurðardóttir</em><br>University of Iceland</td>
-                            <td style="padding: 10px; border: 1px solid #ddd;"><strong>Treebanks and digital annotation of Ancient Greek texts (Part 1)</strong><br><em>Daniel Riaño Rufilanchas</em><br>Centro de Ciencias Humanas y Sociales, Madrid</td>
-                            <td style="padding: 10px; border: 1px solid #ddd;"><strong>Treebanks and digital annotation of Ancient Greek texts (Part 2)</strong><br><em>Daniel Riaño Rufilanchas</em><br>Centro de Ciencias Humanas y Sociales, Madrid</td>
-                        </tr>
-                        <tr style="background-color: #f9f9f9;">
-                            <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">6:10-6:15 PM</td>
-                            <td style="padding: 10px; border: 1px solid #ddd;"></td>
-                            <td style="padding: 10px; border: 1px solid #ddd;">Short Break</td>
-                            <td style="padding: 10px; border: 1px solid #ddd;">Short Break</td>
-                            <td style="padding: 10px; border: 1px solid #ddd;">Short Break</td>
-                            <td style="padding: 10px; border: 1px solid #ddd;">Short Break</td>
-                            <td style="padding: 10px; border: 1px solid #ddd;">Short Break</td>
-                        </tr>
-                        <tr>
-                            <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">6:15-7:15 PM</td>
-                            <td style="padding: 10px; border: 1px solid #ddd;"></td>
-                            <td style="padding: 10px; border: 1px solid #ddd;"><strong>Diachronic pragmatics and the rise of pragmatic markers (Part 1)</strong><br><em>Maj-Britt Mosegaard Hansen</em><br>University of Manchester</td>
-                            <td style="padding: 10px; border: 1px solid #ddd;"><strong>Diachronic pragmatics and the rise of pragmatic markers (Part 2)</strong><br><em>Maj-Britt Mosegaard Hansen</em><br>University of Manchester</td>
-                            <td style="padding: 10px; border: 1px solid #ddd;"><strong>Modality: diachronic and computational approaches (Part 1)</strong><br><em>Francesca Dell'Oro</em><br>Università di Bologna</td>
-                            <td style="padding: 10px; border: 1px solid #ddd;"><strong>Cyclical processes in language change (Part 2)</strong><br><em>Ljuba Veselinova</em><br>Stockholm University</td>
-                            <td style="padding: 10px; border: 1px solid #ddd;"><strong>Modality: diachronic and computational approaches (Part 2)</strong><br><em>Francesca Dell'Oro</em><br>Università di Bologna</td>
-                        </tr>
-                        <tr style="background-color: #f9f9f9;">
-                            <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">7:15-7:20 PM</td>
-                            <td style="padding: 10px; border: 1px solid #ddd;"></td>
-                            <td style="padding: 10px; border: 1px solid #ddd;">Short Break</td>
-                            <td style="padding: 10px; border: 1px solid #ddd;">Short Break</td>
-                            <td style="padding: 10px; border: 1px solid #ddd;">Short Break</td>
-                            <td style="padding: 10px; border: 1px solid #ddd;">Short Break</td>
-                            <td style="padding: 10px; border: 1px solid #ddd;">Short Break</td>
-                        </tr>
-                        <tr>
-                            <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">7:20-8:20 PM</td>
-                            <td style="padding: 10px; border: 1px solid #ddd;"></td>
-                            <td style="padding: 10px; border: 1px solid #ddd;"><strong>Locative verbs from Latin to Romance Languages (Part 1)</strong><br><em>Maria Isabel Jiménez Martínez</em><br>Universidad Autónoma de Madrid</td>
-                            <td style="padding: 10px; border: 1px solid #ddd;"><strong>Locative verbs from Latin to Romance Languages (Part 2)</strong><br><em>Maria Isabel Jiménez Martínez</em><br>Universidad Autónoma de Madrid</td>
-                            <td style="padding: 10px; border: 1px solid #ddd;"><strong>CHS Special Session</strong><br><em>Eleni Belmehdi, Ioanna Papadopoulou, Julien Razanajao</em><br>Center for Hellenic Studies, Harvard University</td>
-                            <td style="padding: 10px; border: 1px solid #ddd;"><strong>Diachronic Linguistics Today and Tomorrow (Part 1)</strong><br><em>Nikolaos Lavidas</em><br>National and Kapodistrian University of Athens</td>
-                            <td style="padding: 10px; border: 1px solid #ddd;"><strong>Diachronic Linguistics Today and Tomorrow (Part 2)</strong><br><em>Nikolaos Lavidas</em><br>National and Kapodistrian University of Athens</td>
-                        </tr>
-                        <tr style="background-color: #fff3cd;">
-                            <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">8:30 PM</td>
-                            <td style="padding: 10px; border: 1px solid #ddd;"><strong>Welcome Reception & Roundtable</strong></td>
-                            <td style="padding: 10px; border: 1px solid #ddd;"><strong>Castle and Portara Tour</strong></td>
-                            <td style="padding: 10px; border: 1px solid #ddd;"><strong>Traditional Greek Dinner</strong> (in village)</td>
-                            <td style="padding: 10px; border: 1px solid #ddd;"><strong>Traditional Greek Dinner</strong> (in village)</td>
-                            <td style="padding: 10px; border: 1px solid #ddd;"></td>
-                            <td style="padding: 10px; border: 1px solid #ddd;"><strong>Farewell Reception</strong></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
- 
-            <hr>
- 
-            <h3>Social Events</h3>
-            
-            <p><strong>Sunday Evening:</strong> Welcome Reception & Roundtable</p>
-            <p><strong>Monday Evening:</strong> Castle and Portara Tour</p>
-            <p><strong>Tuesday Evening:</strong> Traditional Greek Dinner (in village)</p>
-            <p><strong>Wednesday Evening:</strong> Traditional Greek Dinner (in village)</p>
-            <p><strong>Friday Evening:</strong> Farewell Reception</p>
- 
-            <hr>
- 
-            <h4>All classes and lectures are open to all Summer School participants</h4>
-            
-            <p><em>Program last updated: March 25, 2026</em></p>
- 
-        </div>
-    </section>
- 
-    <footer>
-        <div class="container">
-            <div class="logos" style="display: flex; justify-content: center; align-items: center; gap: 2.5rem; margin-top: 2rem; flex-wrap: wrap;">
-                <a href="https://athdgc.github.io/naxos-summer-school-2026" target="_blank" style="display: inline-flex; align-items: center;">
-                    <img src="assets/logos/11th.png" alt="11th Naxos Summer School logo" style="height: 80px; width: auto;">
-                </a>
-                <a href="https://civis.eu" target="_blank" style="display: inline-flex; align-items: center;">
-                    <img src="assets/logos/civis-large---.png" alt="CIVIS European University Alliance logo" style="height: 120px; width: auto;">
-                </a>
-                <a href="https://erasmus-plus.ec.europa.eu/" target="_blank" style="display: inline-flex; align-items: center;">
-                    <img src="assets/logos/eu_flag.png" alt="Erasmus+ Programme of the European Union" style="height: 80px; width: auto;">
-                </a>
-                <a href="https://vanriemsdijkfoundation.org/" target="_blank" style="display: inline-flex; align-items: center;">
-                    <img src="assets/logos/riemsdijk.png" alt="Van Riemsdijk Foundation logo" style="height: 80px; width: auto;">
-                </a>
-            </div>
-        </div>
-    </footer>
- 
+    <div class="header">
+        <h1>11th Naxos Summer School 2026</h1>
+        <p>Diachronic Linguistics | Naxos, Greece | July 19–24, 2026</p>
+    </div>
+
+    <div class="info-box">
+        <strong>Daily Morning:</strong> Refreshments served from 9:00 AM. | 
+        <strong>ECTS:</strong> 50% minimum attendance required. | 
+        <span class="invited">Special Invited Talk:</span> Johan van Rooryck (Open Science) - Time TBD.
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th class="time-col">Time</th>
+                <th>Monday</th>
+                <th>Tuesday</th>
+                <th>Wednesday</th>
+                <th>Thursday</th>
+                <th>Friday</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="time-col">9:00-10:10<br>(70m)</td>
+                <td>J. van der Auwera (1)</td>
+                <td>J. van der Auwera (2)</td>
+                <td class="prox-highlight">C. Gianollo (2)</td>
+                <td>M. Heinz (1)</td>
+                <td>M. Heinz (2)</td>
+            </tr>
+            <tr class="intensive">
+                <td class="time-col">10:15-11:05</td>
+                <td colspan="5" style="text-align:center"><strong>I. Sitaridou:</strong> Syntactic Evolution of Romance Languages (Daily)</td>
+            </tr>
+            <tr class="intensive">
+                <td class="time-col">11:10-12:00</td>
+                <td colspan="5" style="text-align:center"><strong>I. Yanovich:</strong> Evolutionary Formal Tools (Daily)</td>
+            </tr>
+            <tr>
+                <td class="time-col">12:05-1:15<br>(70m)</td>
+                <td>Maj-Britt Hansen (1)</td>
+                <td class="prox-highlight">C. Gianollo (1)</td>
+                <td>Ljuba Veselinova (1)</td>
+                <td>Ljuba Veselinova (2)</td>
+                <td>Maj-Britt Hansen (2)</td>
+            </tr>
+            <tr class="lunch">
+                <td class="time-col">1:15-2:05</td>
+                <td colspan="5">LIGHT LUNCH & POSTER SESSIONS</td>
+            </tr>
+            <tr class="intensive">
+                <td class="time-col">2:10-3:00</td>
+                <td colspan="5" style="text-align:center"><strong>G. Jäger:</strong> Phylogenetic Methods</td>
+            </tr>
+            <tr class="intensive">
+                <td class="time-col">3:05-3:55</td>
+                <td colspan="5" style="text-align:center"><strong>K. Axel-Tober & K. Müller:</strong> Rise of Pragmatic Markers</td>
+            </tr>
+            <tr class="intensive">
+                <td class="time-col">4:00-4:50</td>
+                <td colspan="5" style="text-align:center"><strong>N. Tahmasebi & P. Cassotti:</strong> Computational Modeling</td>
+            </tr>
+            <tr>
+                <td class="time-col">4:55-6:05<br>(70m)</td>
+                <td class="spread-highlight">N. Lavidas (1)</td>
+                <td>T. Eythórsson (1)</td>
+                <td>T. Eythórsson (2)</td>
+                <td>F. Pompeo (1)</td>
+                <td>F. Pompeo (2)</td>
+            </tr>
+            <tr>
+                <td class="time-col">6:10-7:20<br>(70m)</td>
+                <td>F. Dell'Oro (1)</td>
+                <td>F. Dell'Oro (2)</td>
+                <td>S. Sigurðardóttir (1)</td>
+                <td>S. Sigurðardóttir (2)</td>
+                <td class="prox-highlight">D. Rufilanchas (2)</td>
+            </tr>
+            <tr>
+                <td class="time-col">7:25-8:35<br>(70m)</td>
+                <td>M. Martínez (1)</td>
+                <td>M. Martínez (2)</td>
+                <td>CHS Special Session</td>
+                <td class="prox-highlight">D. Rufilanchas (1)</td>
+                <td class="spread-highlight">N. Lavidas (2)</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="footer">
+        <strong>Social Events:</strong> 
+        Sun: Welcome (8:30 PM) | Mon: Castle Tour (8:45 PM) | Tue/Wed: Village Dinner (9:00 PM) | Fri: Farewell Reception (8:45 PM)
+        <br><em>Program last updated: March 27, 2026</em>
+    </div>
+
 </body>
 </html>
