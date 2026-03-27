@@ -1,123 +1,186 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <title>Program Schedule - Naxos 2026</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Program | Naxos Summer School 2026</title>
+    <link rel="icon" type="image/png" href="assets/logos/favicon.png">
+    <link rel="stylesheet" href="style.css">
     <style>
-        body { font-family: 'Georgia', serif; color: #222; line-height: 1.4; padding: 30px; }
-        .header { text-align: center; border-bottom: 2px solid #2c5aa0; margin-bottom: 20px; padding-bottom: 10px; }
-        h1 { margin: 0; font-size: 22pt; color: #2c5aa0; }
-        .info-box { background: #f4f7fa; padding: 12px; border-left: 6px solid #2c5aa0; margin-bottom: 20px; font-size: 10pt; }
-        table { width: 100%; border-collapse: collapse; table-layout: fixed; }
-        th { background-color: #2c5aa0; color: white; border: 1px solid #ccc; padding: 10px; font-size: 11pt; }
-        td { border: 1px solid #ccc; padding: 8px; vertical-align: top; font-size: 9.5pt; height: 55px; }
-        .time-col { width: 90px; font-weight: bold; background: #fcfcfc; text-align: center; color: #555; }
-        .intensive { background-color: #fafafa; font-style: italic; color: #444; }
-        .prox-highlight { background-color: #f0f7ff; font-weight: bold; } /* For Chiara/Daniel */
-        .spread-highlight { background-color: #fff9f0; } /* For Lavidas */
-        .lunch { background-color: #f0f0f0; text-align: center; font-weight: bold; font-size: 10pt; height: 35px; }
-        .footer { margin-top: 25px; font-size: 9pt; border-top: 1px solid #ccc; padding-top: 10px; }
-        .invited { color: #2c5aa0; font-weight: bold; }
-        @media print { body { padding: 0; } .no-print { display: none; } }
+        #program {
+            font-family: Georgia, 'Times New Roman', serif;
+        }
+        
+        #program h2, #program h3, #program h4 {
+            font-family: Georgia, 'Times New Roman', serif;
+            font-weight: 600;
+        }
+        
+        #program table {
+            font-family: Georgia, 'Times New Roman', serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+        
+        #program td, #program th {
+            padding: 12px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+        
+        #program p {
+            font-family: Georgia, 'Times New Roman', serif;
+            line-height: 1.6;
+        }
     </style>
 </head>
+
 <body>
+    <nav>
+        <div class="container">
+            <a href="index.html" class="logo">Naxos 2026</a>
+            <ul>
+                <li><a href="about.html">About</a></li>
+                <li><a href="program.html" class="active">Program</a></li>
+                <li><a href="topics.html">Topics</a></li>
+                <li><a href="faculty.html">Faculty</a></li>
+                <li><a href="registration.html">Register</a></li>
+                <li><a href="venue.html">Venue</a></li>
+                <li><a href="accommodation.html">Stay</a></li>
+                <li><a href="social.html">Social</a></li>
+                <li><a href="previous.html">Previous</a></li>
+                <li><a href="support.html">Support</a></li>
+            </ul>
+        </div>
+    </nav>
 
-    <div class="header">
-        <h1>11th Naxos Summer School 2026</h1>
-        <p>Diachronic Linguistics | Naxos, Greece | July 19–24, 2026</p>
-    </div>
+    <section id="program">
+        <div class="container">
+            <h2 class="section-title">Program Schedule</h2>
+            
+            <p><strong>Dates:</strong> July 19–24, 2026</p>
 
-    <div class="info-box">
-        <strong>Daily Morning:</strong> Refreshments served from 9:00 AM. | 
-        <strong>ECTS:</strong> 50% minimum attendance required. | 
-        <span class="invited">Special Invited Talk:</span> Johan van Rooryck (Open Science) - Time TBD.
-    </div>
+            <h3>Daily Schedule</h3>
+            
+            <p><strong>Morning (9:00 AM):</strong> Light refreshments (cookies, coffee, tea) available at venue</p>
+            
+            <p><strong>Lunch (1:15–2:05 PM):</strong> Light lunch served at venue, including Poster Session and Presentations</p>
+            
+            <p><strong>Classes:</strong> Sessions run until evening (5-session tracks: 50 min; 2-session tracks: 70 min)</p>
 
-    <table>
-        <thead>
-            <tr>
-                <th class="time-col">Time</th>
-                <th>Monday</th>
-                <th>Tuesday</th>
-                <th>Wednesday</th>
-                <th>Thursday</th>
-                <th>Friday</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td class="time-col">9:00-10:10<br>(70m)</td>
-                <td>J. van der Auwera (1)</td>
-                <td>J. van der Auwera (2)</td>
-                <td class="prox-highlight">C. Gianollo (2)</td>
-                <td>M. Heinz (1)</td>
-                <td>M. Heinz (2)</td>
-            </tr>
-            <tr class="intensive">
-                <td class="time-col">10:15-11:05</td>
-                <td colspan="5" style="text-align:center"><strong>I. Sitaridou:</strong> Syntactic Evolution of Romance Languages (Daily)</td>
-            </tr>
-            <tr class="intensive">
-                <td class="time-col">11:10-12:00</td>
-                <td colspan="5" style="text-align:center"><strong>I. Yanovich:</strong> Evolutionary Formal Tools (Daily)</td>
-            </tr>
-            <tr>
-                <td class="time-col">12:05-1:15<br>(70m)</td>
-                <td>Maj-Britt Hansen (1)</td>
-                <td class="prox-highlight">C. Gianollo (1)</td>
-                <td>Ljuba Veselinova (1)</td>
-                <td>Ljuba Veselinova (2)</td>
-                <td>Maj-Britt Hansen (2)</td>
-            </tr>
-            <tr class="lunch">
-                <td class="time-col">1:15-2:05</td>
-                <td colspan="5">LIGHT LUNCH & POSTER SESSIONS</td>
-            </tr>
-            <tr class="intensive">
-                <td class="time-col">2:10-3:00</td>
-                <td colspan="5" style="text-align:center"><strong>G. Jäger:</strong> Phylogenetic Methods</td>
-            </tr>
-            <tr class="intensive">
-                <td class="time-col">3:05-3:55</td>
-                <td colspan="5" style="text-align:center"><strong>K. Axel-Tober & K. Müller:</strong> Rise of Pragmatic Markers</td>
-            </tr>
-            <tr class="intensive">
-                <td class="time-col">4:00-4:50</td>
-                <td colspan="5" style="text-align:center"><strong>N. Tahmasebi & P. Cassotti:</strong> Computational Modeling</td>
-            </tr>
-            <tr>
-                <td class="time-col">4:55-6:05<br>(70m)</td>
-                <td class="spread-highlight">N. Lavidas (1)</td>
-                <td>T. Eythórsson (1)</td>
-                <td>T. Eythórsson (2)</td>
-                <td>F. Pompeo (1)</td>
-                <td>F. Pompeo (2)</td>
-            </tr>
-            <tr>
-                <td class="time-col">6:10-7:20<br>(70m)</td>
-                <td>F. Dell'Oro (1)</td>
-                <td>F. Dell'Oro (2)</td>
-                <td>S. Sigurðardóttir (1)</td>
-                <td>S. Sigurðardóttir (2)</td>
-                <td class="prox-highlight">D. Rufilanchas (2)</td>
-            </tr>
-            <tr>
-                <td class="time-col">7:25-8:35<br>(70m)</td>
-                <td>M. Martínez (1)</td>
-                <td>M. Martínez (2)</td>
-                <td>CHS Special Session</td>
-                <td class="prox-highlight">D. Rufilanchas (1)</td>
-                <td class="spread-highlight">N. Lavidas (2)</td>
-            </tr>
-        </tbody>
-    </table>
+            <div style="background-color: #f0f4f8; border-left: 4px solid #2c5aa0; padding: 1rem 1.5rem; margin: 2rem 0;">
+                <p style="margin: 0 0 0.5rem 0;"><strong>Important Notes:</strong></p>
+                <p style="margin: 0 0 0.5rem 0;">• Participants can freely select which lectures and seminars to attend, or attend all sessions.</p>
+                <p style="margin: 0 0 0.5rem 0;">• <strong>For ECTS credits:</strong> Minimum 50% attendance is required.</p>
+                <p style="margin: 0;">• <strong>Special Invited Talk</p>
+            </div>
 
-    <div class="footer">
-        <strong>Social Events:</strong> 
-        Sun: Welcome (8:30 PM) | Mon: Castle Tour (8:45 PM) | Tue/Wed: Village Dinner (9:00 PM) | Fri: Farewell Reception (8:45 PM)
-        <br><em>Program last updated: March 27, 2026</em>
-    </div>
+            <h3>Weekly Schedule</h3>
 
+            <div style="overflow-x: auto;">
+                <table>
+                    <thead>
+                        <tr style="background-color: #2c5aa0; color: white;">
+                            <th>Time</th>
+                            <th>Monday</th>
+                            <th>Tuesday</th>
+                            <th>Wednesday</th>
+                            <th>Thursday</th>
+                            <th>Friday</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="font-weight: bold;">9:00-10:10 AM</td>
+                            <td><strong>Indefinites (1)</strong><br>J. van der Auwera</td>
+                            <td><strong>Indefinites (2)</strong><br>J. van der Auwera</td>
+                            <td style="background-color: #eef7ff;"><strong>Negation (2)</strong><br>Chiara Gianollo</td>
+                            <td style="background-color: #fff9e6;"><strong>Italo-Romance (1)</strong><br>Matthias Heinz</td>
+                            <td style="background-color: #fff9e6;"><strong>Italo-Romance (2)</strong><br>Matthias Heinz</td>
+                        </tr>
+                        <tr style="background-color: #f9f9f9;">
+                            <td style="font-weight: bold;">10:15-11:05 AM</td>
+                            <td colspan="5" style="text-align: center;"><strong>Syntactic Evolution of Romance Languages (Days 1-5)</strong><br>Ioanna Sitaridou</td>
+                        </tr>
+                        <tr style="background-color: #f9f9f9;">
+                            <td style="font-weight: bold;">11:10-12:00 PM</td>
+                            <td colspan="5" style="text-align: center;"><strong>Evolutionary Formal Tools (Days 1-5)</strong><br>Igor Yanovich</td>
+                        </tr>
+                        <tr>
+                            <td style="font-weight: bold;">12:05-1:15 PM</td>
+                            <td style="background-color: #eef7ff;"><strong>Negation (1)</strong><br>Chiara Gianollo</td>
+                            <td><strong>Linguistics Today (1)</strong><br>Nikolaos Lavidas</td>
+                            <td style="background-color: #fff9e6;"><strong>Cyclical Change (1)</strong><br>Ljuba Veselinova</td>
+                            <td style="background-color: #fff9e6;"><strong>Cyclical Change (2)</strong><br>Ljuba Veselinova</td>
+                            <td><strong>Pragmatic Markers (2)</strong><br>Maj-Britt Hansen</td>
+                        </tr>
+                        <tr style="background-color: #f0f4f8;">
+                            <td style="font-weight: bold;">1:15-2:05 PM</td>
+                            <td colspan="5" style="text-align: center;"><strong>Light Lunch + Poster Session + Presentations</strong></td>
+                        </tr>
+                        <tr style="background-color: #f9f9f9;">
+                            <td style="font-weight: bold;">2:10-3:00 PM</td>
+                            <td colspan="5" style="text-align: center;"><strong>Phylogenetic Methods (Days 1-5)</strong><br>Gerhard Jäger</td>
+                        </tr>
+                        <tr style="background-color: #f9f9f9;">
+                            <td style="font-weight: bold;">3:05-3:55 PM</td>
+                            <td colspan="5" style="text-align: center;"><strong>Rise of Pragmatic Markers (Days 1-5)</strong><br>K. Axel-Tober & K. Müller</td>
+                        </tr>
+                        <tr style="background-color: #f9f9f9;">
+                            <td style="font-weight: bold;">4:00-4:50 PM</td>
+                            <td colspan="5" style="text-align: center;"><strong>Computational Modeling (Days 1-5)</strong><br>N. Tahmasebi & P. Cassotti</td>
+                        </tr>
+                        <tr>
+                            <td style="font-weight: bold;">4:55-6:05 PM</td>
+                            <td><strong>Pragmatic Markers (1)</strong><br>Maj-Britt Hansen</td>
+                            <td><strong>Germanic (1)</strong><br>T. Eythórsson</td>
+                            <td><strong>Germanic (2)</strong><br>T. Eythórsson</td>
+                            <td><strong>Ancient Greek (1)</strong><br>F. Pompeo</td>
+                            <td><strong>Ancient Greek (2)</strong><br>F. Pompeo</td>
+                        </tr>
+                        <tr>
+                            <td style="font-weight: bold;">6:10-7:20 PM</td>
+                            <td><strong>Modality (1)</strong><br>F. Dell'Oro</td>
+                            <td><strong>Modality (2)</strong><br>F. Dell'Oro</td>
+                            <td><strong>Forecasting (1)</strong><br>S. Sigurðardóttir</td>
+                            <td><strong>Forecasting (2)</strong><br>S. Sigurðardóttir</td>
+                            <td style="background-color: #e2f3e2;"><strong>Digital Annotation (2)</strong><br>D. Rufilanchas</td>
+                        </tr>
+                        <tr>
+                            <td style="font-weight: bold;">7:25-8:35 PM</td>
+                            <td><strong>Locative Verbs (1)</strong><br>M. Martinez</td>
+                            <td><strong>Locative Verbs (2)</strong><br>M. Martinez</td>
+                            <td><strong>CHS Special Session</strong><br>Harvard Team</td>
+                            <td style="background-color: #e2f3e2;"><strong>Digital Annotation (1)</strong><br>D. Rufilanchas</td>
+                            <td><strong>Linguistics Tomorrow (2)</strong><br>Nikolaos Lavidas</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <hr>
+
+            <h3>Social Events</h3>
+            <p><strong>Sunday:</strong> Welcome Reception & Roundtable (8:30 PM)</p>
+            <p><strong>Monday:</strong> Castle and Portara Tour (8:45 PM)</p>
+            <p><strong>Tuesday/Wednesday:</strong> Traditional Greek Dinner in village (9:00 PM)</p>
+            <p><strong>Friday:</strong> Farewell Reception (8:45 PM)</p>
+
+            <hr>
+            <p><em>Program last updated: March 27, 2026</em></p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container" style="text-align: center; padding: 2rem 0;">
+            <div style="display: flex; justify-content: center; gap: 2.5rem; flex-wrap: wrap;">
+                <img src="assets/logos/11th.png" alt="11th Naxos" style="height: 60px;">
+                <img src="assets/logos/civis-large---.png" alt="CIVIS" style="height: 80px;">
+                <img src="assets/logos/eu_flag.png" alt="Erasmus+" style="height: 60px;">
+                <img src="assets/logos/riemsdijk.png" alt="Van Riemsdijk" style="height: 60px;">
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
