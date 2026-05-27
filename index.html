@@ -9,6 +9,78 @@
         content="International summer school on diachronic linguistics, computational methods, and language change. July 19-24, 2026 in Naxos, Greece.">
     <link rel="icon" type="image/png" href="assets/logos/favicon.png">
     <link rel="stylesheet" href="style.css">
+    <style>
+        .hero-logo-layout {
+            background-color: #f5f0e4;
+            padding: 3.5rem 0;
+            border-bottom: 2px solid #d8d0c0;
+        }
+        .hero-logo-layout .container {
+            display: flex;
+            align-items: center;
+            gap: 3.5rem;
+            flex-wrap: wrap;
+        }
+        .hero-logo-layout .hero-logo-img {
+            flex: 0 0 auto;
+            max-width: 360px;
+        }
+        .hero-logo-layout .hero-logo-img img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .hero-logo-layout .hero-text {
+            flex: 1;
+            min-width: 220px;
+        }
+        .hero-logo-layout .hero-text h1 {
+            font-family: Georgia, 'Times New Roman', serif;
+            font-size: 2.4rem;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin: 0 0 0.6rem 0;
+            line-height: 1.2;
+        }
+        .hero-logo-layout .hero-text h2 {
+            font-family: Georgia, 'Times New Roman', serif;
+            font-size: 1.4rem;
+            font-weight: 400;
+            color: #333;
+            margin: 0 0 1.2rem 0;
+        }
+        .hero-logo-layout .hero-text .hero-details {
+            font-family: Georgia, 'Times New Roman', serif;
+            font-size: 1.05rem;
+            color: #555;
+            margin: 0 0 1.5rem 0;
+        }
+        .hero-logo-layout .hero-text .btn {
+            display: inline-block;
+            padding: 0.65rem 1.6rem;
+            background-color: #1a4d8f;
+            color: #fff;
+            font-family: Georgia, 'Times New Roman', serif;
+            font-size: 0.95rem;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.2s;
+        }
+        .hero-logo-layout .hero-text .btn:hover {
+            background-color: #163e72;
+        }
+        @media (max-width: 680px) {
+            .hero-logo-layout .container {
+                flex-direction: column;
+                gap: 2rem;
+                text-align: center;
+            }
+            .hero-logo-layout .hero-logo-img {
+                max-width: 280px;
+                margin: 0 auto;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -31,14 +103,18 @@
         </div>
     </nav>
 
-    <section class="hero"
-        style="background-image: url('assets/images/stefanos-nt-Yi0sH4InPRQ-unsplash.jpg'); background-size: cover; background-position: center;">
-        <div class="hero-overlay"
-            style="background: rgba(0,0,0,0.3); position: absolute; top: 0; left: 0; right: 0; bottom: 0;"></div>
-        <div class="hero-content" style="position: relative; z-index: 2;">
-            <h1 style="color: white; font-size: 3rem; margin-bottom: 1rem;">11th Naxos Summer School</h1>
-            <h2 style="color: white; font-size: 1.8rem; margin-bottom: 2rem;">Diachronic Linguistics 2026</h2>
-            <p class="hero-details" style="color: white; font-size: 1.2rem;">July 19–24, 2026 | Naxos, Greece</p>
+    <!-- Hero: logo left, text right -->
+    <section class="hero-logo-layout">
+        <div class="container">
+            <div class="hero-logo-img">
+                <img src="assets/logos/11th.png" alt="11th Naxos Summer School on Diachronic Linguistics">
+            </div>
+            <div class="hero-text">
+                <h1>11th Naxos Summer School</h1>
+                <h2>Diachronic Linguistics 2026</h2>
+                <p class="hero-details">July 19&#8211;24, 2026 &nbsp;|&nbsp; Naxos, Greece</p>
+                <a href="https://forms.gle/xPBn15HdDjBiyknH9" target="_blank" class="btn">Apply Here</a>
+            </div>
         </div>
     </section>
 
@@ -51,7 +127,7 @@
 
                 <div class="description">
                     <p>The 11th Naxos Summer School on Diachronic Linguistics, subtitled <strong>Theoretical and
-                            Computational Approaches to Diachronic Linguistics</strong>, will be held from <strong>19–24
+                            Computational Approaches to Diachronic Linguistics</strong>, will be held from <strong>19&#8211;24
                             July 2026</strong> on the island of Naxos, Greece, bridging classic theoretical syntax with
                         innovative computational technology in a truly interdisciplinary framework. The summer school is
                         organized by the National and Kapodistrian University of Athens in collaboration with Arizona
@@ -91,10 +167,10 @@
                             <li><strong>Early Bird:</strong> 175 euros (applications submitted by 31 March 2026)</li>
                             <li><strong>Standard Registration:</strong> 225 euros (until 10 June 2026)</li>
                         </ul>
-                        
+
                         <p><strong>Students and participants will also be offered a discount of 30% for the ferry tickets (Blue Star Ferries' offer).</strong></p>
 
-                        <p>A limited number of scholarships will be offered based on academic merit and program engagement. 
+                        <p>A limited number of scholarships will be offered based on academic merit and program engagement.
                            Please refer to the <a href="https://athdgc.github.io/naxos-summer-school-2026/registration.html" target="_blank">Registration page</a> for application details and deadlines.</p>
                     </div>
 
@@ -120,7 +196,7 @@
 
     <footer>
         <div class="container">
-            <h3 style="margin-bottom: 1.5rem;">Contact & Information</h3>
+            <h3 style="margin-bottom: 1.5rem;">Contact &amp; Information</h3>
             <p style="margin-bottom: 1rem;">
                 <strong>Organizers:</strong><br>
                 Nikolaos Lavidas, Alexander Bergs, Elly van Gelderen, Ioanna Sitaridou <br>
@@ -134,7 +210,7 @@
             <p style="margin-bottom: 1.5rem;">
                 <strong><a href="https://athdgc.github.io/civis-diachronic-linguistics-2026/#coordinators" target="_blank">2026 CIVIS BIP Course</a> Coordinators:</strong> Nikolaos Lavidas, Antonio R. Revuelta Puigdollers, Katrin Axel-Tober, Artemij Keidan, Flavia Pompeo, Joanna Kopaczyk, Adina Dragomirescu, Alexandru Nicolae, Ljuba Veselinova, Matthias Heinz, Linda Pillière
             </p>
-            
+
             <div style="margin-bottom: 2rem;">
                 <p style="margin-bottom: 0.5rem;"><strong>Student Assistants</strong></p>
                 <p style="margin-bottom: 0.5rem;">A small team of MA students from the Department of English, Division of Language-Linguistics, NKUA will assist during the Summer School.</p>
@@ -149,11 +225,6 @@
 
             <div class="logos"
                 style="display: flex; justify-content: center; align-items: center; gap: 2.5rem; margin-top: 2rem; flex-wrap: wrap;">
-                <a href="https://athdgc.github.io/naxos-summer-school-2026" target="_blank"
-                    style="display: inline-flex; align-items: center;">
-                    <img src="assets/logos/11th.png" alt="11th Naxos Summer School logo"
-                        style="height: 80px; width: auto;">
-                </a>
                 <a href="https://civis.eu" target="_blank" style="display: inline-flex; align-items: center;">
                     <img src="assets/logos/civis-large---.png" alt="CIVIS European University Alliance logo"
                         style="height: 120px; width: auto;">
