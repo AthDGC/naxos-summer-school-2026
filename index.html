@@ -12,45 +12,43 @@
     <style>
         .hero-split {
             display: flex;
-            min-height: 340px;
-            border-bottom: 1px solid #c8bfb0;
-        }
-        .hero-split .hero-left {
-            flex: 0 0 52%;
+            min-height: 320px;
             background-color: #f2ece0;
-            display: flex;
+            border-bottom: 1px solid #c8bfb0;
             align-items: center;
-            padding: 3.5rem 4rem 3.5rem 5rem;
+            padding: 3rem 5rem;
             box-sizing: border-box;
+            gap: 4rem;
         }
-        .hero-split .hero-left-inner {
-            max-width: 440px;
+        .hero-split .hero-logo {
+            flex: 0 0 auto;
         }
-        .hero-split .hero-left-inner img.main-logo {
-            width: 400px;
+        .hero-split .hero-logo img {
+            width: 380px;
             max-width: 100%;
             display: block;
-            margin-bottom: 2rem;
         }
-        .hero-split .hero-left-inner h1 {
+        .hero-split .hero-text {
+            flex: 1;
+        }
+        .hero-split .hero-text h1 {
             font-family: Georgia, 'Times New Roman', serif;
-            font-size: 1.75rem;
+            font-size: 2rem;
             font-weight: 700;
             color: #1a1a1a;
             margin: 0 0 0.35rem 0;
             line-height: 1.25;
-            letter-spacing: 0.01em;
         }
-        .hero-split .hero-left-inner h2 {
+        .hero-split .hero-text h2 {
             font-family: Georgia, 'Times New Roman', serif;
-            font-size: 1.05rem;
+            font-size: 1rem;
             font-weight: 400;
             color: #555;
             margin: 0 0 1.6rem 0;
-            letter-spacing: 0.04em;
+            letter-spacing: 0.05em;
             text-transform: uppercase;
         }
-        .hero-split .hero-left-inner .hero-meta {
+        .hero-split .hero-text .hero-meta {
             font-family: Georgia, 'Times New Roman', serif;
             font-size: 0.95rem;
             color: #444;
@@ -59,7 +57,7 @@
             padding-left: 0.75rem;
             line-height: 1.7;
         }
-        .hero-split .hero-left-inner .hero-btn {
+        .hero-split .hero-text .hero-btn {
             display: inline-block;
             padding: 0.6rem 1.8rem;
             background-color: #1a4d8f;
@@ -68,28 +66,19 @@
             font-size: 0.9rem;
             letter-spacing: 0.04em;
             text-decoration: none;
-            border: none;
             transition: background-color 0.2s;
         }
-        .hero-split .hero-left-inner .hero-btn:hover {
+        .hero-split .hero-text .hero-btn:hover {
             background-color: #163e72;
         }
-        .hero-split .hero-right {
-            flex: 1;
-            
-            
-            background-color: #1a4d8f;
-            
-        }
-        /* .hero-split .hero-right::after {
-            content: '';
-            position: absolute;
-            inset: 0;
-            
-        }
         @media (max-width: 720px) {
-            .hero-split { flex-direction: column; }
-            .hero-split .hero-left { flex: none; padding: 2.5rem 1.5rem; }
+            .hero-split {
+                flex-direction: column;
+                padding: 2rem 1.5rem;
+                gap: 1.5rem;
+            }
+            .hero-split .hero-logo img { width: 260px; }
+        }
             .hero-split .hero-right { min-height: 220px; flex: none; }
         }
     </style>
@@ -116,20 +105,19 @@
     </nav>
 
     <!-- Split hero: logo + text left, Portara photo right -->
-    <section class="hero-split">
-        <div class="hero-left">
-            <div class="hero-left-inner">
-                <img class="main-logo" src="assets/logos/11th.png" alt="11th Naxos Summer School on Diachronic Linguistics">
-                <h1>11th Naxos Summer School<br>on Diachronic Linguistics</h1>
-                <h2>Theoretical &amp; Computational Approaches</h2>
-                <p class="hero-meta">
-                    July 19&#8211;24, 2026<br>
-                    Naxos, Greece
-                </p>
-                <a href="https://forms.gle/xPBn15HdDjBiyknH9" target="_blank" class="hero-btn">Apply Here</a>
-            </div>
+        <section class="hero-split">
+        <div class="hero-logo">
+            <img src="assets/logos/11th.png" alt="11th Naxos Summer School on Diachronic Linguistics">
         </div>
-        <div class="hero-right"></div>
+        <div class="hero-text">
+            <h1>11th Naxos Summer School<br>on Diachronic Linguistics</h1>
+            <h2>Theoretical &amp; Computational Approaches</h2>
+            <p class="hero-meta">
+                July 19&#8211;24, 2026<br>
+                Naxos, Greece
+            </p>
+            <a href="https://forms.gle/xPBn15HdDjBiyknH9" target="_blank" class="hero-btn">Apply Here</a>
+        </div>
     </section>
 
     <section class="summer-school-info">
