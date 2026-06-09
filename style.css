@@ -548,17 +548,57 @@ footer a {
         flex-direction: column;
         gap: 0.5rem;
         display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: white;
+        padding: 1rem 1.5rem;
+        border-bottom: 1px solid #ccc;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+        z-index: 999;
     }
 
-    nav:hover ul {
+    nav .container {
+        position: relative;
+    }
+
+    /* Visible hamburger icon — tap nav area top-right to open */
+    nav .container::after {
+        content: '\2630';
+        font-size: 1.6rem;
+        line-height: 1;
+        color: var(--primary);
+        cursor: pointer;
+        padding: 0.25rem 0.5rem;
+        border: 1px solid var(--border);
+        border-radius: 4px;
+        user-select: none;
+    }
+
+    nav:hover ul,
+    nav:focus-within ul {
         display: flex;
-        background: white;
-        padding: 1rem;
-        border-bottom: 1px solid #ccc;
     }
 
     .venue-content {
         grid-template-columns: 1fr;
+    }
+
+    /* Fix EU / Erasmus+ logo overflow on mobile */
+    footer .logos img,
+    footer .logos a img,
+    footer [style*="display: flex"] img {
+        max-width: calc(100vw - 3rem) !important;
+        height: auto !important;
+        width: auto;
+    }
+
+    footer .logos,
+    footer [style*="display: flex"][style*="flex-wrap"] {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem !important;
     }
 }/* FOOTER WITH REAL LOGOS - ADD TO style.css */
 .footer-with-logos {
