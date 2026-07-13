@@ -7,18 +7,18 @@
 }
 
 :root {
-    --primary: #111111;
+    --primary: #8B0000;
     /* Black text as primary */
     --text: #333333;
     --text-light: #555555;
     --bg-page: #fbf7ef;
     --bg-surface: #ffffff;
     --bg-soft: #f6f2e8;
-    --border: #ebe3d6;
+    --border: #e6c9c9;
 }
 
 body {
-    font-family: 'Georgia', 'Times New Roman', serif;
+    font-family: Palatino, 'Palatino Linotype', 'Book Antiqua', Georgia, serif;
     line-height: 1.6;
     color: var(--text);
     overflow-x: hidden;
@@ -30,7 +30,7 @@ h1,
 h2,
 h3,
 h4 {
-    font-family: 'Arial', sans-serif;
+    font-family: Palatino, 'Palatino Linotype', 'Book Antiqua', Georgia, serif;
     font-weight: 400;
     color: var(--primary);
 }
@@ -75,7 +75,7 @@ nav .container {
 }
 
 nav .logo {
-    font-family: 'Arial', sans-serif;
+    font-family: Palatino, 'Palatino Linotype', 'Book Antiqua', Georgia, serif;
     font-weight: 700;
     font-size: 1.2rem;
     color: var(--primary);
@@ -91,7 +91,7 @@ nav ul {
 nav a {
     text-decoration: none;
     color: var(--text-light);
-    font-family: 'Arial', sans-serif;
+    font-family: Palatino, 'Palatino Linotype', 'Book Antiqua', Georgia, serif;
     font-size: 0.9rem;
 }
 
@@ -208,7 +208,7 @@ nav a.active {
     padding: 1rem 2rem;
     border: 2px solid transparent;
     text-decoration: none;
-    font-family: 'Arial', sans-serif;
+    font-family: Palatino, 'Palatino Linotype', 'Book Antiqua', Georgia, serif;
     font-size: 1rem;
     font-weight: 500;
     margin: 0.5rem;
@@ -217,14 +217,14 @@ nav a.active {
 }
 
 .btn-primary {
-    background: #004040;
+    background: #8B0000;
     color: white;
-    border-color: #004040;
+    border-color: #8B0000;
 }
 
 .btn-primary:hover {
     background: transparent;
-    color: #004040;
+    color: #8B0000;
     transform: translateY(-2px);
 }
 
@@ -236,7 +236,7 @@ nav a.active {
 
 .btn-secondary:hover {
     background: white;
-    color: #003366;
+    color: #8B0000;
     transform: translateY(-2px);
 }
 
@@ -602,12 +602,12 @@ footer a {
     }
 }/* FOOTER WITH REAL LOGOS - ADD TO style.css */
 .footer-with-logos {
-    background: #1e293b;
+    background: #8B0000;
     color: #e2e8f0;
     padding: 2.5rem 0;
     text-align: center;
-    font-family: 'Inter', sans-serif;
-    border-top: 1px solid #334155;
+    font-family: Palatino, 'Palatino Linotype', 'Book Antiqua', Georgia, serif;
+    border-top: 1px solid #8B0000;
 }
 
 .footer-content {
@@ -617,7 +617,7 @@ footer a {
 }
 
 .footer-title {
-    font-family: 'Crimson Text', serif;
+    font-family: Palatino, 'Palatino Linotype', 'Book Antiqua', Georgia, serif;
     font-size: 1.8rem;
     font-weight: 600;
     color: #f1f5f9;
@@ -653,4 +653,7 @@ body { padding-top: 70px !important; }
 
 
 html body { padding-top: 70px !important; }
+
+
+
 
