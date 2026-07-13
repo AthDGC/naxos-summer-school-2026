@@ -647,3 +647,10 @@ footer a {
     .logos-container { flex-direction: column; gap: 2rem; }
     .logo-item img { height: 50px; }
 }
+
+body { padding-top: 70px !important; }
+
+
+
+html body { padding-top: 70px !important; }
+
