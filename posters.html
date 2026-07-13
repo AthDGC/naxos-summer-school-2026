@@ -3,143 +3,134 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Poster Presentations Program | Naxos 2026</title>
+    <title>Poster Presentations | Naxos 2026</title>
     <link rel="stylesheet" href="styles.css">
     <style>
         .poster-wrap {
-            max-width: 1200px;
+            max-width: 1000px;
             margin: 0 auto;
-            padding: 2rem 1rem;
+            padding: 2rem 1rem 3rem;
         }
-        .poster-hero {
-            margin: 1rem 0 1.25rem;
+        .poster-wrap h1 {
+            margin-bottom: 0.75rem;
         }
-        .schedule-note {
-            margin: 0.5rem 0 1rem;
-            color: #374151;
+        .poster-wrap p {
+            max-width: 75ch;
         }
-        .poster-table {
-            width: 100%;
-            border-collapse: collapse;
-            table-layout: fixed;
-            font-size: 0.92rem;
-        }
-        .poster-table th,
-        .poster-table td {
-            border: 1px solid #d1d5db;
-            padding: 0.65rem;
-            vertical-align: top;
-            text-align: left;
-            overflow-wrap: anywhere;
-            word-break: break-word;
-        }
-        .poster-table th {
+        .poster-meta {
+            margin: 1.25rem 0 2rem;
+            padding: 1rem 1.25rem;
             background: #f8fafc;
+            border: 1px solid #dbe2ea;
         }
-        .time-col {
-            width: 110px;
-            white-space: nowrap;
-            font-weight: 700;
+        .poster-meta p {
+            margin: 0.35rem 0;
         }
-        .lunch-row td {
-            background: #f8fafc;
-            text-align: center;
-            font-weight: 700;
+        .day-block {
+            margin: 0 0 1.75rem;
+            padding: 1rem 1.25rem;
+            border: 1px solid #dbe2ea;
+            background: #ffffff;
         }
-        .lunch-sub {
-            display: block;
-            font-weight: 400;
+        .day-block h3 {
+            margin: 0 0 0.75rem;
+        }
+        .day-block ul {
+            margin: 0.5rem 0 0 1.2rem;
+        }
+        .day-block li {
+            margin-bottom: 0.55rem;
+            line-height: 1.45;
+        }
+        .lunch-note {
             font-style: italic;
-            margin-top: 0.25rem;
-        }
-        @media (max-width: 900px) {
-            .poster-wrap { padding: 1rem .5rem; }
-            .poster-table { font-size: .82rem; }
+            color: #4b5563;
+            margin-top: 0.35rem;
         }
     </style>
 </head>
 <body>
-<nav>
-    <div class="nav-container">
-        <a href="index.html" class="logo">Naxos 2026</a>
-        <ul style="list-style-type:none;">
-            <li><a href="about.html">About</a></li>
-            <li><a href="program.html">Program</a></li>
-            <li><a href="courses.html">Courses</a></li>
-            <li><a href="topics.html">Topics</a></li>
-            <li><a href="faculty.html">Faculty</a></li>
-            <li><a href="registration.html">Register</a></li>
-            <li><a href="venue.html">Venue</a></li>
-            <li><a href="accommodation.html">Stay</a></li>
-            <li><a href="social.html">Social</a></li>
-            <li><a href="previous.html">Previous</a></li>
-            <li><a href="support.html">Support</a></li>
-        </ul>
-    </div>
-</nav>
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo">Naxos 2026</a>
+            <ul style="list-style-type:none;">
+                <li><a href="about.html">About</a></li>
+                <li><a href="program.html">Program</a></li>
+                <li><a href="descriptions.html">Courses</a></li>
+                <li><a href="topics.html">Topics</a></li>
+                <li><a href="faculty.html">Faculty</a></li>
+                <li><a href="registration.html">Register</a></li>
+                <li><a href="venue.html">Venue</a></li>
+                <li><a href="accommodation.html">Stay</a></li>
+                <li><a href="social.html">Social</a></li>
+                <li><a href="previous.html">Previous</a></li>
+                <li><a href="support.html">Support</a></li>
+            </ul>
+        </div>
+    </nav>
 
-<main class="poster-wrap">
-    <h1 class="poster-hero">Poster Presentations Program</h1>
-    <p class="schedule-note">Weekly presentation schedule and presenter lineup for the poster session of the 11th Naxos Summer School on Diachronic Linguistics.</p>
+    <main class="poster-wrap">
+        <h1>Poster Presentations Program</h1>
+        <p>Weekly presentation schedule and presenter lineup for the poster session of the 11th Naxos Summer School on Diachronic Linguistics.</p>
 
-    <section>
-        <h2>Poster Session</h2>
-        <p><strong>Dates:</strong> 20–24 July 2026</p>
-        <p><strong>Time:</strong> 1:10–2:10 PM daily</p>
-        <p><strong>Location:</strong> Naxos, Greece</p>
-    </section>
+        <div class="poster-meta">
+            <p><strong>Dates:</strong> 20–24 July 2026</p>
+            <p><strong>Time:</strong> 1:10–2:10 PM daily</p>
+            <p><strong>Format:</strong> Lunch and poster presentations</p>
+            <p class="lunch-note">The first 20 minutes are for taking lunch from the table.</p>
+        </div>
 
-    <section>
-        <h2>Schedule</h2>
-        <table class="poster-table">
-            <thead>
-                <tr>
-                    <th class="time-col">Time Slot</th>
-                    <th>Monday 20/7</th>
-                    <th>Tuesday 21/7</th>
-                    <th>Wednesday 22/7</th>
-                    <th>Thursday 23/7</th>
-                    <th>Friday 24/7</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr class="lunch-row">
-                    <td class="time-col">1:10 - 1:30</td>
-                    <td colspan="5">Lunch<span class="lunch-sub">20 minutes to take lunch from the table.</span></td>
-                </tr>
-                <tr>
-                    <td class="time-col">1:30 - 1:40</td>
-                    <td>Language Change and Context-Dependent Interaction of Factors in Czech Reflexive Clitic Placement: Evidence from the Late 19th Century<br><strong>Linda Rudenka</strong></td>
-                    <td>Man vs Machine: evaluating AI in translating classical idioms<br><strong>Alexandra Nikolopoulou</strong></td>
-                    <td>The Conceptualization of Space in Herodotus and Thucydides<br><strong>Davide Pinna</strong></td>
-                    <td>Tracing the evolution of psych-verbs in the diachrony of Greek: The case of Dative Experiencer psych-verbs<br><strong>Anastasia Tsiropina</strong></td>
-                    <td>Greek presents in -k- and their cognates<br><strong>Sofia Dmitrieva</strong></td>
-                </tr>
-                <tr>
-                    <td class="time-col">1:40 - 1:50</td>
-                    <td>Letters Across Time: Linguistic Variation in Fictional and Authentic English Correspondence<br><strong>Ariadni Manousaki</strong></td>
-                    <td>Caring for and through Inner Speech(es)<br><strong>Abdelhadi Moumene</strong></td>
-                    <td>Seeing something unexpected: On the diachrony of French voyez-moi ça as a mirative marker<br><strong>Ivica Bakmaz</strong></td>
-                    <td>An investigation of the competition between different means of expressing the future in Late Middle and Early New High German<br><strong>Jordan Reid</strong></td>
-                    <td>The expression of gender in Phrygian onomastics<br><strong>Elena Maria Sinatra</strong></td>
-                </tr>
-                <tr>
-                    <td class="time-col">1:50 - 2:00</td>
-                    <td>¡¿En serio?! A mirative marker in Spanish?! A diachronic case study<br><strong>Yannick Piechotta</strong></td>
-                    <td>Can LLMs Learn Diachronic Syntax Without Universal Grammar? A Poverty-of-the-Stimulus Test on Historical Corpora<br><strong>Lavinia Chereluc (Bratu)</strong></td>
-                    <td>Leveraging LLMs in semantic change studies<br><strong>Samuele De Santis Savoldelli</strong></td>
-                    <td>Greek Preverbs in Diachrony: An Ongoing Study<br><strong>Nadia Scanavino</strong></td>
-                    <td>Tangut grades and their Sino-Tibetan prominence<br><strong>Tok Shing Henry Wong</strong></td>
-                </tr>
-                <tr>
-                    <td class="time-col">2:00 - 2:10</td>
-                    <td>Language used for women vs language women use: Linguistics on gender and power<br><strong>Pavlina Konstantopoulou-Belogianni</strong></td>
-                    <td>The Effect of Metaphor and Metonymy in the Stability of Colexifications<br><strong>Ecesu Ürker</strong></td>
-                    <td></td><td></td><td></td>
-                </tr>
-            </tbody>
-        </table>
-    </section>
-</main>
+        <div class="day-block">
+            <h3>Monday 20/7</h3>
+            <p><strong>1:10–1:30</strong> Lunch</p>
+            <ul>
+                <li><strong>1:30–1:40</strong> Language Change and Context-Dependent Interaction of Factors in Czech Reflexive Clitic Placement: Evidence from the Late 19th Century — Linda Rudenka</li>
+                <li><strong>1:40–1:50</strong> Letters Across Time: Linguistic Variation in Fictional and Authentic English Correspondence — Ariadni Manousaki</li>
+                <li><strong>1:50–2:00</strong> ¡¿En serio?! A mirative marker in Spanish?! A diachronic case study — Yannick Piechotta</li>
+                <li><strong>2:00–2:10</strong> Language used for women vs language women use: Linguistics on gender and power — Pavlina Konstantopoulou-Belogianni</li>
+            </ul>
+        </div>
+
+        <div class="day-block">
+            <h3>Tuesday 21/7</h3>
+            <p><strong>1:10–1:30</strong> Lunch</p>
+            <ul>
+                <li><strong>1:30–1:40</strong> Man vs Machine: evaluating AI in translating classical idioms — Alexandra Nikolopoulou</li>
+                <li><strong>1:40–1:50</strong> Caring for and through Inner Speech(es) — Abdelhadi Moumene</li>
+                <li><strong>1:50–2:00</strong> Can LLMs Learn Diachronic Syntax Without Universal Grammar? A Poverty-of-the-Stimulus Test on Historical Corpora — Lavinia Chereluc (Bratu)</li>
+                <li><strong>2:00–2:10</strong> The Effect of Metaphor and Metonymy in the Stability of Colexifications — Ecesu Ürker</li>
+            </ul>
+        </div>
+
+        <div class="day-block">
+            <h3>Wednesday 22/7</h3>
+            <p><strong>1:10–1:30</strong> Lunch</p>
+            <ul>
+                <li><strong>1:30–1:40</strong> The Conceptualization of Space in Herodotus and Thucydides — Davide Pinna</li>
+                <li><strong>1:40–1:50</strong> Seeing something unexpected: On the diachrony of French voyez-moi ça as a mirative marker — Ivica Bakmaz</li>
+                <li><strong>1:50–2:00</strong> Leveraging LLMs in semantic change studies — Samuele De Santis Savoldelli</li>
+            </ul>
+        </div>
+
+        <div class="day-block">
+            <h3>Thursday 23/7</h3>
+            <p><strong>1:10–1:30</strong> Lunch</p>
+            <ul>
+                <li><strong>1:30–1:40</strong> Tracing the evolution of psych-verbs in the diachrony of Greek: The case of Dative Experiencer psych-verbs — Anastasia Tsiropina</li>
+                <li><strong>1:40–1:50</strong> An investigation of the competition between different means of expressing the future in Late Middle and Early New High German — Jordan Reid</li>
+                <li><strong>1:50–2:00</strong> Greek Preverbs in Diachrony: An Ongoing Study — Nadia Scanavino</li>
+            </ul>
+        </div>
+
+        <div class="day-block">
+            <h3>Friday 24/7</h3>
+            <p><strong>1:10–1:30</strong> Lunch</p>
+            <ul>
+                <li><strong>1:30–1:40</strong> Greek presents in -k- and their cognates — Sofia Dmitrieva</li>
+                <li><strong>1:40–1:50</strong> The expression of gender in Phrygian onomastics — Elena Maria Sinatra</li>
+                <li><strong>1:50–2:00</strong> Tangut grades and their Sino-Tibetan prominence — Tok Shing Henry Wong</li>
+            </ul>
+        </div>
+    </main>
 </body>
 </html>
