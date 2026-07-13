@@ -9,8 +9,8 @@
 :root {
     --primary: #8B0000;
     /* Black text as primary */
-    --text: #333333;
-    --text-light: #555555;
+    --text: #8B0000;
+    --text-light: #8B0000;
     --bg-page: #fbf7ef;
     --bg-surface: #ffffff;
     --bg-soft: #f6f2e8;
@@ -18,7 +18,7 @@
 }
 
 body {
-    font-family: Palatino, 'Palatino Linotype', 'Book Antiqua', Georgia, serif;
+    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
     line-height: 1.6;
     color: var(--text);
     overflow-x: hidden;
@@ -30,7 +30,7 @@ h1,
 h2,
 h3,
 h4 {
-    font-family: Palatino, 'Palatino Linotype', 'Book Antiqua', Georgia, serif;
+    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
     font-weight: 400;
     color: var(--primary);
 }
@@ -75,7 +75,7 @@ nav .container {
 }
 
 nav .logo {
-    font-family: Palatino, 'Palatino Linotype', 'Book Antiqua', Georgia, serif;
+    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
     font-weight: 700;
     font-size: 1.2rem;
     color: var(--primary);
@@ -91,7 +91,7 @@ nav ul {
 nav a {
     text-decoration: none;
     color: var(--text-light);
-    font-family: Palatino, 'Palatino Linotype', 'Book Antiqua', Georgia, serif;
+    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
     font-size: 0.9rem;
 }
 
@@ -208,7 +208,7 @@ nav a.active {
     padding: 1rem 2rem;
     border: 2px solid transparent;
     text-decoration: none;
-    font-family: Palatino, 'Palatino Linotype', 'Book Antiqua', Georgia, serif;
+    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
     font-size: 1rem;
     font-weight: 500;
     margin: 0.5rem;
@@ -554,7 +554,7 @@ footer a {
         right: 0;
         background: white;
         padding: 1rem 1.5rem;
-        border-bottom: 1px solid #ccc;
+        border-bottom: 1px solid #8B0000;
         box-shadow: 0 4px 8px rgba(0,0,0,0.08);
         z-index: 999;
     }
@@ -603,10 +603,10 @@ footer a {
 }/* FOOTER WITH REAL LOGOS - ADD TO style.css */
 .footer-with-logos {
     background: #8B0000;
-    color: #e2e8f0;
+    color: #f9eaea;
     padding: 2.5rem 0;
     text-align: center;
-    font-family: Palatino, 'Palatino Linotype', 'Book Antiqua', Georgia, serif;
+    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
     border-top: 1px solid #8B0000;
 }
 
@@ -617,10 +617,10 @@ footer a {
 }
 
 .footer-title {
-    font-family: Palatino, 'Palatino Linotype', 'Book Antiqua', Georgia, serif;
+    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
     font-size: 1.8rem;
     font-weight: 600;
-    color: #f1f5f9;
+    color: #f9eaea;
     margin-bottom: 0.5rem;
 }
 
@@ -653,6 +653,9 @@ body { padding-top: 70px !important; }
 
 
 html body { padding-top: 70px !important; }
+
+
+
 
 
 
