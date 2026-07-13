@@ -6,131 +6,140 @@
     <title>Poster Presentations Program | Naxos 2026</title>
     <link rel="stylesheet" href="styles.css">
     <style>
+        .poster-wrap {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+        .poster-hero {
+            margin: 1rem 0 1.25rem;
+        }
+        .schedule-note {
+            margin: 0.5rem 0 1rem;
+            color: #374151;
+        }
         .poster-table {
             width: 100%;
             border-collapse: collapse;
             table-layout: fixed;
-            margin-top: 1.5rem;
-            font-size: 0.95rem;
+            font-size: 0.92rem;
         }
         .poster-table th,
         .poster-table td {
             border: 1px solid #d1d5db;
-            padding: 0.75rem;
+            padding: 0.65rem;
             vertical-align: top;
             text-align: left;
-            word-wrap: break-word;
-            overflow-wrap: break-word;
+            overflow-wrap: anywhere;
+            word-break: break-word;
         }
         .poster-table th {
             background: #f8fafc;
         }
         .time-col {
-            width: 120px;
-            font-weight: 700;
+            width: 110px;
             white-space: nowrap;
+            font-weight: 700;
         }
         .lunch-row td {
             background: #f8fafc;
-            font-weight: 600;
             text-align: center;
+            font-weight: 700;
         }
-        .lunch-note {
+        .lunch-sub {
+            display: block;
             font-weight: 400;
             font-style: italic;
-            display: block;
-            margin-top: 0.35rem;
+            margin-top: 0.25rem;
+        }
+        @media (max-width: 900px) {
+            .poster-wrap { padding: 1rem .5rem; }
+            .poster-table { font-size: .82rem; }
         }
     </style>
 </head>
 <body>
-    <nav>
-        <div class="nav-container">
-            <a href="index.html" class="logo">Naxos 2026</a>
-            <ul style="list-style-type: none;">
-                <li><a href="about.html">About</a></li>
-                <li><a href="program.html">Program</a></li>
-                <li><a href="posters.html" class="active">Posters</a></li>
-                <li><a href="descriptions.html">Courses</a></li>
-                <li><a href="topics.html">Topics</a></li>
-                <li><a href="faculty.html">Faculty</a></li>
-                <li><a href="registration.html">Register</a></li>
-                <li><a href="venue.html">Venue</a></li>
-                <li><a href="accommodation.html">Stay</a></li>
-                <li><a href="social.html">Social</a></li>
-                <li><a href="previous.html">Previous</a></li>
-                <li><a href="support.html">Support</a></li>
-            </ul>
-        </div>
-    </nav>
+<nav>
+    <div class="nav-container">
+        <a href="index.html" class="logo">Naxos 2026</a>
+        <ul style="list-style-type:none;">
+            <li><a href="about.html">About</a></li>
+            <li><a href="program.html">Program</a></li>
+            <li><a href="courses.html">Courses</a></li>
+            <li><a href="topics.html">Topics</a></li>
+            <li><a href="faculty.html">Faculty</a></li>
+            <li><a href="registration.html">Register</a></li>
+            <li><a href="venue.html">Venue</a></li>
+            <li><a href="accommodation.html">Stay</a></li>
+            <li><a href="social.html">Social</a></li>
+            <li><a href="previous.html">Previous</a></li>
+            <li><a href="support.html">Support</a></li>
+        </ul>
+    </div>
+</nav>
 
-    <main class="container">
-        <h1>Poster Presentations Program</h1>
-        <p>Weekly presentation schedule and presenter lineup for the poster session of the 11th Naxos Summer School on Diachronic Linguistics.</p>
+<main class="poster-wrap">
+    <h1 class="poster-hero">Poster Presentations Program</h1>
+    <p class="schedule-note">Weekly presentation schedule and presenter lineup for the poster session of the 11th Naxos Summer School on Diachronic Linguistics.</p>
 
-        <section>
-            <h2>Poster Session</h2>
-            <p><strong>Dates:</strong> 20–24 July 2026</p>
-            <p><strong>Time:</strong> 1:10–2:10 PM daily</p>
-            <p><strong>Location:</strong> Naxos, Greece</p>
-        </section>
+    <section>
+        <h2>Poster Session</h2>
+        <p><strong>Dates:</strong> 20–24 July 2026</p>
+        <p><strong>Time:</strong> 1:10–2:10 PM daily</p>
+        <p><strong>Location:</strong> Naxos, Greece</p>
+    </section>
 
-        <section>
-            <h2>Schedule</h2>
-            <table class="poster-table">
-                <thead>
-                    <tr>
-                        <th class="time-col">Time Slot</th>
-                        <th>Monday 20/7</th>
-                        <th>Tuesday 21/7</th>
-                        <th>Wednesday 22/7</th>
-                        <th>Thursday 23/7</th>
-                        <th>Friday 24/7</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr class="lunch-row">
-                        <td class="time-col">1:10 - 1:30</td>
-                        <td colspan="5">
-                            Lunch
-                            <span class="lunch-note">20 minutes to take lunch from the table.</span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="time-col">1:30 - 1:40</td>
-                        <td>Language Change and Context-Dependent Interaction of Factors in Czech Reflexive Clitic Placement: Evidence from the Late 19th Century<br><strong>Linda Rudenka</strong></td>
-                        <td>Man vs Machine: evaluating AI in translating classical idioms<br><strong>Alexandra Nikolopoulou</strong></td>
-                        <td>The Conceptualization of Space in Herodotus and Thucydides<br><strong>Davide Pinna</strong></td>
-                        <td>Tracing the evolution of psych-verbs in the diachrony of Greek: The case of Dative Experiencer psych-verbs<br><strong>Anastasia Tsiropina</strong></td>
-                        <td>Greek presents in -k- and their cognates<br><strong>Sofia Dmitrieva</strong></td>
-                    </tr>
-                    <tr>
-                        <td class="time-col">1:40 - 1:50</td>
-                        <td>Letters Across Time: Linguistic Variation in Fictional and Authentic English Correspondence<br><strong>Ariadni Manousaki</strong></td>
-                        <td>Caring for and through Inner Speech(es)<br><strong>Abdelhadi Moumene</strong></td>
-                        <td>Seeing something unexpected: On the diachrony of French voyez-moi ça as a mirative marker<br><strong>Ivica Bakmaz</strong></td>
-                        <td>An investigation of the competition between different means of expressing the future in Late Middle and Early New High German<br><strong>Jordan Reid</strong></td>
-                        <td>The expression of gender in Phrygian onomastics<br><strong>Elena Maria Sinatra</strong></td>
-                    </tr>
-                    <tr>
-                        <td class="time-col">1:50 - 2:00</td>
-                        <td>¡¿En serio?! A mirative marker in Spanish?! A diachronic case study<br><strong>Yannick Piechotta</strong></td>
-                        <td>Can LLMs Learn Diachronic Syntax Without Universal Grammar? A Poverty-of-the-Stimulus Test on Historical Corpora<br><strong>Lavinia Chereluc (Bratu)</strong></td>
-                        <td>Leveraging LLMs in semantic change studies<br><strong>Samuele De Santis Savoldelli</strong></td>
-                        <td>Greek Preverbs in Diachrony: An Ongoing Study<br><strong>Nadia Scanavino</strong></td>
-                        <td>Tangut grades and their Sino-Tibetan prominence<br><strong>Tok Shing Henry Wong</strong></td>
-                    </tr>
-                    <tr>
-                        <td class="time-col">2:00 - 2:10</td>
-                        <td>Language used for women vs language women use: Linguistics on gender and power<br><strong>Pavlina Konstantopoulou-Belogianni</strong></td>
-                        <td>The Effect of Metaphor and Metonymy in the Stability of Colexifications<br><strong>Ecesu Ürker</strong></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
-    </main>
+    <section>
+        <h2>Schedule</h2>
+        <table class="poster-table">
+            <thead>
+                <tr>
+                    <th class="time-col">Time Slot</th>
+                    <th>Monday 20/7</th>
+                    <th>Tuesday 21/7</th>
+                    <th>Wednesday 22/7</th>
+                    <th>Thursday 23/7</th>
+                    <th>Friday 24/7</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="lunch-row">
+                    <td class="time-col">1:10 - 1:30</td>
+                    <td colspan="5">Lunch<span class="lunch-sub">20 minutes to take lunch from the table.</span></td>
+                </tr>
+                <tr>
+                    <td class="time-col">1:30 - 1:40</td>
+                    <td>Language Change and Context-Dependent Interaction of Factors in Czech Reflexive Clitic Placement: Evidence from the Late 19th Century<br><strong>Linda Rudenka</strong></td>
+                    <td>Man vs Machine: evaluating AI in translating classical idioms<br><strong>Alexandra Nikolopoulou</strong></td>
+                    <td>The Conceptualization of Space in Herodotus and Thucydides<br><strong>Davide Pinna</strong></td>
+                    <td>Tracing the evolution of psych-verbs in the diachrony of Greek: The case of Dative Experiencer psych-verbs<br><strong>Anastasia Tsiropina</strong></td>
+                    <td>Greek presents in -k- and their cognates<br><strong>Sofia Dmitrieva</strong></td>
+                </tr>
+                <tr>
+                    <td class="time-col">1:40 - 1:50</td>
+                    <td>Letters Across Time: Linguistic Variation in Fictional and Authentic English Correspondence<br><strong>Ariadni Manousaki</strong></td>
+                    <td>Caring for and through Inner Speech(es)<br><strong>Abdelhadi Moumene</strong></td>
+                    <td>Seeing something unexpected: On the diachrony of French voyez-moi ça as a mirative marker<br><strong>Ivica Bakmaz</strong></td>
+                    <td>An investigation of the competition between different means of expressing the future in Late Middle and Early New High German<br><strong>Jordan Reid</strong></td>
+                    <td>The expression of gender in Phrygian onomastics<br><strong>Elena Maria Sinatra</strong></td>
+                </tr>
+                <tr>
+                    <td class="time-col">1:50 - 2:00</td>
+                    <td>¡¿En serio?! A mirative marker in Spanish?! A diachronic case study<br><strong>Yannick Piechotta</strong></td>
+                    <td>Can LLMs Learn Diachronic Syntax Without Universal Grammar? A Poverty-of-the-Stimulus Test on Historical Corpora<br><strong>Lavinia Chereluc (Bratu)</strong></td>
+                    <td>Leveraging LLMs in semantic change studies<br><strong>Samuele De Santis Savoldelli</strong></td>
+                    <td>Greek Preverbs in Diachrony: An Ongoing Study<br><strong>Nadia Scanavino</strong></td>
+                    <td>Tangut grades and their Sino-Tibetan prominence<br><strong>Tok Shing Henry Wong</strong></td>
+                </tr>
+                <tr>
+                    <td class="time-col">2:00 - 2:10</td>
+                    <td>Language used for women vs language women use: Linguistics on gender and power<br><strong>Pavlina Konstantopoulou-Belogianni</strong></td>
+                    <td>The Effect of Metaphor and Metonymy in the Stability of Colexifications<br><strong>Ecesu Ürker</strong></td>
+                    <td></td><td></td><td></td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+</main>
 </body>
 </html>
