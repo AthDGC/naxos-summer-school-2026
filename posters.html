@@ -5,6 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Poster Presentations Program | Naxos 2026</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        .poster-table {
+            width: 100%;
+            border-collapse: collapse;
+            table-layout: fixed;
+            margin-top: 1.5rem;
+            font-size: 0.95rem;
+        }
+        .poster-table th,
+        .poster-table td {
+            border: 1px solid #d1d5db;
+            padding: 0.75rem;
+            vertical-align: top;
+            text-align: left;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+        }
+        .poster-table th {
+            background: #f8fafc;
+        }
+        .time-col {
+            width: 120px;
+            font-weight: 700;
+            white-space: nowrap;
+        }
+        .lunch-row td {
+            background: #f8fafc;
+            font-weight: 600;
+            text-align: center;
+        }
+        .poster-table td br + * {
+            display: inline;
+        }
+    </style>
 </head>
 <body>
     <nav>
@@ -40,10 +74,10 @@
 
         <section>
             <h2>Schedule</h2>
-            <table>
+            <table class="poster-table">
                 <thead>
                     <tr>
-                        <th>Time Slot</th>
+                        <th class="time-col">Time Slot</th>
                         <th>Monday 20/7</th>
                         <th>Tuesday 21/7</th>
                         <th>Wednesday 22/7</th>
@@ -52,38 +86,38 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td><strong>1:10 - 1:30</strong></td>
+                    <tr class="lunch-row">
+                        <td class="time-col">1:10 - 1:30</td>
                         <td colspan="5">Lunch</td>
                     </tr>
                     <tr>
-                        <td><strong>1:30 - 1:40</strong></td>
-                        <td>Language Change and Context-Dependent Interaction of Factors in Czech Reflexive Clitic Placement: Evidence from the Late 19th Century<br>Linda Rudenka</td>
-                        <td>Man vs Machine: evaluating AI in translating classical idioms<br>Alexandra Nikolopoulou</td>
-                        <td>The Conceptualization of Space in Herodotus and Thucydides<br>Davide Pinna</td>
-                        <td>Tracing the evolution of psych-verbs in the diachrony of Greek: The case of Dative Experiencer psych-verbs<br>Anastasia Tsiropina</td>
-                        <td>Greek presents in -k- and their cognates<br>Sofia Dmitrieva</td>
+                        <td class="time-col">1:30 - 1:40</td>
+                        <td>Language Change and Context-Dependent Interaction of Factors in Czech Reflexive Clitic Placement: Evidence from the Late 19th Century<br><strong>Linda Rudenka</strong></td>
+                        <td>Man vs Machine: evaluating AI in translating classical idioms<br><strong>Alexandra Nikolopoulou</strong></td>
+                        <td>The Conceptualization of Space in Herodotus and Thucydides<br><strong>Davide Pinna</strong></td>
+                        <td>Tracing the evolution of psych-verbs in the diachrony of Greek: The case of Dative Experiencer psych-verbs<br><strong>Anastasia Tsiropina</strong></td>
+                        <td>Greek presents in -k- and their cognates<br><strong>Sofia Dmitrieva</strong></td>
                     </tr>
                     <tr>
-                        <td><strong>1:40 - 1:50</strong></td>
-                        <td>Letters Across Time: Linguistic Variation in Fictional and Authentic English Correspondence<br>Ariadni Manousaki</td>
-                        <td>Caring for and through Inner Speech(es)<br>Abdelhadi Moumene</td>
-                        <td>Seeing something unexpected: On the diachrony of French voyez-moi ça as a mirative marker<br>Ivica Bakmaz</td>
-                        <td>An investigation of the competition between different means of expressing the future in Late Middle and Early New High German<br>Jordan Reid</td>
-                        <td>The expression of gender in Phrygian onomastics<br>Elena Maria Sinatra</td>
+                        <td class="time-col">1:40 - 1:50</td>
+                        <td>Letters Across Time: Linguistic Variation in Fictional and Authentic English Correspondence<br><strong>Ariadni Manousaki</strong></td>
+                        <td>Caring for and through Inner Speech(es)<br><strong>Abdelhadi Moumene</strong></td>
+                        <td>Seeing something unexpected: On the diachrony of French voyez-moi ça as a mirative marker<br><strong>Ivica Bakmaz</strong></td>
+                        <td>An investigation of the competition between different means of expressing the future in Late Middle and Early New High German<br><strong>Jordan Reid</strong></td>
+                        <td>The expression of gender in Phrygian onomastics<br><strong>Elena Maria Sinatra</strong></td>
                     </tr>
                     <tr>
-                        <td><strong>1:50 - 2:00</strong></td>
-                        <td>¡¿En serio?! A mirative marker in Spanish?! A diachronic case study<br>Yannick Piechotta</td>
-                        <td>Can LLMs Learn Diachronic Syntax Without Universal Grammar? A Poverty-of-the-Stimulus Test on Historical Corpora<br>Lavinia Chereluc (Bratu)</td>
-                        <td>Leveraging LLMs in semantic change studies<br>Samuele De Santis Savoldelli</td>
-                        <td>Greek Preverbs in Diachrony: An Ongoing Study<br>Nadia Scanavino</td>
-                        <td>Tangut grades and their Sino-Tibetan prominence<br>Tok Shing Henry Wong</td>
+                        <td class="time-col">1:50 - 2:00</td>
+                        <td>¡¿En serio?! A mirative marker in Spanish?! A diachronic case study<br><strong>Yannick Piechotta</strong></td>
+                        <td>Can LLMs Learn Diachronic Syntax Without Universal Grammar? A Poverty-of-the-Stimulus Test on Historical Corpora<br><strong>Lavinia Chereluc (Bratu)</strong></td>
+                        <td>Leveraging LLMs in semantic change studies<br><strong>Samuele De Santis Savoldelli</strong></td>
+                        <td>Greek Preverbs in Diachrony: An Ongoing Study<br><strong>Nadia Scanavino</strong></td>
+                        <td>Tangut grades and their Sino-Tibetan prominence<br><strong>Tok Shing Henry Wong</strong></td>
                     </tr>
                     <tr>
-                        <td><strong>2:00 - 2:10</strong></td>
-                        <td>Language used for women vs language women use: Linguistics on gender and power<br>Pavlina Konstantopoulou-Belogianni</td>
-                        <td>The Effect of Metaphor and Metonymy in the Stability of Colexifications<br>Ecesu Ürker</td>
+                        <td class="time-col">2:00 - 2:10</td>
+                        <td>Language used for women vs language women use: Linguistics on gender and power<br><strong>Pavlina Konstantopoulou-Belogianni</strong></td>
+                        <td>The Effect of Metaphor and Metonymy in the Stability of Colexifications<br><strong>Ecesu Ürker</strong></td>
                         <td></td>
                         <td></td>
                         <td></td>
