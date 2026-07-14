@@ -86,3 +86,31 @@ h1 *, h2 *, h3 *, h4 *, h5 *, h6 *, .title *, .headline * {
 [class*="dark"] *, [class*="bg-dark"] *, .bg-black *, footer * { 
     color: #FFFFFF !important; 
 }
+
+/* Neutral Light Beige Background for EVERYTHING, including the footer */
+body, html, main, section, article, header, nav, aside, footer, 
+.bg-white, .bg-light, [class*="bg-white"], .white-bg { 
+    background-color: #F4F0EB !important; 
+}
+
+/* Force black text for standard elements and the footer */
+body, html, p, span:not([class*="icon"]), li, td, th, div, footer, footer * { 
+    color: #000000 !important; 
+}
+
+/* Dark Red Headlines */
+h1, h2, h3, h4, h5, h6, .title, .headline,
+h1 *, h2 *, h3 *, h4 *, h5 *, h6 *, .title *, .headline * { 
+    color: #8B0000 !important; 
+}
+
+/* Preserve Dark Blocks (BUT NOT the footer) */
+[class*="dark"], [class*="bg-dark"], .bg-black { 
+    background-color: #1A1A1A !important; 
+}
+
+/* Force white text ONLY inside those specific dark blocks */
+[class*="dark"], [class*="bg-dark"], .bg-black,
+[class*="dark"] *, [class*="bg-dark"] *, .bg-black * { 
+    color: #FFFFFF !important; 
+}
