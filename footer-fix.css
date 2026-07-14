@@ -59,3 +59,30 @@ h1, h2, h3, h4, h5, h6, .title, .headline {
 [class*="dark"], [class*="bg-dark"], footer { 
     color: #FFFFFF !important; 
 }
+
+/* Neutral Light Beige Background */
+body, html, main, section, article, header, nav, aside, 
+.bg-white, .bg-light, [class*="bg-white"], .white-bg { 
+    background-color: #F4F0EB !important; 
+}
+
+/* Force black text for standard elements */
+body, html, p, span:not([class*="icon"]), li, td, th, div { 
+    color: #000000 !important; 
+}
+
+/* Dark Red Headlines */
+h1, h2, h3, h4, h5, h6, .title, .headline,
+h1 *, h2 *, h3 *, h4 *, h5 *, h6 *, .title *, .headline * { 
+    color: #8B0000 !important; 
+}
+
+/* Preserve Dark Blocks and Force White Text Inside Them */
+[class*="dark"], [class*="bg-dark"], .bg-black, footer { 
+    background-color: #1A1A1A !important; 
+}
+
+[class*="dark"], [class*="bg-dark"], .bg-black, footer,
+[class*="dark"] *, [class*="bg-dark"] *, .bg-black *, footer * { 
+    color: #FFFFFF !important; 
+}
