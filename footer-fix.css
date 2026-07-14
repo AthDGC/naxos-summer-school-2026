@@ -45,3 +45,17 @@
     .logos-container { flex-direction: column; gap: 2rem; }
     .logo-item img { height: 50px; }
 }
+
+/* Custom Color Overrides */
+body, html { 
+    background-color: #F5F5DC !important; 
+    color: #000000 !important; 
+}
+
+h1, h2, h3, h4, h5, h6, .title, .headline { 
+    color: #8B0000 !important; 
+}
+
+[class*="dark"], [class*="bg-dark"], footer { 
+    color: #FFFFFF !important; 
+}
